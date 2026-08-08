@@ -55,10 +55,50 @@ class Category:
     name: str                 # e.g. "Guest", "Floor"
     items: List[str]          # display labels, e.g. ["the Envoy", "the Curator", ...]
     ordinal: bool = False      # True for the fixed slot-order axis (Floor, Place, Rank)
+    kind: str = "attribute"    # "person" | "ordinal" | "attribute" -- drives clue grammar
+    verb: str = "had"          # used for attribute categories, e.g. "wore", "was holding"
+    unit: str = None           # used for ordinal categories, e.g. "floor", "place"
+
+    def __post_init__(self):
+        if self.ordinal and self.kind == "attribute":
+            self.kind = "ordinal"
+        if self.kind == "ordinal" and self.unit is None:
+            self.unit = self.name.rstrip("s").lower()
 
     @property
     def n(self) -> int:
         return len(self.items)
+
+    def as_subject(self, item_idx: int) -> str:
+        it = self.items[item_idx]
+        if self.kind == "person":
+            return it[0].upper() + it[1:] if it and it[0].islower() else it
+        if self.kind == "ordinal":
+            return f"Whoever was on {self.unit} {it}"
+        return f"Whoever {self.verb} {it}"
+
+    def as_predicate(self, item_idx: int) -> str:
+        it = self.items[item_idx]
+        if self.kind == "person":
+            return f"is {it}"
+        if self.kind == "ordinal":
+            return f"is on {self.unit} {it}"
+        return f"{self.verb} {it}"
+
+    def as_bare_object(self, item_idx: int) -> str:
+        """Plain object form, used in negative/either-or clues where a single
+        neutral copula ('is not', 'either...or') needs to govern any kind."""
+        it = self.items[item_idx]
+        if self.kind == "ordinal":
+            return f"on {self.unit} {it}"
+        return it
+
+    def stem(self) -> str:
+        """The bare copula/verb used before a plain object list, e.g. in
+        'X wore either A or B' / 'X is either C or D'."""
+        if self.kind == "attribute":
+            return self.verb
+        return "is"
 
 
 @dataclass
@@ -121,13 +161,13 @@ class PuzzleEngine:
         sa = self.slot_of(catA.name, ia)
         if positive:
             ib = self.item_at_slot(catB.name, sa)
-            text = f"{catA.items[ia]} is {catB.items[ib]}."
+            text = f"{catA.as_subject(ia)} {catB.as_predicate(ib)}."
             atoms = [("positive", catA.name, ia, catB.name, ib, None)]
         else:
             correct_ib = self.item_at_slot(catB.name, sa)
             wrong_choices = [j for j in range(self.N) if j != correct_ib]
             ib = self.rng.choice(wrong_choices)
-            text = f"{catA.items[ia]} is not {catB.items[ib]}."
+            text = f"{catA.as_subject(ia)} is not {catB.as_bare_object(ib)}."
             atoms = [("negative", catA.name, ia, catB.name, ib, None)]
         return Clue("positive" if positive else "negative", text, atoms)
 
@@ -140,7 +180,8 @@ class PuzzleEngine:
         wrong_ib = self.rng.choice(others)
         pair = [correct_ib, wrong_ib]
         self.rng.shuffle(pair)
-        text = f"{catA.items[ia]} is either {catB.items[pair[0]]} or {catB.items[pair[1]]}."
+        text = (f"{catA.as_subject(ia)} {catB.stem()} either {catB.as_bare_object(pair[0])} "
+                f"or {catB.as_bare_object(pair[1])}.")
         atoms = [("negative", catA.name, ia, catB.name, j, None)
                  for j in range(self.N) if j not in pair]
         return Clue("either_or", text, atoms)
@@ -152,9 +193,6 @@ class PuzzleEngine:
         catA = self.rng.choice(non_ord)
         ia = self.rng.randrange(self.N)
         sa = self.slot_of(catA.name, ia)
-        offsets = [o for o in range(1, max_offset + 1) if 0 <= sa - o < self.N] + \
-                  [-o for o in range(1, max_offset + 1) if 0 <= sa - o < self.N]
-        # we want itemB such that sa = sb + offset  ->  sb = sa - offset
         candidates = []
         for offset in range(1, max_offset + 1):
             sb = sa - offset
@@ -164,15 +202,27 @@ class PuzzleEngine:
         if not candidates:
             return None
         offset, ib = self.rng.choice(candidates)
-        unit = self.ordinal_cat.name.rstrip('s').lower()
-        text = f"{catA.items[ia]} was exactly {offset} {unit}{'s' if offset != 1 else ''} above {catA.items[ib]}."
+        unit = self.ordinal_cat.unit
+        plural = "s" if offset != 1 else ""
+        # Build a clean comparison sentence: "<A> was exactly N <unit>s above <B>."
+        subj_text = catA.items[ia]
+        subj_text = subj_text[0].upper() + subj_text[1:]
+        text = f"{subj_text} was exactly {offset} {unit}{plural} above {catA.items[ib]}."
         atoms = [("relative", catA.name, ia, catA.name, ib, offset)]
         return Clue("relative", text, atoms)
 
     def gen_compound(self, n_children: int = 2) -> Clue:
         children = []
-        for _ in range(n_children):
-            children.append(self.gen_direct(positive=True))
+        seen = set()
+        tries = 0
+        while len(children) < n_children and tries < 20:
+            tries += 1
+            c = self.gen_direct(positive=True)
+            key = frozenset(c.atoms)
+            if key in seen:
+                continue
+            seen.add(key)
+            children.append(c)
         text = "All of these are true: " + " ".join(c.text for c in children)
         atoms = [a for c in children for a in c.atoms]
         return Clue("compound", text, atoms)

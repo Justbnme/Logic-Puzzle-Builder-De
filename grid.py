@@ -119,35 +119,45 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             c.restoreState()
         bx += block_w
 
-    # -- staircase blocks: one N x N grid per (row_names x col_category) pair --
+    # -- staircase blocks: block i has rows = categories[i], columns = categories[i+1:] --
+    n_blocks = len(names) - 1  # e.g. K=4 categories -> 3 blocks
     grid_top = y0
-    n_blocks = len(col_categories)
-    ry = grid_top
+    c.setFont("Helvetica", fsize)
     for block_idx in range(n_blocks):
-        block_h = N * cell
-        ry -= block_h
-        # row labels only drawn once, on the first (topmost) block
-        if block_idx == 0:
-            for i, label in enumerate(row_names):
-                yy = grid_top - i * cell - cell / 2
-                c.setFont("Helvetica", fsize)
-                c.drawString(x0 + cat_bar, yy - fsize * 0.35, label[:22])
-            c.setFillColor(SLATE)
-            c.rect(x0, grid_top - N * cell * n_blocks, cat_bar, N * cell * n_blocks,
-                   fill=1, stroke=0)
-        # the staircase: block j only spans columns for categories AFTER it
-        # (standard logic-grid layout avoids redundant same-pair duplication)
-        bx = x0 + cat_bar + row_label_w
-        for prior in range(block_idx):
-            bx += N * cell  # skip columns already used by earlier blocks
-        remaining_cats = col_categories[block_idx:]
-        for k, cat_name in enumerate(remaining_cats):
+        row_cat_name = names[block_idx]
+        row_items = cats[row_cat_name]
+        block_top = grid_top - block_idx * N * cell
+        block_left = x0 + cat_bar + row_label_w + block_idx * N * cell
+
+        # row labels for this block, reusing the strip its own category
+        # occupied as a column header one step up (the classic staircase look)
+        label_x = block_left - N * cell if block_idx > 0 else x0 + cat_bar
+        label_w = N * cell if block_idx > 0 else row_label_w
+        c.setFillColor(SLATE)
+        c.rect(label_x, block_top - N * cell, label_w, N * cell, fill=1, stroke=0)
+        c.setFillColor(white)
+        for i, label in enumerate(row_items):
+            yy = block_top - i * cell - cell / 2
+            c.drawString(label_x + 3, yy - fsize * 0.35, label[:24])
+        c.setFillColor(black)
+
+        # the actual N x N cell blocks for this row category against every
+        # remaining column category
+        col_cats = names[block_idx + 1:]
+        for k, cat_name in enumerate(col_cats):
             for row in range(N):
                 for col in range(N):
-                    cxL = bx + k * N * cell + col * cell
-                    cyB = ry + (N - 1 - row) * cell
+                    cxL = block_left + k * N * cell + col * cell
+                    cyB = block_top - (row + 1) * cell
                     c.rect(cxL, cyB, cell, cell, stroke=1, fill=0)
 
+    grid_bottom = grid_top - n_blocks * N * cell
+
+    c.setFillColor(SLATE)
+    c.rect(x0, grid_top - N * cell, cat_bar, N * cell, fill=1, stroke=0)
+    c.setFillColor(black)
+
     c.setStrokeColor(black)
-    total_h = grid_top - ry if n_blocks else 0
-    return spec["ncols"] * cell + cat_bar + row_label_w, oy_top - (grid_top - ry) - col_label_h
+    total_w = (K - 1) * N * cell + cat_bar + row_label_w
+    total_h = (oy_top - grid_bottom)
+    return total_w, oy_top - total_h
