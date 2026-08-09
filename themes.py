@@ -17,7 +17,7 @@ from __future__ import annotations
 import random
 from dataclasses import dataclass, field
 from typing import List, Optional
-from puzzle_engine import Category, PuzzleEngine, PROFILES
+from puzzle_engine import Category, PuzzleEngine, PROFILES, DEPTH_FLOORS
 
 
 @dataclass
@@ -76,6 +76,7 @@ def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
         "clues": [c.text for c in clues],
         "solution": engine.solution,
         "n_clues": len(clues),
+        "deduction_depth": engine.deduction_depth(clues),
     }
 
 

@@ -247,7 +247,7 @@ class PuzzleEngine:
     def _new_possible(self) -> Dict[Tuple[str, int], Set[int]]:
         return {(c.name, i): set(range(self.N)) for c in self.categories for i in range(self.N)}
 
-    def _propagate(self, atoms_list: List[Tuple]) -> Tuple[Dict[Tuple[str, int], Set[int]], bool]:
+    def _propagate(self, atoms_list: List[Tuple]) -> Tuple[Dict[Tuple[str, int], Set[int]], bool, int]:
         possible = self._new_possible()
         # fix the anchor category immediately (by construction, item i -> slot i)
         for i in range(self.N):
@@ -263,8 +263,10 @@ class PuzzleEngine:
                 relatives.append((catA, ia, catB, ib, offset))
 
         changed = True
+        rounds = 0
         while changed:
             changed = False
+            rounds += 1
             # positives: intersect
             for catA, ia, catB, ib in positives:
                 inter = possible[(catA, ia)] & possible[(catB, ib)]
@@ -312,36 +314,49 @@ class PuzzleEngine:
         solved = all(len(possible[(c.name, i)]) == 1
                      for c in self.categories for i in range(self.N))
         consistent = all(len(possible[k]) > 0 for k in possible)
-        return possible, (solved and consistent)
+        return possible, (solved and consistent), rounds
 
     def is_pure_deduction_solvable(self, clues: List[Clue]) -> bool:
         atoms = [a for cl in clues for a in cl.atoms]
-        _, solved = self._propagate(atoms)
+        _, solved, _ = self._propagate(atoms)
         return solved
+
+    def deduction_depth(self, clues: List[Clue]) -> int:
+        """Number of propagation rounds needed to fully solve -- an objective
+        proxy for how many chained inference steps a solver needs, independent
+        of which clue-type mix produced the puzzle."""
+        atoms = [a for cl in clues for a in cl.atoms]
+        _, solved, rounds = self._propagate(atoms)
+        return rounds if solved else -1
 
     # -- puzzle assembly ------------------------------------------------------
     def build_puzzle(self, profile: Dict[str, float], max_clues: int = 30,
-                      min_clues: int = 6, max_attempts: int = 500) -> List[Clue]:
+                      min_clues: int = 6, max_attempts: int = 500,
+                      min_depth: int = 0) -> List[Clue]:
         """Add clues one at a time (profile-weighted) until pure propagation
-        solves the grid, then greedily strip any clue that's redundant.
-        Duplicate/no-op clues are skipped so sparse profiles (hard/expert,
-        which lean on either_or/relative/negative) don't burn the attempt
-        budget on clues that add no new information."""
+        solves the grid, then greedily strip redundant clues -- sparser
+        clue sets generally require MORE deduction rounds, not fewer, so
+        min_depth is enforced as a floor during stripping (don't strip past
+        the point where depth would drop below it), not during adding."""
         clues: List[Clue] = []
         seen_atom_sets = set()
         attempts = 0
+
+        def solved_and_depth(cl):
+            atoms = [a for c in cl for a in c.atoms]
+            _, ok, rounds = self._propagate(atoms)
+            return ok, rounds
+
         while not self.is_pure_deduction_solvable(clues):
             if attempts > max_attempts:
                 raise RuntimeError("Could not reach a pure-deduction solution "
-                                    "within max_attempts -- widen profile or raise max_attempts")
+                                    "within max_attempts")
             attempts += 1
             c = self.gen_clue(profile)
             key = frozenset(c.atoms)
             if key in seen_atom_sets:
                 continue
             if len(clues) >= max_clues:
-                # already at the cap and still not solved -- force in a
-                # cheap direct clue so we make progress instead of stalling
                 c = self.gen_direct(True)
                 key = frozenset(c.atoms)
                 if key in seen_atom_sets:
@@ -349,11 +364,13 @@ class PuzzleEngine:
             seen_atom_sets.add(key)
             clues.append(c)
 
-        # strip redundant clues (keep order stable, re-check each removal)
+        # strip redundant clues (keep order stable, re-check each removal),
+        # but never strip below the required min_depth
         i = 0
         while i < len(clues) and len(clues) > min_clues:
             trial = clues[:i] + clues[i + 1:]
-            if self.is_pure_deduction_solvable(trial):
+            ok, depth = solved_and_depth(trial)
+            if ok and depth >= min_depth:
                 clues = trial
             else:
                 i += 1
@@ -370,3 +387,8 @@ PROFILES = {
     "hard":   {"positive": 0.15, "negative": 0.35, "either_or": 0.25, "relative": 0.20, "compound": 0.05},
     "expert": {"positive": 0.10, "negative": 0.30, "either_or": 0.25, "relative": 0.25, "compound": 0.10},
 }
+
+# Minimum propagation rounds required for a puzzle to count as that
+# difficulty -- measured, not assumed (see build_volume validation).
+# Ensures Expert is provably harder than Hard, not just differently flavored.
+DEPTH_FLOORS = {"easy": 0, "medium": 6, "hard": 7, "expert": 9}
