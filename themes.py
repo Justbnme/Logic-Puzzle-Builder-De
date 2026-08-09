@@ -39,8 +39,21 @@ class ScenarioTheme:
     categories: List[ThemeCategory]  # first one should be kind="person"
 
 
+# Max fraction of the final printed clues allowed to be plain direct ("X is
+# Y") pairings, by difficulty tier -- this is the concrete rejection rule:
+# an Expert puzzle cannot consist overwhelmingly of direct pairings, no
+# matter how large the grid is.
+MAX_DIRECT_FRACTION = {"easy": 1.0, "medium": 0.65, "hard": 0.45, "expert": 0.20}
+
+
+def _direct_fraction(clues) -> float:
+    if not clues:
+        return 0.0
+    return sum(1 for c in clues if c.kind == "positive") / len(clues)
+
+
 def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
-                         seed: int, puzzle_number: int = 1) -> dict:
+                         seed: int, puzzle_number: int = 1, max_tries: int = 8) -> dict:
     rng = random.Random(seed)
 
     engine_cats = []
@@ -55,8 +68,19 @@ def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
                         kind=tc.kind, verb=tc.verb, unit=tc.unit)
         engine_cats.append(cat)
 
-    engine = PuzzleEngine(engine_cats, seed=seed)
-    clues = engine.build_puzzle(PROFILES[profile_name], max_clues=30, min_clues=6)
+    cap = MAX_DIRECT_FRACTION.get(profile_name, 1.0)
+    best_clues, best_frac, best_engine = None, 2.0, None
+    for attempt in range(max_tries):
+        trial_seed = seed if attempt == 0 else seed + attempt * 104729
+        engine = PuzzleEngine(engine_cats, seed=trial_seed)
+        clues = engine.build_puzzle(PROFILES[profile_name], max_clues=30, min_clues=6,
+                                      max_attempts=1500)
+        frac = _direct_fraction(clues)
+        if frac < best_frac:
+            best_clues, best_frac, best_engine = clues, frac, engine
+        if frac <= cap:
+            break
+    clues, engine = best_clues, best_engine
 
     noun = rng.choice(theme.title_nouns)
     pattern = rng.choice(theme.title_patterns)
@@ -77,6 +101,7 @@ def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
         "solution": engine.solution,
         "n_clues": len(clues),
         "deduction_depth": engine.deduction_depth(clues),
+        "direct_fraction": round(_direct_fraction(clues), 3),
     }
 
 

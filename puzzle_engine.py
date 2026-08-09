@@ -186,7 +186,9 @@ class PuzzleEngine:
                  for j in range(self.N) if j not in pair]
         return Clue("either_or", text, atoms)
 
-    def gen_relative(self, max_offset: int = 3) -> Optional[Clue]:
+    def gen_relative(self, max_offset: int = None) -> Optional[Clue]:
+        if max_offset is None:
+            max_offset = self.N - 1
         if self.ordinal_cat is None:
             return None
         non_ord = [c for c in self.categories if not c.ordinal]
@@ -350,17 +352,13 @@ class PuzzleEngine:
         while not self.is_pure_deduction_solvable(clues):
             if attempts > max_attempts:
                 raise RuntimeError("Could not reach a pure-deduction solution "
-                                    "within max_attempts")
+                                    "within max_attempts -- widen profile, raise "
+                                    "max_attempts, or raise max_clues")
             attempts += 1
             c = self.gen_clue(profile)
             key = frozenset(c.atoms)
             if key in seen_atom_sets:
                 continue
-            if len(clues) >= max_clues:
-                c = self.gen_direct(True)
-                key = frozenset(c.atoms)
-                if key in seen_atom_sets:
-                    continue
             seen_atom_sets.add(key)
             clues.append(c)
 
