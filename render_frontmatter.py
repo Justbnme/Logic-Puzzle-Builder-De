@@ -60,13 +60,13 @@ def draw_title_page(c, title="MASTER LOGIC", subtitle="Volume 1",
 
 
 def draw_copyright_page(c, byline="Julian Stone", imprint="Deduction House",
-                         year="2026"):
+                         year="2026", subtitle="Volume 1"):
     c.setFont("Helvetica", 9)
     y = PAGE_H - 5.2 * IN
     x = MARGIN
     w = PAGE_W - 2 * MARGIN
     lines = [
-        f"Master Logic, Volume 1",
+        f"Master Logic, {subtitle}",
         f"Copyright \u00A9 {year} {byline} / {imprint}",
         "",
         "All rights reserved. No part of this publication may be reproduced, "
