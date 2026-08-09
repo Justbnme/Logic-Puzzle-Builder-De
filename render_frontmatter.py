@@ -8,6 +8,12 @@ all original content/wording (not derived from any competitor text).
 from reportlab.lib.units import inch as IN
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
+import fonts as _fonts
+
+FONT = _fonts.FONT_REGULAR
+FONT_B = _fonts.FONT_BOLD
+FONT_I = _fonts.FONT_ITALIC
+FONT_BI = _fonts.FONT_BOLDITALIC
 
 PAGE_W, PAGE_H = 8.5 * IN, 11 * IN
 MARGIN = 0.75 * IN
@@ -42,26 +48,26 @@ def draw_title_page(c, title="MASTER LOGIC", subtitle="Volume 1",
                      tagline="50 Hard + 50 Expert Logic Grid Puzzles for Adults",
                      byline="Julian Stone", imprint="Deduction House"):
     c.setFillColor(colors.black)
-    c.setFont("Helvetica-Bold", 40)
+    c.setFont(FONT_B, 40)
     c.drawCentredString(PAGE_W / 2, PAGE_H - 3.2 * IN, title)
-    c.setFont("Helvetica-Bold", 20)
+    c.setFont(FONT_B, 20)
     c.drawCentredString(PAGE_W / 2, PAGE_H - 3.75 * IN, subtitle.upper())
 
     c.setLineWidth(1)
     c.line(PAGE_W / 2 - 1.4 * IN, PAGE_H - 4.05 * IN, PAGE_W / 2 + 1.4 * IN, PAGE_H - 4.05 * IN)
 
-    c.setFont("Helvetica", 13)
+    c.setFont(FONT, 13)
     c.drawCentredString(PAGE_W / 2, PAGE_H - 4.5 * IN, tagline)
 
-    c.setFont("Helvetica", 15)
+    c.setFont(FONT, 15)
     c.drawCentredString(PAGE_W / 2, MARGIN + 1.0 * IN, byline)
-    c.setFont("Helvetica-Oblique", 10)
+    c.setFont(FONT_I, 10)
     c.drawCentredString(PAGE_W / 2, MARGIN + 0.75 * IN, imprint)
 
 
 def draw_copyright_page(c, byline="Julian Stone", imprint="Deduction House",
                          year="2026", subtitle="Volume 1"):
-    c.setFont("Helvetica", 9)
+    c.setFont(FONT, 9)
     y = PAGE_H - 5.2 * IN
     x = MARGIN
     w = PAGE_W - 2 * MARGIN
@@ -86,12 +92,12 @@ def draw_copyright_page(c, byline="Julian Stone", imprint="Deduction House",
         if para == "":
             y -= 10
             continue
-        y = _draw_wrapped(c, para, x, y, "Helvetica", 9, w, 12.5)
+        y = _draw_wrapped(c, para, x, y, FONT, 9, w, 12.5)
         y -= 4
 
 
 def draw_how_to_solve_page(c):
-    c.setFont("Helvetica-Bold", 18)
+    c.setFont(FONT_B, 18)
     c.drawString(MARGIN, PAGE_H - MARGIN - 10, "How to Solve These Puzzles")
     y = PAGE_H - MARGIN - 45
     w = PAGE_W - 2 * MARGIN
@@ -125,10 +131,10 @@ def draw_how_to_solve_page(c):
     ]
     for heading, body in sections:
         if heading:
-            c.setFont("Helvetica-Bold", 11.5)
+            c.setFont(FONT_B, 11.5)
             c.drawString(MARGIN, y, heading)
             y -= 16
-        y = _draw_wrapped(c, body, MARGIN, y, "Helvetica", 10, w, 14)
+        y = _draw_wrapped(c, body, MARGIN, y, FONT, 10, w, 14)
         y -= 14
 
 
@@ -136,7 +142,7 @@ from grid import draw_logic_grid
 
 
 def draw_worked_example_page(c):
-    c.setFont("Helvetica-Bold", 18)
+    c.setFont(FONT_B, 18)
     c.drawString(MARGIN, PAGE_H - MARGIN - 10, "A Worked Example")
     y = PAGE_H - MARGIN - 40
     w = PAGE_W - 2 * MARGIN
@@ -144,10 +150,10 @@ def draw_worked_example_page(c):
     intro = ("Here's a small puzzle solved one step at a time. Three friends, "
              "Priya, Owen, and Talia, each chose a different pastry and a "
              "different drink.")
-    y = _draw_wrapped(c, intro, MARGIN, y, "Helvetica", 10, w, 14)
+    y = _draw_wrapped(c, intro, MARGIN, y, FONT, 10, w, 14)
     y -= 10
 
-    c.setFont("Helvetica-Bold", 10.5)
+    c.setFont(FONT_B, 10.5)
     c.drawString(MARGIN, y, "Clues")
     y -= 14
     clues = [
@@ -157,7 +163,7 @@ def draw_worked_example_page(c):
         "4. Talia drank cocoa.",
     ]
     for cl in clues:
-        c.setFont("Helvetica", 10)
+        c.setFont(FONT, 10)
         c.drawString(MARGIN, y, cl)
         y -= 13.5
     y -= 12
@@ -179,13 +185,13 @@ def draw_worked_example_page(c):
          "for Priya is coffee."),
     ]
     for heading, body in steps:
-        c.setFont("Helvetica-Bold", 10.5)
-        y = _draw_wrapped(c, heading, MARGIN, y, "Helvetica-Bold", 10.5, w, 14)
-        y = _draw_wrapped(c, body, MARGIN, y, "Helvetica", 10, w, 14)
+        c.setFont(FONT_B, 10.5)
+        y = _draw_wrapped(c, heading, MARGIN, y, FONT_B, 10.5, w, 14)
+        y = _draw_wrapped(c, body, MARGIN, y, FONT, 10, w, 14)
         y -= 10
 
     y -= 6
-    c.setFont("Helvetica-Bold", 10.5)
+    c.setFont(FONT_B, 10.5)
     c.drawString(MARGIN, y, "Solved below:")
     y -= 20
 

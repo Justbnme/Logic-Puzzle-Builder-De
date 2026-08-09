@@ -17,15 +17,16 @@ label string at the target font, so labels always fit without guessing.
 from reportlab.lib.units import inch as IN
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
+import fonts as _fonts
+
+FONT   = _fonts.FONT_REGULAR
+FONT_B = _fonts.FONT_BOLD
 
 INK    = colors.Color(0.0, 0.0, 0.0)
 HAIR   = colors.Color(0.55, 0.57, 0.60)   # thin gridline gray
 HDR_BG = colors.black
 HDR_FG = colors.white
 SHADE  = colors.Color(0.955, 0.958, 0.965)  # boxed-label background
-
-FONT   = "Helvetica"
-FONT_B = "Helvetica-Bold"
 
 TRIMS = {
     "6x9":     (6 * IN, 9 * IN, 0.5 * IN, 0.5 * IN),
@@ -130,14 +131,14 @@ def _kerned_centered(c, cx, cy, text, font, size, tracking=0.6, color=HDR_FG):
         x += w + tracking
 
 
-def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
-                     trim: str = "6x9", large_print: bool = False, marks: dict = None,
-                     usable_width_override: float = None):
-    """cats: ordered {category_name: [item labels]}. First category is the
-    row/person axis. Returns (width, height) of the drawn grid.
-    usable_width_override: constrain sizing to less than the full page width,
-    e.g. for a small illustrative example grid that shouldn't stretch to
-    fill the same width as a real, much-wider puzzle grid."""
+def compute_grid_geometry(c: canvas.Canvas, cats: dict, trim: str = "6x9",
+                            large_print: bool = False, usable_width_override: float = None) -> dict:
+    """Pure geometry calculation, no drawing -- the single source of truth
+    for grid dimensions. draw_logic_grid uses this internally, and callers
+    that need to know grid height in advance (e.g. deciding whether a
+    puzzle's clue list will fit below it) should call this directly rather
+    than re-approximating the math, which risks quietly drifting out of
+    sync with what actually gets drawn."""
     names = list(cats.keys())
     K = len(names)
     N = len(next(iter(cats.values())))
@@ -146,20 +147,44 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
     cell = spec["cell"]
     cat_bar = spec["cat_bar"]
 
-    # -- row-label font: shrink only if it wouldn't fit the cell HEIGHT --
     row_fsize = _fit_font(c, FONT, ROW_FONT_TARGET, ROW_FONT_MIN, cell * 0.9)
-    # -- column rotated-label font: shrink only if it wouldn't fit cell WIDTH --
     col_fsize = _fit_font(c, FONT, COL_FONT_TARGET, COL_FONT_MIN, cell * 0.9)
 
-    # -- measure real label widths (using cleaned display form) --
     person_axis_labels = [_display_label(x) for x in cats[names[0]]]
-    row_label_w = max(c.stringWidth(lbl, FONT, row_fsize) for lbl in person_axis_labels) \
-                  + 10  # padding
+    row_label_w = max(c.stringWidth(lbl, FONT, row_fsize) for lbl in person_axis_labels) + 10
     row_label_w = max(row_label_w, 0.55 * IN)
 
     col_items = [_display_label(it) for k in names[1:] for it in cats[k]]
     longest_col_label_w = max(c.stringWidth(lbl, FONT, col_fsize) for lbl in col_items)
-    col_label_h = longest_col_label_w + 18  # padding, since rotated 90deg
+    col_label_h = longest_col_label_w + 18
+
+    n_blocks = K - 1
+    total_h = cat_bar + col_label_h + n_blocks * N * cell
+    total_w = (K - 1) * N * cell + cat_bar + row_label_w
+
+    return {"cell": cell, "cat_bar": cat_bar, "row_fsize": row_fsize,
+            "col_fsize": col_fsize, "row_label_w": row_label_w,
+            "col_label_h": col_label_h, "n_blocks": n_blocks,
+            "total_h": total_h, "total_w": total_w, "K": K, "N": N}
+
+
+def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
+                     trim: str = "6x9", large_print: bool = False, marks: dict = None,
+                     usable_width_override: float = None):
+    """cats: ordered {category_name: [item labels]}. First category is the
+    row/person axis. Returns (width, height) of the drawn grid.
+    usable_width_override: constrain sizing to less than the full page width,
+    e.g. for a small illustrative example grid that shouldn't stretch to
+    fill the same width as a real, much-wider puzzle grid."""
+    geo = compute_grid_geometry(c, cats, trim, large_print, usable_width_override)
+    names = list(cats.keys())
+    K, N = geo["K"], geo["N"]
+    cell = geo["cell"]
+    cat_bar = geo["cat_bar"]
+    row_fsize = geo["row_fsize"]
+    col_fsize = geo["col_fsize"]
+    row_label_w = geo["row_label_w"]
+    col_label_h = geo["col_label_h"]
 
     col_categories = names[1:]
 

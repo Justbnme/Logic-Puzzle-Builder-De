@@ -3,7 +3,7 @@ import json
 from reportlab.pdfgen import canvas
 import build_volume
 from verify_unique import verify_puzzle_unique
-from render_page import draw_puzzle_page, PAGE_W, PAGE_H
+from render_page import draw_puzzle, PAGE_W, PAGE_H
 from render_frontmatter import (draw_title_page, draw_copyright_page,
                                   draw_how_to_solve_page, draw_worked_example_page)
 from render_backmatter import draw_solutions_pages
@@ -34,13 +34,26 @@ def make_volume(volume_number: int):
 
     pdf_path = f"master_logic_vol{volume_number}_FULL.pdf"
     c = canvas.Canvas(pdf_path, pagesize=(PAGE_W, PAGE_H))
-    draw_title_page(c, subtitle=subtitle); c.showPage()
-    draw_copyright_page(c, subtitle=subtitle); c.showPage()
-    draw_how_to_solve_page(c); c.showPage()
-    draw_worked_example_page(c); c.showPage()
-    for p in puzzles:
-        draw_puzzle_page(c, p, p["puzzle_index"])
+    front_matter_pages = 0
+    draw_title_page(c, subtitle=subtitle); c.showPage(); front_matter_pages += 1
+    draw_copyright_page(c, subtitle=subtitle); c.showPage(); front_matter_pages += 1
+    draw_how_to_solve_page(c); c.showPage(); front_matter_pages += 1
+    draw_worked_example_page(c); c.showPage(); front_matter_pages += 1
+
+    # Each puzzle spread must open with clues on the LEFT (verso/even) and
+    # grid on the RIGHT (recto/odd) so they appear together on one open
+    # spread. That requires the first puzzle's clues page to land on an
+    # even page number, which requires an ODD page count so far. Insert one
+    # blank page if we're currently at an even count.
+    if front_matter_pages % 2 == 0:
         c.showPage()
+
+    n_spread = 0
+    for p in puzzles:
+        pages_used = draw_puzzle(c, p, p["puzzle_index"])
+        if pages_used == 2:
+            n_spread += 1
+    print(f"Puzzles needing the two-page spread: {n_spread}/{len(puzzles)}")
     draw_solutions_pages(c, puzzles)
     c.showPage()
     c.save()

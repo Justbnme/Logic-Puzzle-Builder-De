@@ -11,6 +11,10 @@ solvers checking their answer just need the resolved pairings).
 from reportlab.lib.units import inch as IN
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
+import fonts as _fonts
+
+FONT = _fonts.FONT_REGULAR
+FONT_B = _fonts.FONT_BOLD
 
 PAGE_W, PAGE_H = 8.5 * IN, 11 * IN
 MARGIN = 0.75 * IN
@@ -82,7 +86,7 @@ def draw_solutions_pages(c, puzzles: list):
         if not first_page:
             c.showPage()
         first_page = False
-        c.setFont("Helvetica-Bold", 16)
+        c.setFont(FONT_B, 16)
         c.drawString(MARGIN, PAGE_H - MARGIN - 5, "Solutions")
         y_top = PAGE_H - MARGIN - header_h
 
@@ -93,10 +97,10 @@ def draw_solutions_pages(c, puzzles: list):
             x = MARGIN + col * (col_w + COL_GAP)
             y = y_top - row_in_col * entry_h
 
-            c.setFont("Helvetica-Bold", 10)
+            c.setFont(FONT_B, 10)
             c.drawString(x, y, f"Puzzle {p['puzzle_index']}  {p['title']}")
             y -= 13
-            c.setFont("Helvetica", 8.5)
+            c.setFont(FONT, 8.5)
             for line in _solution_rows(p):
                 c.drawString(x + 4, y, line)
                 y -= 11
