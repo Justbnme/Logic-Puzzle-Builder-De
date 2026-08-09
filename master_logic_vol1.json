@@ -102,7 +102,9 @@
   "direct_fraction": 0.294,
   "puzzle_index": 1,
   "difficulty": "hard",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The County Bee 1",
@@ -207,7 +209,9 @@
   "direct_fraction": 0.176,
   "puzzle_index": 2,
   "difficulty": "hard",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Iron Skillet Kitchen Challenge 1",
@@ -310,7 +314,9 @@
   "direct_fraction": 0.333,
   "puzzle_index": 3,
   "difficulty": "hard",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The International Film Festival 1",
@@ -413,7 +419,9 @@
   "direct_fraction": 0.133,
   "puzzle_index": 4,
   "difficulty": "hard",
-  "theme_key": "film_festival"
+  "theme_key": "film_festival",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Basement Set 1",
@@ -514,7 +522,9 @@
   "direct_fraction": 0.308,
   "puzzle_index": 5,
   "difficulty": "hard",
-  "theme_key": "jazz_club"
+  "theme_key": "jazz_club",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Forgotten Key Affair 1",
@@ -616,7 +626,9 @@
   "direct_fraction": 0.286,
   "puzzle_index": 6,
   "difficulty": "hard",
-  "theme_key": "manor_mystery"
+  "theme_key": "manor_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Capital City Open 1",
@@ -719,7 +731,9 @@
   "direct_fraction": 0.133,
   "puzzle_index": 7,
   "difficulty": "hard",
-  "theme_key": "chess_open"
+  "theme_key": "chess_open",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Summer Bake-Off 1",
@@ -821,7 +835,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 8,
   "difficulty": "hard",
-  "theme_key": "bake_off"
+  "theme_key": "bake_off",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Underground Open Mic 1",
@@ -924,7 +940,9 @@
   "direct_fraction": 0.2,
   "puzzle_index": 9,
   "difficulty": "hard",
-  "theme_key": "poetry_slam"
+  "theme_key": "poetry_slam",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Autumn Estate Sale 1",
@@ -1029,7 +1047,9 @@
   "direct_fraction": 0.118,
   "puzzle_index": 10,
   "difficulty": "hard",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Private Exhibit 1",
@@ -1133,7 +1153,9 @@
   "direct_fraction": 0.25,
   "puzzle_index": 11,
   "difficulty": "hard",
-  "theme_key": "gallery_opening"
+  "theme_key": "gallery_opening",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Blue Ribbon Flower Show 1",
@@ -1236,7 +1258,9 @@
   "direct_fraction": 0.2,
   "puzzle_index": 12,
   "difficulty": "hard",
-  "theme_key": "garden_show"
+  "theme_key": "garden_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Silver Masquerade 1",
@@ -1340,7 +1364,9 @@
   "direct_fraction": 0.188,
   "puzzle_index": 13,
   "difficulty": "hard",
-  "theme_key": "masquerade_ball"
+  "theme_key": "masquerade_ball",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Chrome & Steel Cruise-In 1",
@@ -1440,7 +1466,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 14,
   "difficulty": "hard",
-  "theme_key": "vintage_car_show"
+  "theme_key": "vintage_car_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Junior Expo 1",
@@ -1542,7 +1570,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 15,
   "difficulty": "hard",
-  "theme_key": "science_fair"
+  "theme_key": "science_fair",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Coastal Race 1",
@@ -1645,7 +1675,9 @@
   "direct_fraction": 0.267,
   "puzzle_index": 16,
   "difficulty": "hard",
-  "theme_key": "regatta"
+  "theme_key": "regatta",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Estate Tasting 1",
@@ -1749,7 +1781,9 @@
   "direct_fraction": 0.125,
   "puzzle_index": 17,
   "difficulty": "hard",
-  "theme_key": "wine_tasting"
+  "theme_key": "wine_tasting",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Final Crossing 1",
@@ -1851,7 +1885,9 @@
   "direct_fraction": 0.071,
   "puzzle_index": 18,
   "difficulty": "hard",
-  "theme_key": "cruise_mystery"
+  "theme_key": "cruise_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Regional Relay 1",
@@ -1952,7 +1988,9 @@
   "direct_fraction": 0.231,
   "puzzle_index": 19,
   "difficulty": "hard",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Uptown Opening 2",
@@ -2054,7 +2092,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 20,
   "difficulty": "hard",
-  "theme_key": "gallery_opening"
+  "theme_key": "gallery_opening",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Rose Flower Show 2",
@@ -2156,7 +2196,9 @@
   "direct_fraction": 0.071,
   "puzzle_index": 21,
   "difficulty": "hard",
-  "theme_key": "garden_show"
+  "theme_key": "garden_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Independent Screening 2",
@@ -2259,7 +2301,9 @@
   "direct_fraction": 0.267,
   "puzzle_index": 22,
   "difficulty": "hard",
-  "theme_key": "film_festival"
+  "theme_key": "film_festival",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Saturday Farm Stand 2",
@@ -2358,7 +2402,9 @@
   "direct_fraction": 0.182,
   "puzzle_index": 23,
   "difficulty": "hard",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Spring Expo 2",
@@ -2459,7 +2505,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 24,
   "difficulty": "hard",
-  "theme_key": "science_fair"
+  "theme_key": "science_fair",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Citywide Spelling Bee 2",
@@ -2560,7 +2608,9 @@
   "direct_fraction": 0.231,
   "puzzle_index": 25,
   "difficulty": "hard",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Estate Sale 2",
@@ -2662,7 +2712,9 @@
   "direct_fraction": 0.429,
   "puzzle_index": 26,
   "difficulty": "hard",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Bay Regatta 2",
@@ -2765,7 +2817,9 @@
   "direct_fraction": 0.4,
   "puzzle_index": 27,
   "difficulty": "hard",
-  "theme_key": "regatta"
+  "theme_key": "regatta",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Cook-Off 2",
@@ -2870,7 +2924,9 @@
   "direct_fraction": 0.294,
   "puzzle_index": 28,
   "difficulty": "hard",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Grand Ball 2",
@@ -2970,7 +3026,9 @@
   "direct_fraction": 0.333,
   "puzzle_index": 29,
   "difficulty": "hard",
-  "theme_key": "masquerade_ball"
+  "theme_key": "masquerade_ball",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Downtown Track Meet 2",
@@ -3074,7 +3132,9 @@
   "direct_fraction": 0.125,
   "puzzle_index": 30,
   "difficulty": "hard",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Autumn Cellar 2",
@@ -3174,7 +3234,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 31,
   "difficulty": "hard",
-  "theme_key": "wine_tasting"
+  "theme_key": "wine_tasting",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Open Mic 2",
@@ -3275,7 +3337,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 32,
   "difficulty": "hard",
-  "theme_key": "poetry_slam"
+  "theme_key": "poetry_slam",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Vanishing Voyage 2",
@@ -3375,7 +3439,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 33,
   "difficulty": "hard",
-  "theme_key": "cruise_mystery"
+  "theme_key": "cruise_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Late Night Set 2",
@@ -3475,7 +3541,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 34,
   "difficulty": "hard",
-  "theme_key": "jazz_club"
+  "theme_key": "jazz_club",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Bake-Off 2",
@@ -3578,7 +3646,9 @@
   "direct_fraction": 0.133,
   "puzzle_index": 35,
   "difficulty": "hard",
-  "theme_key": "bake_off"
+  "theme_key": "bake_off",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Caller Affair 2",
@@ -3679,7 +3749,9 @@
   "direct_fraction": 0.308,
   "puzzle_index": 36,
   "difficulty": "hard",
-  "theme_key": "manor_mystery"
+  "theme_key": "manor_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Open 2",
@@ -3780,7 +3852,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 37,
   "difficulty": "hard",
-  "theme_key": "chess_open"
+  "theme_key": "chess_open",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Summer Car Show 2",
@@ -3882,7 +3956,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 38,
   "difficulty": "hard",
-  "theme_key": "vintage_car_show"
+  "theme_key": "vintage_car_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The County Spelling Bee 3",
@@ -3984,7 +4060,9 @@
   "direct_fraction": 0.286,
   "puzzle_index": 39,
   "difficulty": "hard",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Autumn Cellar 3",
@@ -4086,7 +4164,9 @@
   "direct_fraction": 0.429,
   "puzzle_index": 40,
   "difficulty": "hard",
-  "theme_key": "wine_tasting"
+  "theme_key": "wine_tasting",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Encore Jazz Night 3",
@@ -4189,7 +4269,9 @@
   "direct_fraction": 0.267,
   "puzzle_index": 41,
   "difficulty": "hard",
-  "theme_key": "jazz_club"
+  "theme_key": "jazz_club",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Independent Film Festival 3",
@@ -4293,7 +4375,9 @@
   "direct_fraction": 0.25,
   "puzzle_index": 42,
   "difficulty": "hard",
-  "theme_key": "film_festival"
+  "theme_key": "film_festival",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Innovation Expo 3",
@@ -4397,7 +4481,9 @@
   "direct_fraction": 0.312,
   "puzzle_index": 43,
   "difficulty": "hard",
-  "theme_key": "science_fair"
+  "theme_key": "science_fair",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Downtown Open Mic 3",
@@ -4498,7 +4584,9 @@
   "direct_fraction": 0.308,
   "puzzle_index": 44,
   "difficulty": "hard",
-  "theme_key": "poetry_slam"
+  "theme_key": "poetry_slam",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Grand Ball 3",
@@ -4602,7 +4690,9 @@
   "direct_fraction": 0.125,
   "puzzle_index": 45,
   "difficulty": "hard",
-  "theme_key": "masquerade_ball"
+  "theme_key": "masquerade_ball",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Blue Ribbon Garden Show 3",
@@ -4704,7 +4794,9 @@
   "direct_fraction": 0.214,
   "puzzle_index": 46,
   "difficulty": "hard",
-  "theme_key": "garden_show"
+  "theme_key": "garden_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Autumn Farm Stand 3",
@@ -4808,7 +4900,9 @@
   "direct_fraction": 0.312,
   "puzzle_index": 47,
   "difficulty": "hard",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Crossing 3",
@@ -4911,7 +5005,9 @@
   "direct_fraction": 0.333,
   "puzzle_index": 48,
   "difficulty": "hard",
-  "theme_key": "cruise_mystery"
+  "theme_key": "cruise_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Curious Will Affair 3",
@@ -5014,7 +5110,9 @@
   "direct_fraction": 0.133,
   "puzzle_index": 49,
   "difficulty": "hard",
-  "theme_key": "manor_mystery"
+  "theme_key": "manor_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Summer Bake-Off 3",
@@ -5116,7 +5214,9 @@
   "direct_fraction": 0.357,
   "puzzle_index": 50,
   "difficulty": "hard",
-  "theme_key": "bake_off"
+  "theme_key": "bake_off",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Riverside Auction 3",
@@ -5217,7 +5317,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 51,
   "difficulty": "expert",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Sunday Car Show 3",
@@ -5317,7 +5419,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 52,
   "difficulty": "expert",
-  "theme_key": "vintage_car_show"
+  "theme_key": "vintage_car_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Harvest Cook-Off 3",
@@ -5418,7 +5522,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 53,
   "difficulty": "expert",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Chess Championship 3",
@@ -5519,7 +5625,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 54,
   "difficulty": "expert",
-  "theme_key": "chess_open"
+  "theme_key": "chess_open",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The County Track Meet 3",
@@ -5620,7 +5728,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 55,
   "difficulty": "expert",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Harbor Regatta 3",
@@ -5720,7 +5830,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 56,
   "difficulty": "expert",
-  "theme_key": "regatta"
+  "theme_key": "regatta",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Private Exhibit 3",
@@ -5821,7 +5933,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 57,
   "difficulty": "expert",
-  "theme_key": "gallery_opening"
+  "theme_key": "gallery_opening",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Riverside Estate Sale 4",
@@ -5922,7 +6036,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 58,
   "difficulty": "expert",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Basement Set 4",
@@ -6022,7 +6138,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 59,
   "difficulty": "expert",
-  "theme_key": "jazz_club"
+  "theme_key": "jazz_club",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Moonlit Voyage 4",
@@ -6123,7 +6241,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 60,
   "difficulty": "expert",
-  "theme_key": "cruise_mystery"
+  "theme_key": "cruise_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Cellar Tasting 4",
@@ -6224,7 +6344,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 61,
   "difficulty": "expert",
-  "theme_key": "wine_tasting"
+  "theme_key": "wine_tasting",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Coastal Regatta 4",
@@ -6324,7 +6446,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 62,
   "difficulty": "expert",
-  "theme_key": "regatta"
+  "theme_key": "regatta",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Masters Open 4",
@@ -6423,7 +6547,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 63,
   "difficulty": "expert",
-  "theme_key": "chess_open"
+  "theme_key": "chess_open",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Coastal Screening 4",
@@ -6524,7 +6650,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 64,
   "difficulty": "expert",
-  "theme_key": "film_festival"
+  "theme_key": "film_festival",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Open Open Mic 4",
@@ -6625,7 +6753,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 65,
   "difficulty": "expert",
-  "theme_key": "poetry_slam"
+  "theme_key": "poetry_slam",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Curious Will Affair 4",
@@ -6727,7 +6857,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 66,
   "difficulty": "expert",
-  "theme_key": "manor_mystery"
+  "theme_key": "manor_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Harvest Bake-Off 4",
@@ -6827,7 +6959,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 67,
   "difficulty": "expert",
-  "theme_key": "bake_off"
+  "theme_key": "bake_off",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Autumn Bee 4",
@@ -6927,7 +7061,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 68,
   "difficulty": "expert",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Junior Expo 4",
@@ -7028,7 +7164,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 69,
   "difficulty": "expert",
-  "theme_key": "science_fair"
+  "theme_key": "science_fair",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Masquerade 4",
@@ -7131,7 +7269,9 @@
   "direct_fraction": 0.133,
   "puzzle_index": 70,
   "difficulty": "expert",
-  "theme_key": "masquerade_ball"
+  "theme_key": "masquerade_ball",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Riverside Market 4",
@@ -7233,7 +7373,9 @@
   "direct_fraction": 0.071,
   "puzzle_index": 71,
   "difficulty": "expert",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Downtown Car Show 4",
@@ -7334,7 +7476,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 72,
   "difficulty": "expert",
-  "theme_key": "vintage_car_show"
+  "theme_key": "vintage_car_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Debut Exhibit 4",
@@ -7436,7 +7580,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 73,
   "difficulty": "expert",
-  "theme_key": "gallery_opening"
+  "theme_key": "gallery_opening",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Harvest Kitchen Challenge 4",
@@ -7537,7 +7683,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 74,
   "difficulty": "expert",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Blue Ribbon Flower Show 4",
@@ -7636,7 +7784,9 @@
   "direct_fraction": 0.091,
   "puzzle_index": 75,
   "difficulty": "expert",
-  "theme_key": "garden_show"
+  "theme_key": "garden_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Downtown Track Meet 4",
@@ -7736,7 +7886,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 76,
   "difficulty": "expert",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Silent Exhibit 5",
@@ -7835,7 +7987,9 @@
   "direct_fraction": 0.182,
   "puzzle_index": 77,
   "difficulty": "expert",
-  "theme_key": "gallery_opening"
+  "theme_key": "gallery_opening",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Private Auction 5",
@@ -7934,7 +8088,9 @@
   "direct_fraction": 0.091,
   "puzzle_index": 78,
   "difficulty": "expert",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Reserve Tasting 5",
@@ -8034,7 +8190,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 79,
   "difficulty": "expert",
-  "theme_key": "wine_tasting"
+  "theme_key": "wine_tasting",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Foggy Crossing 5",
@@ -8135,7 +8293,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 80,
   "difficulty": "expert",
-  "theme_key": "cruise_mystery"
+  "theme_key": "cruise_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Harvest Bake-Off 5",
@@ -8237,7 +8397,9 @@
   "direct_fraction": 0.143,
   "puzzle_index": 81,
   "difficulty": "expert",
-  "theme_key": "bake_off"
+  "theme_key": "bake_off",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Summer Regatta 5",
@@ -8340,7 +8502,9 @@
   "direct_fraction": 0.067,
   "puzzle_index": 82,
   "difficulty": "expert",
-  "theme_key": "regatta"
+  "theme_key": "regatta",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The County Spelling Bee 5",
@@ -8439,7 +8603,9 @@
   "direct_fraction": 0.182,
   "puzzle_index": 83,
   "difficulty": "expert",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Caller Affair 5",
@@ -8540,7 +8706,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 84,
   "difficulty": "expert",
-  "theme_key": "manor_mystery"
+  "theme_key": "manor_mystery",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Riverside Farm Stand 5",
@@ -8643,7 +8811,9 @@
   "direct_fraction": 0.2,
   "puzzle_index": 85,
   "difficulty": "expert",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Cook-Off 5",
@@ -8743,7 +8913,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 86,
   "difficulty": "expert",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Innovation Science Fair 5",
@@ -8844,7 +9016,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 87,
   "difficulty": "expert",
-  "theme_key": "science_fair"
+  "theme_key": "science_fair",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Late Night Jazz Night 5",
@@ -8948,7 +9122,9 @@
   "direct_fraction": 0.062,
   "puzzle_index": 88,
   "difficulty": "expert",
-  "theme_key": "jazz_club"
+  "theme_key": "jazz_club",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Screening 5",
@@ -9046,7 +9222,9 @@
   "direct_fraction": 0.1,
   "puzzle_index": 89,
   "difficulty": "expert",
-  "theme_key": "film_festival"
+  "theme_key": "film_festival",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Annual Garden Show 5",
@@ -9144,7 +9322,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 90,
   "difficulty": "expert",
-  "theme_key": "garden_show"
+  "theme_key": "garden_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Silver Ball 5",
@@ -9248,7 +9428,9 @@
   "direct_fraction": 0.125,
   "puzzle_index": 91,
   "difficulty": "expert",
-  "theme_key": "masquerade_ball"
+  "theme_key": "masquerade_ball",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Classic Car Show 5",
@@ -9348,7 +9530,9 @@
   "direct_fraction": 0.083,
   "puzzle_index": 92,
   "difficulty": "expert",
-  "theme_key": "vintage_car_show"
+  "theme_key": "vintage_car_show",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Weekend Chess Championship 5",
@@ -9449,7 +9633,9 @@
   "direct_fraction": 0.077,
   "puzzle_index": 93,
   "difficulty": "expert",
-  "theme_key": "chess_open"
+  "theme_key": "chess_open",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The District Track Meet 5",
@@ -9551,7 +9737,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 94,
   "difficulty": "expert",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Open Open Mic 5",
@@ -9651,7 +9839,9 @@
   "direct_fraction": 0.167,
   "puzzle_index": 95,
   "difficulty": "expert",
-  "theme_key": "poetry_slam"
+  "theme_key": "poetry_slam",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Summer Track Meet 6",
@@ -9752,7 +9942,9 @@
   "direct_fraction": 0.154,
   "puzzle_index": 96,
   "difficulty": "expert",
-  "theme_key": "track_meet"
+  "theme_key": "track_meet",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Chef's Table Kitchen Challenge 6",
@@ -9855,7 +10047,9 @@
   "direct_fraction": 0.2,
   "puzzle_index": 97,
   "difficulty": "expert",
-  "theme_key": "cooking_competition"
+  "theme_key": "cooking_competition",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Saturday Market 6",
@@ -9954,7 +10148,9 @@
   "direct_fraction": 0.0,
   "puzzle_index": 98,
   "difficulty": "expert",
-  "theme_key": "farmers_market"
+  "theme_key": "farmers_market",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Championship Spelling Bee 6",
@@ -10053,7 +10249,9 @@
   "direct_fraction": 0.182,
   "puzzle_index": 99,
   "difficulty": "expert",
-  "theme_key": "spelling_bee"
+  "theme_key": "spelling_bee",
+  "unique_solution": true,
+  "n_solutions_found": 1
  },
  {
   "title": "The Midnight Estate Sale 6",
@@ -10154,6 +10352,8 @@
   "direct_fraction": 0.077,
   "puzzle_index": 100,
   "difficulty": "expert",
-  "theme_key": "antique_auction"
+  "theme_key": "antique_auction",
+  "unique_solution": true,
+  "n_solutions_found": 1
  }
 ]

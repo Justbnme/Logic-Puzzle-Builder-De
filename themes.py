@@ -102,6 +102,8 @@ def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
         "n_clues": len(clues),
         "deduction_depth": engine.deduction_depth(clues),
         "direct_fraction": round(_direct_fraction(clues), 3),
+        "_engine": engine,
+        "_clues_raw": clues,
     }
 
 

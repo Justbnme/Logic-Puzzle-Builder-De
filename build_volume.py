@@ -9,13 +9,14 @@ Generates a full Master Logic volume: 50 Hard + 50 Expert puzzles, N=7,
 import json
 import random
 from themes import THEMES, build_themed_puzzle
+from verify_unique import verify_puzzle_unique
 
 N = 7
 K = 4  # categories per puzzle (Person + 2 attributes + 1 ordinal)
 
 
 def build_volume(volume_number: int, n_hard: int = 50, n_expert: int = 50,
-                  base_seed: int = 1000) -> list:
+                  base_seed: int = 1000, verify: bool = True) -> list:
     rng = random.Random(base_seed + volume_number)
     theme_keys = list(THEMES.keys())
 
@@ -43,6 +44,18 @@ def build_volume(volume_number: int, n_hard: int = 50, n_expert: int = 50,
         p["puzzle_index"] = idx
         p["difficulty"] = difficulty
         p["theme_key"] = theme_key
+
+        if verify:
+            engine = p.pop("_engine")
+            clues = p.pop("_clues_raw")
+            cat_names = list(p["categories"].keys())
+            report = verify_puzzle_unique(cat_names, N, engine.anchor_cat.name, clues)
+            p["unique_solution"] = report["unique"]
+            p["n_solutions_found"] = report["n_solutions_found"]
+        else:
+            p.pop("_engine", None)
+            p.pop("_clues_raw", None)
+
         puzzles.append(p)
     return puzzles
 
@@ -68,6 +81,9 @@ def report(puzzles: list):
     consec = sum(1 for i in range(1, len(puzzles))
                  if puzzles[i]["theme_key"] == puzzles[i - 1]["theme_key"])
     print(f"Consecutive same-theme repeats: {consec}")
+    if "unique_solution" in puzzles[0]:
+        non_unique = [p["puzzle_index"] for p in puzzles if not p["unique_solution"]]
+        print(f"Non-unique solutions (independent brute-force check): {len(non_unique)} {non_unique if non_unique else ''}")
 
 
 if __name__ == "__main__":
