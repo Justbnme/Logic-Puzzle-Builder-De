@@ -82,6 +82,23 @@ def fit_check(K: int, N: int, trim: str, large_print: bool = False):
     return spec
 
 
+import re
+
+def _display_label(s: str) -> str:
+    """Clean a raw item string for grid display: drop a leading 'a/an/the'
+    and title-case the rest, so 'a flower-draped stall' -> 'Flower-Draped
+    Stall'. Clue text elsewhere is untouched -- this only affects what's
+    printed inside the grid cells/labels."""
+    s = re.sub(r"^(a|an|the)\s+", "", s.strip(), flags=re.IGNORECASE)
+    # title-case each hyphenated part too ("flower-draped" -> "Flower-Draped")
+    words = s.split(" ")
+    out = []
+    for w in words:
+        parts = w.split("-")
+        out.append("-".join(p[:1].upper() + p[1:] if p else p for p in parts))
+    return " ".join(out)
+
+
 def _kerned_centered(c, cx, cy, text, font, size, tracking=0.6, color=HDR_FG):
     """Draw text with extra letter-spacing, centered at (cx, cy)."""
     widths = [c.stringWidth(ch, font, size) for ch in text]
@@ -110,13 +127,13 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
     # -- column rotated-label font: shrink only if it wouldn't fit cell WIDTH --
     col_fsize = _fit_font(c, FONT, COL_FONT_TARGET, COL_FONT_MIN, cell * 0.9)
 
-    # -- measure real label widths to size the label areas (no guessing) --
-    person_axis_labels = cats[names[0]]
+    # -- measure real label widths (using cleaned display form) --
+    person_axis_labels = [_display_label(x) for x in cats[names[0]]]
     row_label_w = max(c.stringWidth(lbl, FONT, row_fsize) for lbl in person_axis_labels) \
                   + 10  # padding
     row_label_w = max(row_label_w, 0.55 * IN)
 
-    col_items = [it for k in names[1:] for it in cats[k]]
+    col_items = [_display_label(it) for k in names[1:] for it in cats[k]]
     longest_col_label_w = max(c.stringWidth(lbl, FONT, col_fsize) for lbl in col_items)
     col_label_h = longest_col_label_w + 12  # padding, since rotated 90deg
 
@@ -134,8 +151,12 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
         block_w = N * cell
         c.setFillColor(HDR_BG)
         c.rect(bx, catbar_y - cat_bar, block_w, cat_bar, fill=1, stroke=0)
+        if gi > 0:
+            c.setStrokeColor(colors.white)
+            c.setLineWidth(1.2)
+            c.line(bx, catbar_y - cat_bar, bx, catbar_y)
         _kerned_centered(c, bx + block_w / 2, catbar_y - cat_bar + cat_bar * 0.28,
-                          cat_name.upper(), FONT_B, min(8.5, hdr_fsize), tracking=0.7)
+                          cat_name.upper(), FONT_B, min(8.5, hdr_fsize), tracking=0.3)
 
     # ---------- rotated column item labels ----------
     c.setFillColor(INK)
@@ -146,7 +167,7 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             c.translate(cxp, grid_top - 0.03 * IN)
             c.rotate(90)
             c.setFont(FONT, col_fsize)
-            c.drawString(2, -cell * 0.32, label)
+            c.drawString(2, -cell * 0.32, _display_label(label))
             c.restoreState()
 
     # ---------- staircase blocks: block i has rows = categories[i] ----------
@@ -174,7 +195,7 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
         c.setFont(FONT, row_fsize)
         for i, label in enumerate(row_items):
             yy = block_top - i * cell - cell / 2
-            c.drawString(label_x + 4, yy - row_fsize * 0.35, label)
+            c.drawString(label_x + 4, yy - row_fsize * 0.35, _display_label(label))
 
         # the N x N cell blocks for this row category against remaining cols
         col_cats = names[block_idx + 1:]
@@ -189,6 +210,21 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             for col in range(N + 1):
                 xx = gx0 + col * cell
                 c.line(xx, gy0, xx, block_top)
+            # heavier divider between this column-group and the next
+            c.setStrokeColor(INK)
+            c.setLineWidth(1.4)
+            c.line(gx0 + N * cell, gy0, gx0 + N * cell, block_top)
+            c.setStrokeColor(HAIR)
+            c.setLineWidth(0.5)
+
+        # heavier divider under this row-block, and around its label column
+        c.setStrokeColor(INK)
+        c.setLineWidth(1.4)
+        c.line(block_left, block_top - N * cell, block_left + (len(col_cats)) * N * cell,
+               block_top - N * cell)
+        c.line(label_x, block_top - N * cell, label_x, block_top)
+        c.line(label_x + label_w, block_top - N * cell, label_x + label_w, block_top)
+        c.line(block_left, block_top, block_left + len(col_cats) * N * cell, block_top)
 
     grid_bottom = grid_top - n_blocks * N * cell
 
