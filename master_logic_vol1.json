@@ -146,22 +146,23 @@
    ]
   },
   "clues": [
-   "Whoever was given a legal term is either Junie or Zora.",
-   "Zora was exactly 4 rounds above Rosalind.",
-   "Whoever was given a French loanword represented either Dunmore Prep or Ashford Elementary.",
-   "Rosalind was exactly 1 round above Emmett.",
-   "Whoever was on round 2 represented Ashford Elementary.",
-   "Whoever was on round 7 was given a nature word.",
-   "Achebe was exactly 4 rounds above Marisol.",
-   "A legal term was exactly 2 rounds above a geography word.",
-   "Whoever was given a science word is either on round 3 or on round 7.",
-   "Dunmore Prep was exactly 2 rounds above Ivy Lane School.",
-   "Glenhaven School was exactly 1 round above Ashford Elementary.",
    "Whoever was on round 6 represented either Dunmore Prep or Ivy Lane School.",
-   "Achebe represented Fairview Academy.",
+   "Whoever was given a legal term is either Junie or Zora.",
+   "Achebe was exactly 4 rounds above Marisol.",
    "A legal term was exactly 3 rounds above a music term.",
-   "Whoever was on round 1 represented either Glenhaven School or Cedar Ridge School.",
-   "Marisol is not Glenhaven School."
+   "Marisol is not Glenhaven School.",
+   "Glenhaven School was exactly 1 round above Ashford Elementary.",
+   "Whoever was on round 7 was given a nature word.",
+   "Whoever was given a legal term is either on round 4 or on round 3.",
+   "Rosalind was exactly 1 round above Emmett.",
+   "Ashford Elementary was exactly 1 round above Cedar Ridge School.",
+   "Dunmore Prep was exactly 2 rounds above Ivy Lane School.",
+   "Whoever was on round 2 represented Ashford Elementary.",
+   "A legal term was exactly 2 rounds above a geography word.",
+   "Rosalind is not a medical term.",
+   "Achebe represented Fairview Academy.",
+   "Whoever was given a French loanword represented either Dunmore Prep or Ashford Elementary.",
+   "Zora was exactly 4 rounds above Rosalind."
   ],
   "solution": {
    "Contestant": [
@@ -201,9 +202,9 @@
     6
    ]
   },
-  "n_clues": 16,
-  "deduction_depth": 6,
-  "direct_fraction": 0.188,
+  "n_clues": 17,
+  "deduction_depth": 5,
+  "direct_fraction": 0.176,
   "puzzle_index": 2,
   "difficulty": "hard",
   "theme_key": "spelling_bee"
@@ -363,9 +364,9 @@
    "The Golden Reel was exactly 1 theater above Best Cinematography.",
    "Anouk was exactly 4 theaters above Solveig.",
    "Whoever was on theater 4 is either Osei or Noor.",
-   "Whoever won the Jury Prize is not a war epic.",
+   "Whoever was on theater 7 is not a satire.",
    "Idris screened either a road movie or a period drama.",
-   "Whoever was on theater 7 screened either a war epic or a psychological thriller.",
+   "Whoever won the Jury Prize is not a war epic.",
    "Noor won either Best Screenplay or the Audience Award.",
    "The Golden Reel was exactly 2 theaters above the Audience Award."
   ],
@@ -408,7 +409,7 @@
    ]
   },
   "n_clues": 15,
-  "deduction_depth": 7,
+  "deduction_depth": 8,
   "direct_fraction": 0.133,
   "puzzle_index": 4,
   "difficulty": "hard",
@@ -456,20 +457,19 @@
    ]
   },
   "clues": [
-   "Elmore opened with a ballad set.",
-   "Ines was exactly 1 set above Vashti.",
-   "Whoever opened with a Latin jazz set is either on set 5 or on set 2.",
    "All of these are true: Whoever played the vibraphone is on set 3. Whoever played the upright bass is on set 2.",
-   "The trumpet was exactly 1 set above the saxophone.",
-   "All of these are true: Whoever opened with a bebop set is on set 5. Whoever played the flute opened with a standards set.",
-   "Whoever was on set 5 is Ines.",
-   "Whoever was on set 6 is Roscoe.",
-   "Whoever was on set 5 played either the piano or the saxophone.",
-   "A Latin jazz set was exactly 1 set above an original composition set.",
+   "Elmore is on set 3.",
+   "Ines was exactly 1 set above Vashti.",
    "Vashti opened with either a Latin jazz set or a fusion set.",
+   "All of these are true: Whoever opened with a bebop set is on set 5. Whoever played the flute opened with a standards set.",
+   "A Latin jazz set was exactly 1 set above an original composition set.",
+   "Whoever opened with a bebop set is not the trumpet.",
+   "Yolanda opened with a standards set.",
+   "Whoever was on set 6 is Roscoe.",
+   "Elmore opened with a ballad set.",
    "Yolanda was exactly 6 sets above Delphine.",
-   "Whoever played the trombone is either on set 6 or on set 1.",
-   "Yolanda opened with a standards set."
+   "The trumpet was exactly 1 set above the saxophone.",
+   "The upright bass was exactly 1 set above the trombone."
   ],
   "solution": {
    "Musician": [
@@ -509,9 +509,9 @@
     6
    ]
   },
-  "n_clues": 14,
-  "deduction_depth": 6,
-  "direct_fraction": 0.286,
+  "n_clues": 13,
+  "deduction_depth": 5,
+  "direct_fraction": 0.308,
   "puzzle_index": 5,
   "difficulty": "hard",
   "theme_key": "jazz_club"
@@ -568,7 +568,7 @@
    "Whoever was holding a soda water wore a grey coat.",
    "Whoever wore a slate coat is not the Journalist.",
    "Whoever wore a camel coat is on floor 7.",
-   "Whoever was on floor 7 is either the Doctor or the Professor.",
+   "Whoever wore a camel coat is the Doctor.",
    "Whoever was holding a claret is either on floor 4 or on floor 2.",
    "A brandy was exactly 4 floors above a sherry.",
    "Whoever was on floor 5 wore either a charcoal coat or a navy coat."
@@ -612,8 +612,8 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 9,
-  "direct_fraction": 0.214,
+  "deduction_depth": 8,
+  "direct_fraction": 0.286,
   "puzzle_index": 6,
   "difficulty": "hard",
   "theme_key": "manor_mystery"
@@ -968,46 +968,51 @@
    ]
   },
   "clues": [
-   "A blue paddle was exactly 2 rows above a gold paddle.",
-   "Whoever was on row 6 is either the Dealer or the Widow.",
-   "An oil portrait was exactly 5 rows above a grandfather clock.",
-   "Whoever won a bronze statue is the Heiress.",
-   "All of these are true: Whoever was on row 5 won a jeweled brooch. Whoever was on row 3 is the Widow.",
-   "A green paddle was exactly 5 rows above a black paddle.",
-   "The Decorator won a crystal chandelier.",
-   "Whoever won a carved chess set carried a red paddle.",
-   "Whoever carried a green paddle is on row 6.",
-   "A white paddle was exactly 2 rows above a purple paddle.",
-   "All of these are true: Whoever carried a white paddle is the Antiquarian. Whoever carried a gold paddle is the Heiress.",
-   "Whoever carried a purple paddle is the Appraiser."
+   "The Heiress was exactly 1 row above the Widow.",
+   "Whoever was on row 6 is either the Dealer or the Curator.",
+   "Whoever won a crystal chandelier is either on row 7 or on row 1.",
+   "Whoever carried a green paddle is either on row 2 or on row 1.",
+   "Whoever carried a purple paddle won a crystal chandelier.",
+   "A black paddle was exactly 1 row above a green paddle.",
+   "Whoever was on row 2 is not a bronze statue.",
+   "Whoever carried a green paddle is not a carved chess set.",
+   "The Antiquarian was exactly 2 rows above the Dealer.",
+   "Whoever won an oil portrait carried a gold paddle.",
+   "The Decorator was exactly 1 row above the Dealer.",
+   "A jeweled brooch was exactly 1 row above a bronze statue.",
+   "Whoever won a silver tea set is either on row 5 or on row 1.",
+   "The Appraiser won either an oil portrait or a grandfather clock.",
+   "The Decorator was exactly 3 rows above the Widow.",
+   "Whoever carried a red paddle is either the Curator or the Decorator.",
+   "Whoever carried a blue paddle is either the Appraiser or the Curator."
   ],
   "solution": {
    "Bidder": [
+    2,
     5,
+    6,
+    3,
     0,
     4,
-    3,
-    2,
-    6,
     1
    ],
    "Item": [
-    2,
     5,
     6,
-    1,
     4,
+    2,
     3,
-    0
+    0,
+    1
    ],
    "Paddle": [
+    0,
+    1,
+    2,
+    3,
     4,
     5,
-    0,
-    2,
-    6,
-    3,
-    1
+    6
    ],
    "Row": [
     0,
@@ -1019,9 +1024,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 8,
-  "direct_fraction": 0.417,
+  "n_clues": 17,
+  "deduction_depth": 11,
+  "direct_fraction": 0.118,
   "puzzle_index": 10,
   "difficulty": "hard",
   "theme_key": "antique_auction"
@@ -1068,18 +1073,18 @@
    ]
   },
   "clues": [
-   "Whoever was on wall 6 worked in either ink wash or charcoal.",
+   "Whoever worked in charcoal is either on wall 2 or on wall 4.",
    "Whoever worked in collage is on wall 5.",
-   "Perpetua is on wall 2.",
-   "Nils worked in bronze sculpture.",
-   "Whoever favored a pastel palette is Mireille.",
-   "Whoever worked in ink wash is not Odalys.",
-   "A stark black-and-white palette was exactly 1 wall above a warm palette.",
-   "A pastel palette was exactly 2 walls above a muted palette.",
    "Whoever favored a neon palette is not on wall 1.",
+   "Whoever was on wall 6 worked in either ink wash or charcoal.",
    "Charcoal was exactly 2 walls above etching.",
+   "Whoever worked in ink wash is not Odalys.",
+   "Nils worked in bronze sculpture.",
+   "A pastel palette was exactly 2 walls above a muted palette.",
+   "Whoever favored a pastel palette is Mireille.",
    "Kato was exactly 6 walls above Nils.",
-   "Whoever was on wall 4 worked in either ink wash or charcoal.",
+   "A stark black-and-white palette was exactly 1 wall above a warm palette.",
+   "Perpetua is on wall 2.",
    "A stark black-and-white palette was exactly 5 walls above a muted palette.",
    "Whoever worked in watercolor is not on wall 7.",
    "Imre was exactly 2 walls above Nils.",
@@ -1124,7 +1129,7 @@
    ]
   },
   "n_clues": 16,
-  "deduction_depth": 7,
+  "deduction_depth": 6,
   "direct_fraction": 0.25,
   "puzzle_index": 11,
   "difficulty": "hard",
@@ -1172,21 +1177,21 @@
    ]
   },
   "clues": [
-   "Whoever was on tent 3 entered an orchid.",
-   "Verbena is either on tent 6 or on tent 2.",
+   "Linden is either on tent 1 or on tent 5.",
+   "Whoever entered a rose is either Fennimore or Verbena.",
    "Whoever was on tent 6 is Clover.",
-   "Whoever was awarded a bronze ribbon is either on tent 5 or on tent 6.",
-   "All of these are true: Whoever was on tent 4 was awarded a green ribbon. Whoever entered a rose is on tent 2.",
-   "Whoever was on tent 4 is not a chrysanthemum.",
-   "Whoever was awarded a gold ribbon is Basil.",
    "Whoever was on tent 2 is not a yellow ribbon.",
-   "Clover entered either a zinnia or a foxglove.",
+   "All of these are true: Whoever was on tent 4 was awarded a green ribbon. Whoever entered a rose is on tent 2.",
+   "Whoever was on tent 3 entered an orchid.",
+   "Whoever was awarded a gold ribbon is Basil.",
    "Linden is not a purple ribbon.",
+   "Clover entered either a zinnia or a foxglove.",
+   "Whoever entered an orchid is either Verbena or Petra.",
    "A silver ribbon was exactly 3 tents above a yellow ribbon.",
    "Marigold was exactly 1 tent above Fennimore.",
-   "Whoever entered an orchid is either Verbena or Petra.",
-   "Linden is either on tent 1 or on tent 5.",
-   "A tulip was exactly 6 tents above a zinnia."
+   "A tulip was exactly 6 tents above a zinnia.",
+   "Whoever was awarded a bronze ribbon is either on tent 5 or on tent 6.",
+   "Whoever was awarded a green ribbon is not a chrysanthemum."
   ],
   "solution": {
    "Exhibitor": [
@@ -1227,7 +1232,7 @@
    ]
   },
   "n_clues": 15,
-  "deduction_depth": 7,
+  "deduction_depth": 6,
   "direct_fraction": 0.2,
   "puzzle_index": 12,
   "difficulty": "hard",
@@ -1275,19 +1280,22 @@
    ]
   },
   "clues": [
-   "A velvet mask was exactly 2 arrivals above a porcelain mask.",
-   "The Magistrate was exactly 1 arrival above the Poet.",
-   "The Stranger wore either a black lace mask or a velvet mask.",
-   "Whoever opened with a mazurka wore either a silver mask or a velvet mask.",
-   "Whoever wore a jeweled mask is the Diplomat.",
-   "A reel was exactly 2 arrivals above a gavotte.",
-   "Whoever opened with a tango is either on arrival 7 or on arrival 5.",
+   "Whoever was on arrival 7 is not a tango.",
    "The Twin is either on arrival 7 or on arrival 3.",
-   "Whoever opened with a waltz wore a jeweled mask.",
-   "All of these are true: Whoever opened with a minuet wore a velvet mask. Whoever was on arrival 7 wore a jeweled mask.",
+   "A velvet mask was exactly 2 arrivals above a porcelain mask.",
+   "Whoever wore a porcelain mask is not a minuet.",
+   "All of these are true: The Stranger is on arrival 4. Whoever was on arrival 1 wore a golden mask.",
+   "The Magistrate was exactly 1 arrival above the Poet.",
+   "Whoever opened with a tango is either on arrival 7 or on arrival 5.",
+   "A reel was exactly 2 arrivals above a gavotte.",
+   "Whoever wore a jeweled mask is the Diplomat.",
    "Whoever was on arrival 6 is either the Officer or the Twin.",
-   "Whoever wore a black lace mask opened with a tango.",
-   "All of these are true: The Stranger is on arrival 4. Whoever was on arrival 1 wore a golden mask."
+   "Whoever wore a porcelain mask is not on arrival 4.",
+   "Whoever opened with a mazurka wore either a silver mask or a velvet mask.",
+   "Whoever opened with a waltz wore a jeweled mask.",
+   "A mazurka was exactly 3 arrivals above a reel.",
+   "Whoever opened with a reel is not a velvet mask.",
+   "Whoever wore a black lace mask opened with a tango."
   ],
   "solution": {
    "Guest": [
@@ -1327,9 +1335,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 6,
-  "direct_fraction": 0.231,
+  "n_clues": 16,
+  "deduction_depth": 9,
+  "direct_fraction": 0.188,
   "puzzle_index": 13,
   "difficulty": "hard",
   "theme_key": "masquerade_ball"
@@ -1376,18 +1384,18 @@
    ]
   },
   "clues": [
-   "Whoever brought a '62 Impala is either Corrine or Gus.",
+   "Duke was exactly 1 space above Loretta.",
    "Whoever brought a '67 GTO is either on space 6 or on space 7.",
    "Coral pink was exactly 2 spaces above turquoise.",
    "All of these are true: Whoever brought a '57 Bel Air had it painted chrome silver. Whoever had it painted midnight blue brought a '65 Mustang.",
-   "All of these are true: Vivian is on space 6. Whoever had it painted sunburst yellow is on space 1.",
-   "Whoever was on space 4 brought either a '58 Corvette or a '65 Mustang.",
-   "Whoever had it painted chrome silver is Corrine.",
    "All of these are true: Whoever brought a '72 Charger is Roscoe. Whoever brought a '70 Challenger had it painted cream white.",
-   "Whoever had it painted sunburst yellow is Loretta.",
-   "Whoever was on space 2 is either Gus or Duke.",
    "Etta was exactly 1 space above Corrine.",
-   "Whoever brought a '62 Impala is either on space 3 or on space 5."
+   "Whoever had it painted chrome silver is Corrine.",
+   "Roscoe is either on space 3 or on space 7.",
+   "Whoever had it painted sunburst yellow is Loretta.",
+   "Whoever brought a '62 Impala is either Corrine or Gus.",
+   "All of these are true: Vivian is on space 6. Whoever had it painted sunburst yellow is on space 1.",
+   "Whoever was on space 4 brought either a '58 Corvette or a '65 Mustang."
   ],
   "solution": {
    "Owner": [
@@ -1428,7 +1436,7 @@
    ]
   },
   "n_clues": 12,
-  "deduction_depth": 11,
+  "deduction_depth": 9,
   "direct_fraction": 0.167,
   "puzzle_index": 14,
   "difficulty": "hard",
@@ -1484,9 +1492,9 @@
    "Whoever was on table 6 is not a weather balloon project.",
    "A memory-testing app was exactly 3 tables above a water filtration project.",
    "Osei represented either Ivy Lane School or Dunmore Prep.",
-   "Whoever was on table 3 presented a solar energy project.",
-   "All of these are true: Whoever presented a water filtration project is on table 1. Whoever was on table 7 is Marisol.",
    "Whoever represented Glenhaven School is either Emeka or Marisol.",
+   "All of these are true: Whoever presented a water filtration project is on table 1. Whoever was on table 7 is Marisol.",
+   "A solar energy project was exactly 2 tables above a water filtration project.",
    "Tobin is on table 2.",
    "Whoever was on table 2 presented either a robotics project or a wind turbine model.",
    "Osei was exactly 1 table above Wren."
@@ -1531,7 +1539,7 @@
   },
   "n_clues": 14,
   "deduction_depth": 7,
-  "direct_fraction": 0.214,
+  "direct_fraction": 0.143,
   "puzzle_index": 15,
   "difficulty": "hard",
   "theme_key": "science_fair"
@@ -1578,21 +1586,21 @@
    ]
   },
   "clues": [
+   "Whoever was sponsored by a local bank is either Dagny or Callan.",
    "Whoever was on lane 3 is either Dagny or Merit.",
    "Whoever sailed the Meridian is either Merit or Dagny.",
-   "All of these are true: Whoever was sponsored by a marine supply shop is Dagny. Whoever was on lane 1 was sponsored by a local paper.",
-   "All of these are true: Whoever was sponsored by a marine supply shop is on lane 7. Whoever was on lane 7 was sponsored by a marine supply shop.",
-   "Whoever was sponsored by the Marina Grill is not on lane 4.",
+   "Seraphine is not the Coral Queen.",
+   "Callan is on lane 6.",
    "Seraphine was sponsored by either a local paper or a local bank.",
    "The Halcyon was exactly 2 lanes above the Tidewater.",
    "Whoever was on lane 5 was sponsored by the Harbor Club.",
    "The Windrunner was exactly 1 lane above the Storm Petrel.",
-   "Whoever was sponsored by a local bank is either Dagny or Callan.",
-   "Whoever was on lane 6 is either Callan or Fenwick.",
-   "Fenwick was exactly 3 lanes above Osric.",
+   "A sailing school was exactly 2 lanes above the Marina Grill.",
+   "All of these are true: Whoever was sponsored by a marine supply shop is Dagny. Whoever was on lane 1 was sponsored by a local paper.",
+   "Whoever was sponsored by a marine supply shop is on lane 7.",
    "Whoever sailed the Storm Petrel was sponsored by a local bank.",
-   "Whoever was sponsored by a local paper sailed either the Meridian or the Sea Fox.",
-   "A sailing school was exactly 2 lanes above the Marina Grill."
+   "Fenwick was exactly 3 lanes above Osric.",
+   "Whoever was sponsored by the Marina Grill is not on lane 4."
   ],
   "solution": {
    "Sailor": [
@@ -1634,7 +1642,7 @@
   },
   "n_clues": 15,
   "deduction_depth": 10,
-  "direct_fraction": 0.133,
+  "direct_fraction": 0.267,
   "puzzle_index": 16,
   "difficulty": "hard",
   "theme_key": "regatta"
@@ -1681,18 +1689,22 @@
    ]
   },
   "clues": [
+   "Whoever favored a Piedmont selection poured either a Viognier or a Chardonnay.",
+   "Whoever was on flight 7 is not a Piedmont selection.",
+   "A Piedmont selection was exactly 3 flights above a Loire selection.",
    "All of these are true: Whoever poured a Merlot is on flight 2. Marcus is on flight 6.",
    "Marcus poured a Tempranillo.",
-   "A Piedmont selection was exactly 3 flights above a Loire selection.",
-   "Liana poured either a Pinot Noir or a Viognier.",
-   "All of these are true: Whoever poured a Viognier is Noor. Whoever was on flight 7 poured a Chardonnay.",
    "Petra was exactly 3 flights above Liana.",
-   "Whoever poured a Malbec favored either a Piedmont selection or a Rioja selection.",
+   "Liana poured either a Pinot Noir or a Viognier.",
+   "Whoever was on flight 1 favored either a Douro selection or a Piedmont selection.",
    "A Barossa selection was exactly 3 flights above a Douro selection.",
+   "Whoever poured a Chardonnay is Odette.",
+   "All of these are true: Whoever poured a Viognier is Noor. Whoever was on flight 7 poured a Chardonnay.",
+   "Marcus is not a Barossa selection.",
    "Marcus was exactly 3 flights above Rafael.",
-   "All of these are true: Whoever favored a Douro selection is Liana. Whoever poured a Merlot is on flight 2.",
-   "Whoever was on flight 6 is not a Stellenbosch selection.",
-   "Whoever poured a Chardonnay is Odette."
+   "Whoever poured a Malbec favored either a Stellenbosch selection or a Rioja selection.",
+   "Whoever favored a Stellenbosch selection is either on flight 7 or on flight 4.",
+   "Whoever favored a Barossa selection is not Odette."
   ],
   "solution": {
    "Taster": [
@@ -1732,9 +1744,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 8,
-  "direct_fraction": 0.167,
+  "n_clues": 16,
+  "deduction_depth": 6,
+  "direct_fraction": 0.125,
   "puzzle_index": 17,
   "difficulty": "hard",
   "theme_key": "wine_tasting"
@@ -1781,20 +1793,20 @@
    ]
   },
   "clues": [
-   "A walking tour was exactly 2 decks above a market tour.",
+   "The Chef is not on deck 5.",
    "Whoever booked a walking tour ordered a rum punch.",
    "The Nurse was exactly 1 deck above the Diplomat.",
-   "All of these are true: Whoever ordered a mojito is on deck 5. Whoever was on deck 1 is the Diplomat.",
+   "Whoever was on deck 1 is not a market tour.",
    "The Photographer booked either a walking tour or a wine tour.",
-   "The Chef is not on deck 5.",
-   "Whoever was on deck 2 ordered either a paloma or a mojito.",
-   "Whoever booked a wine tour is either on deck 6 or on deck 7.",
-   "Whoever ordered a martini is on deck 6.",
    "A wine tour was exactly 3 decks above a museum visit.",
-   "The Tutor was exactly 2 decks above the Chef.",
-   "All of these are true: The Gambler booked a walking tour. Whoever booked a horseback ride is on deck 7.",
    "The Tutor is not a zip-line tour.",
-   "A mai tai was exactly 6 decks above a spritz."
+   "All of these are true: The Gambler booked a walking tour. Whoever ordered a martini is on deck 6.",
+   "Whoever was on deck 7 booked either a wine tour or a horseback ride.",
+   "Whoever was on deck 7 ordered either a mai tai or a daiquiri.",
+   "The Tutor was exactly 2 decks above the Chef.",
+   "All of these are true: Whoever ordered a mojito is on deck 5. Whoever was on deck 1 is the Diplomat.",
+   "A walking tour was exactly 2 decks above a market tour.",
+   "A daiquiri was exactly 2 decks above a spritz."
   ],
   "solution": {
    "Passenger": [
@@ -1835,8 +1847,8 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 6,
-  "direct_fraction": 0.143,
+  "deduction_depth": 7,
+  "direct_fraction": 0.071,
   "puzzle_index": 18,
   "difficulty": "hard",
   "theme_key": "cruise_mystery"
@@ -2089,17 +2101,17 @@
    "An orchid was exactly 1 tent above a dahlia.",
    "Petra was exactly 2 tents above Thistle.",
    "Fennimore is not a foxglove.",
-   "Basil was exactly 3 tents above Clover.",
-   "All of these are true: Whoever was awarded a rosette ribbon is on tent 3. Whoever entered a chrysanthemum was awarded a gold ribbon.",
+   "Whoever was awarded a gold ribbon is either Marigold or Basil.",
+   "All of these are true: Whoever was on tent 5 is Basil. Whoever was awarded a silver ribbon is Clover.",
    "Whoever entered a rose is Marigold.",
    "Whoever entered a zinnia was awarded either a silver ribbon or a gold ribbon.",
+   "Petra is not a purple ribbon.",
    "Whoever was on tent 6 is not a dahlia.",
-   "Whoever was awarded a gold ribbon is either Marigold or Basil.",
    "A blue ribbon was exactly 2 tents above a silver ribbon.",
-   "Whoever was awarded a purple ribbon is either on tent 1 or on tent 7.",
+   "Basil was exactly 3 tents above Clover.",
    "Marigold was awarded either a silver ribbon or a red ribbon.",
-   "All of these are true: Whoever was on tent 5 is Basil. Whoever was awarded a silver ribbon is Clover.",
-   "Iolanthe was exactly 2 tents above Marigold."
+   "Iolanthe was exactly 2 tents above Marigold.",
+   "All of these are true: Whoever entered a chrysanthemum was awarded a gold ribbon. Whoever was on tent 3 was awarded a rosette ribbon."
   ],
   "solution": {
    "Exhibitor": [
@@ -2140,7 +2152,7 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 8,
+  "deduction_depth": 9,
   "direct_fraction": 0.071,
   "puzzle_index": 21,
   "difficulty": "hard",
@@ -2188,19 +2200,21 @@
    ]
   },
   "clues": [
+   "Whoever won Best Director is not on theater 1.",
+   "Whoever screened a satire is on theater 1.",
+   "Osei was exactly 6 theaters above Solveig.",
    "Whoever screened a psychological thriller won the Discovery Award.",
-   "All of these are true: Whoever was on theater 3 won the Critics' Choice. Whoever won the Jury Prize is Casimir.",
+   "The Audience Award was exactly 1 theater above the Jury Prize.",
+   "The Jury Prize was exactly 1 theater above the Critics' Choice.",
+   "Whoever was on theater 5 is Achille.",
+   "The Critics' Choice was exactly 1 theater above Best Ensemble.",
+   "Whoever won the Jury Prize screened a documentary.",
+   "Osei was exactly 3 theaters above Casimir.",
    "A courtroom drama was exactly 1 theater above a satire.",
-   "Whoever screened a road movie is either on theater 7 or on theater 1.",
-   "Achille was exactly 2 theaters above Noor.",
-   "All of these are true: Whoever was on theater 4 won the Jury Prize. Whoever won Best Ensemble is Wren.",
-   "Anouk was exactly 3 theaters above Noor.",
-   "Whoever was on theater 1 won Best Score.",
-   "Whoever won the Critics' Choice screened either a noir mystery or a psychological thriller.",
-   "Osei is either on theater 3 or on theater 7.",
-   "Whoever was on theater 7 won Best Director.",
-   "Whoever won the Discovery Award is either Anouk or Noor.",
-   "Whoever screened a period drama is either Anouk or Achille."
+   "Whoever won Best Director is not a period drama.",
+   "A noir mystery was exactly 2 theaters above a satire.",
+   "Noor was exactly 2 theaters above Solveig.",
+   "Whoever won the Discovery Award is either Anouk or Noor."
   ],
   "solution": {
    "Director": [
@@ -2240,9 +2254,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 11,
-  "direct_fraction": 0.231,
+  "n_clues": 15,
+  "deduction_depth": 6,
+  "direct_fraction": 0.267,
   "puzzle_index": 22,
   "difficulty": "hard",
   "theme_key": "film_festival"
@@ -2388,19 +2402,19 @@
    ]
   },
   "clues": [
-   "All of these are true: Whoever represented Dunmore Prep is Desmond. Whoever presented an earthquake simulator represented Harborview Middle School.",
-   "Osei was exactly 4 tables above Beckett.",
-   "Whoever was on table 7 presented either a weather balloon project or a water filtration project.",
-   "Anouk represented Ashford Middle School.",
-   "Whoever presented a water filtration project is not Ashford Middle School.",
-   "Desmond was exactly 1 table above Beckett.",
    "All of these are true: Whoever presented an ocean acidity project is Louisa. Whoever was on table 6 is Emeka.",
-   "Dunmore Prep was exactly 1 table above Juniper Academy.",
+   "Desmond was exactly 1 table above Beckett.",
+   "Whoever presented a water filtration project is not Ashford Middle School.",
+   "All of these are true: Whoever represented Dunmore Prep is Desmond. Whoever presented an earthquake simulator represented Harborview Middle School.",
+   "Anouk represented Ashford Middle School.",
+   "A wind turbine model was exactly 3 tables above a water filtration project.",
    "Tobin was exactly 2 tables above Osei.",
+   "Dunmore Prep was exactly 1 table above Juniper Academy.",
+   "Osei was exactly 4 tables above Beckett.",
    "Whoever was on table 4 represented either Fairview Academy or Harborview Middle School.",
-   "A robotics project was exactly 2 tables above a solar energy project.",
+   "Whoever was on table 7 presented a weather balloon project.",
    "Whoever represented Brookline Academy presented either a solar energy project or a wind turbine model.",
-   "A wind turbine model was exactly 3 tables above a water filtration project."
+   "A robotics project was exactly 2 tables above a solar energy project."
   ],
   "solution": {
    "Student": [
@@ -2441,8 +2455,8 @@
    ]
   },
   "n_clues": 13,
-  "deduction_depth": 9,
-  "direct_fraction": 0.077,
+  "deduction_depth": 8,
+  "direct_fraction": 0.154,
   "puzzle_index": 24,
   "difficulty": "hard",
   "theme_key": "science_fair"
@@ -2591,18 +2605,17 @@
   },
   "clues": [
    "Whoever carried a yellow paddle won a jeweled brooch.",
-   "Whoever won a bronze statue is the Broker.",
-   "Whoever was on row 3 carried either a black paddle or a white paddle.",
    "Whoever won a leather-bound atlas carried a green paddle.",
    "A silver tea set was exactly 5 rows above a jeweled brooch.",
-   "The Curator is either on row 6 or on row 5.",
-   "Whoever was on row 2 won either a silver tea set or a bronze statue.",
-   "Whoever won an oil portrait is either on row 3 or on row 6.",
-   "Whoever was on row 3 is either the Collector or the Appraiser.",
-   "All of these are true: Whoever carried a purple paddle is on row 4. Whoever was on row 4 won a carved chess set.",
-   "Whoever was on row 4 is the Dealer.",
-   "Whoever carried a white paddle is on row 7.",
    "The Antiquarian won either a silver tea set or a carved chess set.",
+   "The Curator is either on row 6 or on row 5.",
+   "Whoever won a mahogany desk carried a white paddle.",
+   "Whoever won a bronze statue is the Broker.",
+   "All of these are true: Whoever won a bronze statue is on row 2. The Appraiser is on row 3.",
+   "All of these are true: Whoever carried a purple paddle is on row 4. Whoever was on row 4 won a carved chess set.",
+   "Whoever was on row 3 carried either a black paddle or a white paddle.",
+   "Whoever carried a white paddle is on row 7.",
+   "Whoever was on row 4 is the Dealer.",
    "The Collector is either on row 4 or on row 1.",
    "Whoever carried a gold paddle is not a silver tea set."
   ],
@@ -2644,9 +2657,9 @@
     6
    ]
   },
-  "n_clues": 15,
-  "deduction_depth": 8,
-  "direct_fraction": 0.333,
+  "n_clues": 14,
+  "deduction_depth": 6,
+  "direct_fraction": 0.429,
   "puzzle_index": 26,
   "difficulty": "hard",
   "theme_key": "antique_auction"
@@ -2796,23 +2809,23 @@
    ]
   },
   "clues": [
-   "Whoever wore a white apron is on station 6.",
+   "A lobster bisque was exactly 1 station above a smoked brisket.",
    "A white apron was exactly 3 stations above a bib apron.",
    "Sorrel is not on station 5.",
-   "Whoever was on station 1 plated either a braised short rib or a smoked brisket.",
-   "A lobster bisque was exactly 1 station above a smoked brisket.",
-   "Saffron is either on station 4 or on station 2.",
-   "A roasted root vegetable tart was exactly 1 station above a seared duck breast.",
-   "Remy wore either a chef's coat or a monogrammed apron.",
    "Basil plated either a stuffed quail or a smoked brisket.",
    "Whoever wore a waxed canvas apron is on station 2.",
-   "Whoever was on station 2 is either Sorrel or Saffron.",
-   "Whoever wore a leather apron plated either a seared duck breast or a smoked brisket.",
+   "Whoever wore a leather apron is not on station 7.",
+   "A roasted root vegetable tart was exactly 1 station above a seared duck breast.",
+   "Whoever plated a roasted root vegetable tart is on station 3.",
    "Rosemary is either on station 1 or on station 6.",
-   "Whoever plated a lobster bisque wore a white apron.",
+   "Whoever plated a braised short rib is on station 1.",
+   "Whoever wore a white apron is on station 6.",
+   "All of these are true: Whoever wore a waxed canvas apron is Saffron. Whoever plated a braised short rib is Remy.",
+   "Whoever plated a lobster bisque is either Rosemary or Sorrel.",
+   "A linen apron was exactly 1 station above a bib apron.",
    "Basil is either on station 4 or on station 2.",
    "Tarragon wore either a waxed canvas apron or a monogrammed apron.",
-   "Remy is on station 1."
+   "Remy wore a chef's coat."
   ],
   "solution": {
    "Chef": [
@@ -2853,8 +2866,8 @@
    ]
   },
   "n_clues": 17,
-  "deduction_depth": 8,
-  "direct_fraction": 0.235,
+  "deduction_depth": 7,
+  "direct_fraction": 0.294,
   "puzzle_index": 28,
   "difficulty": "hard",
   "theme_key": "cooking_competition"
@@ -2901,18 +2914,18 @@
    ]
   },
   "clues": [
-   "Whoever wore a golden mask is on arrival 6.",
    "The Painter was exactly 5 arrivals above the Twin.",
-   "Whoever wore a feathered mask is the Merchant.",
-   "A porcelain mask was exactly 1 arrival above a feathered mask.",
-   "All of these are true: Whoever was on arrival 7 opened with a mazurka. Whoever was on arrival 3 wore a feathered mask.",
-   "Whoever was on arrival 7 is either the Officer or the Merchant.",
-   "The Composer was exactly 2 arrivals above the Bride.",
+   "Whoever was on arrival 2 is the Bride.",
    "Whoever opened with a polka is either on arrival 7 or on arrival 6.",
-   "All of these are true: The Bride opened with a waltz. Whoever wore a peacock mask opened with a two-step.",
+   "A porcelain mask was exactly 1 arrival above a feathered mask.",
+   "The Officer wore a mirrored mask.",
+   "The Composer was exactly 2 arrivals above the Bride.",
    "A reel was exactly 3 arrivals above a foxtrot.",
-   "Whoever wore a mirrored mask opened with a mazurka.",
-   "A feathered mask was exactly 2 arrivals above a jeweled mask."
+   "All of these are true: The Bride opened with a waltz. Whoever wore a peacock mask opened with a two-step.",
+   "All of these are true: The Twin is on arrival 1. Whoever was on arrival 7 opened with a mazurka.",
+   "A feathered mask was exactly 2 arrivals above a jeweled mask.",
+   "Whoever wore a golden mask is on arrival 6.",
+   "Whoever wore a feathered mask is the Merchant."
   ],
   "solution": {
    "Guest": [
@@ -2954,7 +2967,7 @@
   },
   "n_clues": 12,
   "deduction_depth": 5,
-  "direct_fraction": 0.25,
+  "direct_fraction": 0.333,
   "puzzle_index": 29,
   "difficulty": "hard",
   "theme_key": "masquerade_ball"
@@ -3001,20 +3014,22 @@
    ]
   },
   "clues": [
-   "Whoever laced up yellow spikes wore a lime vest.",
-   "A white vest was exactly 1 place above a purple vest.",
-   "Cyra was exactly 1 place above Soren.",
-   "Yellow spikes was exactly 1 place above silver spikes.",
-   "Whoever was on place 3 laced up orange spikes.",
+   "Whoever laced up white spikes is not Ronan.",
    "Whoever wore a red vest is either Cyra or Amos.",
    "Whoever wore a maroon vest is either Holt or Amos.",
+   "All of these are true: Whoever wore a purple vest is on place 4. Whoever wore an orange vest is Soren.",
+   "Yellow spikes was exactly 1 place above silver spikes.",
+   "Cyra was exactly 1 place above Soren.",
    "Holt laced up either orange spikes or white spikes.",
-   "Talia was exactly 4 places above Cyra.",
+   "Whoever laced up yellow spikes wore a lime vest.",
+   "Talia is not a lime vest.",
+   "Whoever wore an orange vest is either on place 1 or on place 6.",
+   "Whoever was on place 3 laced up orange spikes.",
+   "Talia is not silver spikes.",
+   "A white vest was exactly 1 place above a purple vest.",
    "Ronan was exactly 3 places above Cyra.",
-   "Whoever was on place 6 laced up either white spikes or green spikes.",
    "Black spikes was exactly 3 places above red spikes.",
-   "Whoever laced up white spikes is not Ronan.",
-   "All of these are true: Whoever wore a purple vest is on place 4. Whoever wore an orange vest is Soren."
+   "Talia was exactly 4 places above Cyra."
   ],
   "solution": {
    "Runner": [
@@ -3054,9 +3069,9 @@
     6
    ]
   },
-  "n_clues": 14,
+  "n_clues": 16,
   "deduction_depth": 7,
-  "direct_fraction": 0.143,
+  "direct_fraction": 0.125,
   "puzzle_index": 30,
   "difficulty": "hard",
   "theme_key": "track_meet"
@@ -3103,17 +3118,17 @@
    ]
   },
   "clues": [
-   "Whoever was on flight 3 favored either a Piedmont selection or a Napa selection.",
-   "All of these are true: Whoever poured a Riesling is on flight 1. Whoever poured a Pinot Noir is on flight 6.",
-   "Liana is either on flight 7 or on flight 4.",
-   "Rafael was exactly 3 flights above Bea.",
-   "All of these are true: Whoever favored a Rioja selection poured a Tempranillo. Noor is on flight 7.",
-   "A Stellenbosch selection was exactly 6 flights above a Loire selection.",
    "A Malbec was exactly 4 flights above a Chardonnay.",
-   "Whoever poured a Syrah is either Dax or Liana.",
-   "Whoever favored a Piedmont selection is either Bea or Rafael.",
+   "Whoever was on flight 3 favored either a Piedmont selection or a Napa selection.",
+   "Whoever was on flight 6 is not a Barossa selection.",
+   "All of these are true: Whoever poured a Riesling is on flight 1. Whoever poured a Pinot Noir is on flight 6.",
    "Petra was exactly 5 flights above Marcus.",
-   "Whoever was on flight 6 favored either a Marlborough selection or a Rioja selection.",
+   "Whoever poured a Syrah is either Dax or Liana.",
+   "Whoever poured a Syrah favored either a Marlborough selection or a Barossa selection.",
+   "Rafael was exactly 3 flights above Bea.",
+   "A Stellenbosch selection was exactly 6 flights above a Loire selection.",
+   "All of these are true: Whoever favored a Rioja selection poured a Tempranillo. Noor is on flight 7.",
+   "Noor was exactly 3 flights above Liana.",
    "Whoever favored a Piedmont selection is either Liana or Rafael."
   ],
   "solution": {
@@ -3155,7 +3170,7 @@
    ]
   },
   "n_clues": 12,
-  "deduction_depth": 7,
+  "deduction_depth": 8,
   "direct_fraction": 0.0,
   "puzzle_index": 31,
   "difficulty": "hard",
@@ -3203,21 +3218,19 @@
    ]
   },
   "clues": [
-   "Xochitl is on slot 6.",
-   "Brookline was exactly 1 slot above Fairview.",
+   "Casper came from either Fairview or Dunmore.",
    "Grief was exactly 4 slots above the ocean.",
+   "Childhood was exactly 1 slot above the city at night.",
+   "Juniper Hill was exactly 5 slots above Fairview.",
+   "Xochitl is on slot 6.",
    "All of these are true: Adaora came from Brookline. Whoever came from Ashford wrote about hope.",
    "Whoever was on slot 4 wrote about either the city at night or family history.",
-   "Finch wrote about grief.",
-   "Naledi is not Fairview.",
-   "Whoever wrote about the ocean came from either Ivy Lane or Dunmore.",
-   "Whoever was on slot 1 is not Fairview.",
-   "Whoever was on slot 7 is not Naledi.",
+   "All of these are true: Finch wrote about grief. Whoever wrote about childhood is on slot 3.",
    "Lior was exactly 1 slot above Adaora.",
-   "Childhood was exactly 1 slot above the city at night.",
-   "Casper came from either Fairview or Dunmore.",
+   "Whoever wrote about the ocean came from either Ivy Lane or Dunmore.",
+   "Whoever was on slot 7 is not Naledi.",
    "Whoever was on slot 5 came from Ivy Lane.",
-   "Juniper Hill was exactly 5 slots above Fairview."
+   "Naledi is not Fairview."
   ],
   "solution": {
    "Poet": [
@@ -3257,9 +3270,9 @@
     6
    ]
   },
-  "n_clues": 15,
+  "n_clues": 13,
   "deduction_depth": 7,
-  "direct_fraction": 0.2,
+  "direct_fraction": 0.154,
   "puzzle_index": 32,
   "difficulty": "hard",
   "theme_key": "poetry_slam"
@@ -3506,19 +3519,19 @@
    ]
   },
   "clues": [
-   "A spice cake was exactly 1 table above a lemon tart.",
-   "Whoever wore a solid red apron is not a chocolate torte.",
-   "Mateo was exactly 2 tables above Tobias.",
-   "Whoever wore a solid red apron is either Mateo or Faisal.",
    "Coral was exactly 2 tables above Beckett.",
-   "Whoever wore a linen apron is either on table 7 or on table 2.",
-   "A checkered apron was exactly 3 tables above a polka-dot apron.",
-   "A checkered apron was exactly 4 tables above a canvas apron.",
-   "Whoever was on table 4 wore either a canvas apron or a solid red apron.",
-   "Whoever entered a caramel roll is Coral.",
-   "A checkered apron was exactly 2 tables above a gingham apron.",
+   "All of these are true: Whoever entered a custard pie is on table 4. Whoever entered a lemon tart is Beckett.",
    "Whoever entered a cheese souffle wore a checkered apron.",
+   "Mateo was exactly 2 tables above Tobias.",
+   "Whoever wore a solid red apron is not Tobias.",
+   "Whoever wore a solid red apron is not a chocolate torte.",
+   "Coral entered either a chocolate torte or a caramel roll.",
    "A fruit galette was exactly 6 tables above a lemon tart.",
+   "A checkered apron was exactly 3 tables above a polka-dot apron.",
+   "Whoever entered a chocolate torte is either on table 4 or on table 6.",
+   "A checkered apron was exactly 4 tables above a canvas apron.",
+   "A checkered apron was exactly 2 tables above a gingham apron.",
+   "Whoever wore a linen apron is either on table 7 or on table 2.",
    "Idris is on table 5.",
    "Whoever was on table 7 is either Hazel or Mateo."
   ],
@@ -3561,8 +3574,8 @@
    ]
   },
   "n_clues": 15,
-  "deduction_depth": 10,
-  "direct_fraction": 0.2,
+  "deduction_depth": 8,
+  "direct_fraction": 0.133,
   "puzzle_index": 35,
   "difficulty": "hard",
   "theme_key": "bake_off"
@@ -3609,19 +3622,19 @@
    ]
   },
   "clues": [
-   "The Butler was exactly 1 floor above the Solicitor.",
+   "A soda water was exactly 3 floors above a claret.",
    "Whoever wore a forest coat is either the Colonel or the Major.",
    "Whoever was holding a soda water wore an ivory coat.",
    "All of these are true: Whoever was on floor 5 is the Colonel. The Butler wore a camel coat.",
    "Whoever was on floor 4 is not a claret.",
    "All of these are true: Whoever was holding a whisky is on floor 6. Whoever wore a russet coat was holding a cordial.",
    "Whoever wore a charcoal coat was holding either a claret or a lemonade.",
-   "The Butler was exactly 2 floors above the Actress.",
+   "Whoever was holding a chamomile tea wore a forest coat.",
    "Whoever wore a plum coat was holding a lemonade.",
-   "The Professor was holding either a soda water or a cordial.",
+   "The Butler was exactly 1 floor above the Solicitor.",
+   "The Butler was exactly 2 floors above the Actress.",
    "An ivory coat was exactly 4 floors above a forest coat.",
-   "Whoever wore a forest coat was holding either a cordial or a chamomile tea.",
-   "A soda water was exactly 3 floors above a claret."
+   "The Professor was holding a cordial."
   ],
   "solution": {
    "Guest": [
@@ -3663,7 +3676,7 @@
   },
   "n_clues": 13,
   "deduction_depth": 8,
-  "direct_fraction": 0.154,
+  "direct_fraction": 0.308,
   "puzzle_index": 36,
   "difficulty": "hard",
   "theme_key": "manor_mystery"
@@ -4117,22 +4130,21 @@
    ]
   },
   "clues": [
-   "Silas was exactly 4 sets above Marcus.",
-   "Whoever was on set 2 opened with a standards set.",
-   "A standards set was exactly 1 set above a fusion set.",
-   "Whoever was on set 5 played the piano.",
-   "Django played either the trombone or the clarinet.",
-   "Ines was exactly 3 sets above Django.",
-   "Whoever opened with a ballad set played the guitar.",
-   "Silas played either the drums or the clarinet.",
    "Whoever was on set 3 is either Marcus or Roscoe.",
+   "Whoever played the trombone is not on set 4.",
+   "Silas played either the drums or the clarinet.",
+   "Whoever played the trumpet is either Marcus or Delphine.",
+   "Whoever was on set 5 played the piano.",
+   "Whoever opened with a blues set is either Silas or Django.",
+   "Whoever was on set 2 opened with a standards set.",
+   "Whoever opened with a fusion set is Django.",
    "Booker was exactly 1 set above Silas.",
    "Whoever opened with a modal set is not Delphine.",
-   "Whoever opened with a blues set is either Silas or Django.",
-   "Whoever was on set 4 opened with a ballad set.",
+   "Ines was exactly 3 sets above Django.",
+   "Silas was exactly 4 sets above Marcus.",
+   "The drums was exactly 4 sets above the vibraphone.",
    "Booker opened with either a swing set or a ballad set.",
-   "Booker played either the guitar or the drums.",
-   "Marcus played either the trumpet or the piano."
+   "Whoever was on set 4 opened with a ballad set."
   ],
   "solution": {
    "Musician": [
@@ -4172,9 +4184,9 @@
     6
    ]
   },
-  "n_clues": 16,
+  "n_clues": 15,
   "deduction_depth": 8,
-  "direct_fraction": 0.25,
+  "direct_fraction": 0.267,
   "puzzle_index": 41,
   "difficulty": "hard",
   "theme_key": "jazz_club"
@@ -4221,47 +4233,50 @@
    ]
   },
   "clues": [
-   "The Golden Reel was exactly 2 theaters above the Discovery Award.",
-   "An animated feature was exactly 3 theaters above a psychological thriller.",
-   "Whoever was on theater 6 is either Idris or Halston.",
-   "Whoever was on theater 2 won the Critics' Choice.",
-   "Osei was exactly 1 theater above Marchetti.",
-   "All of these are true: Whoever was on theater 5 is Idris. Whoever screened a noir mystery won Best Screenplay.",
-   "Whoever won the Jury Prize is Noor.",
-   "Whoever screened an animated feature is either on theater 6 or on theater 2.",
-   "Marchetti was exactly 1 theater above Perpetua.",
-   "Whoever screened a courtroom drama is Wren.",
-   "All of these are true: Osei won the Golden Reel. Whoever was on theater 7 screened a documentary.",
-   "Whoever won the Audience Award is not Halston.",
-   "Whoever screened a coming-of-age film won either the Discovery Award or Best Ensemble."
+   "The Audience Award was exactly 3 theaters above the Jury Prize.",
+   "Whoever won the Golden Reel is not Wren.",
+   "Whoever was on theater 4 is not Idris.",
+   "The Critics' Choice was exactly 3 theaters above the Golden Reel.",
+   "Whoever won the Audience Award screened a road movie.",
+   "Wren screened either a courtroom drama or a coming-of-age film.",
+   "Whoever won the Discovery Award is not a courtroom drama.",
+   "Whoever screened a psychological thriller is on theater 4.",
+   "Wren is not the Jury Prize.",
+   "An animated feature was exactly 1 theater above a documentary.",
+   "Whoever won Best Ensemble is either on theater 3 or on theater 5.",
+   "Marchetti was exactly 1 theater above Osei.",
+   "Whoever won the Audience Award is Noor.",
+   "The Discovery Award was exactly 3 theaters above the Critics' Choice.",
+   "A noir mystery was exactly 2 theaters above a psychological thriller.",
+   "Halston won the Discovery Award."
   ],
   "solution": {
    "Director": [
-    2,
-    1,
     0,
+    1,
     3,
+    2,
+    5,
     4,
-    6,
-    5
+    6
    ],
    "Genre": [
-    6,
-    4,
-    1,
-    3,
     0,
     5,
-    2
-   ],
-   "Award": [
-    3,
-    1,
-    5,
+    4,
     2,
     6,
+    1,
+    3
+   ],
+   "Award": [
+    4,
+    3,
+    2,
     0,
-    4
+    1,
+    6,
+    5
    ],
    "Theater": [
     0,
@@ -4273,9 +4288,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 7,
-  "direct_fraction": 0.231,
+  "n_clues": 16,
+  "deduction_depth": 6,
+  "direct_fraction": 0.25,
   "puzzle_index": 42,
   "difficulty": "hard",
   "theme_key": "film_festival"
@@ -4323,22 +4338,21 @@
   },
   "clues": [
    "A wind turbine model was exactly 1 table above a robotics project.",
-   "Whoever presented a memory-testing app is Desmond.",
-   "Whoever represented Glenhaven School presented an earthquake simulator.",
    "Whoever represented Juniper Academy presented a bacteria growth project.",
-   "Brookline Academy was exactly 1 table above Juniper Academy.",
+   "Whoever represented Glenhaven School presented an earthquake simulator.",
+   "Whoever presented an ocean acidity project is not Beckett.",
    "Louisa was exactly 1 table above Marisol.",
-   "Whoever presented a memory-testing app is not on table 6.",
-   "Anouk is either on table 3 or on table 5.",
    "Ashford Middle School was exactly 4 tables above Cedar Ridge School.",
-   "Dunmore Prep was exactly 2 tables above Brookline Academy.",
+   "Desmond was exactly 5 tables above Marisol.",
+   "Whoever presented a memory-testing app is Desmond.",
+   "Anouk is either on table 3 or on table 5.",
    "Anouk was exactly 1 table above Osei.",
    "Whoever was on table 3 presented either a bacteria growth project or a wind turbine model.",
-   "Whoever represented Cedar Ridge School is on table 3.",
    "Anouk represented either Brookline Academy or Glenhaven School.",
    "Tobin is on table 1.",
-   "Whoever presented an ocean acidity project is not Beckett.",
-   "Whoever represented Ashford Middle School presented either an ocean acidity project or a memory-testing app."
+   "Dunmore Prep was exactly 2 tables above Brookline Academy.",
+   "Whoever represented Cedar Ridge School is on table 3.",
+   "Brookline Academy was exactly 1 table above Juniper Academy."
   ],
   "solution": {
    "Student": [
@@ -4378,9 +4392,9 @@
     6
    ]
   },
-  "n_clues": 17,
-  "deduction_depth": 10,
-  "direct_fraction": 0.294,
+  "n_clues": 16,
+  "deduction_depth": 8,
+  "direct_fraction": 0.312,
   "puzzle_index": 43,
   "difficulty": "hard",
   "theme_key": "science_fair"
@@ -4427,21 +4441,19 @@
    ]
   },
   "clues": [
-   "Amani is either on slot 2 or on slot 1.",
-   "Amani wrote about protest.",
-   "Whoever came from Juniper Hill is Xochitl.",
-   "Suri came from either Ashford or Dunmore.",
-   "Whoever was on slot 4 wrote about either heartbreak or memory.",
+   "Whoever came from Harborview wrote about the ocean.",
    "Whoever wrote about heartbreak came from either Fairview or Cedar Falls.",
+   "Rune was exactly 1 slot above Gideon.",
+   "All of these are true: Suri is on slot 3. Whoever wrote about grief came from Juniper Hill.",
+   "Suri came from either Ashford or Dunmore.",
    "Distance was exactly 4 slots above protest.",
-   "Gideon was exactly 2 slots above Elowen.",
+   "Amani wrote about protest.",
    "Glenhaven was exactly 1 slot above Dunmore.",
-   "All of these are true: Whoever came from Harborview is on slot 5. Rune is on slot 7.",
+   "Gideon was exactly 2 slots above Elowen.",
    "Fairview was exactly 2 slots above Harborview.",
+   "Amani was exactly 1 slot above Xochitl.",
    "Elowen wrote about memory.",
-   "Xochitl wrote about either the ocean or grief.",
-   "Amani came from Cedar Falls.",
-   "Whoever came from Harborview wrote about the ocean."
+   "Amani came from Cedar Falls."
   ],
   "solution": {
    "Poet": [
@@ -4481,9 +4493,9 @@
     6
    ]
   },
-  "n_clues": 15,
-  "deduction_depth": 9,
-  "direct_fraction": 0.333,
+  "n_clues": 13,
+  "deduction_depth": 6,
+  "direct_fraction": 0.308,
   "puzzle_index": 44,
   "difficulty": "hard",
   "theme_key": "poetry_slam"
@@ -4538,14 +4550,14 @@
    "Whoever was on arrival 6 opened with either a minuet or a tango.",
    "Whoever was on arrival 7 wore either a feathered mask or a silver mask.",
    "Whoever opened with a waltz is either the Diplomat or the Baroness.",
-   "The Diplomat is not a beaded mask.",
    "A feathered mask was exactly 3 arrivals above a velvet mask.",
+   "A mazurka was exactly 3 arrivals above a polka.",
    "A peacock mask was exactly 2 arrivals above a velvet mask.",
    "The Painter wore a silver mask.",
    "All of these are true: Whoever wore a feathered mask opened with a mazurka. The Magistrate is on arrival 4.",
    "Whoever opened with a minuet is either the Merchant or the Officer.",
    "Whoever wore a golden mask opened with either a waltz or a tango.",
-   "A mazurka was exactly 3 arrivals above a polka."
+   "Whoever wore a beaded mask is either the Poet or the Magistrate."
   ],
   "solution": {
    "Guest": [
@@ -4736,23 +4748,22 @@
    ]
   },
   "clues": [
-   "Whoever sold seasonal jam is Perry.",
    "Whoever decorated a green-striped stall is either on booth 1 or on booth 2.",
-   "Whoever sold goat cheese decorated a red-striped stall.",
-   "Rosalie was exactly 4 booths above Otho.",
    "Seasonal jam was exactly 2 booths above heirloom tomatoes.",
-   "Whoever was on booth 5 decorated either a canvas-awning stall or a red-striped stall.",
-   "Whoever decorated a canvas-awning stall is either Sunniva or Wren.",
-   "All of these are true: Whoever sold smoked trout decorated a string-lit stall. Whoever decorated a rustic-barrel stall sold heirloom tomatoes.",
+   "Sunniva is not sourdough bread.",
    "A red-striped stall was exactly 5 booths above a rustic-barrel stall.",
-   "Whoever sold heirloom tomatoes is not Barnabas.",
-   "Otho is not sourdough bread.",
+   "Whoever was on booth 2 is Otho.",
+   "Whoever sold smoked trout decorated a string-lit stall.",
+   "Barnabas was exactly 3 booths above Coraline.",
+   "Rosalie was exactly 4 booths above Otho.",
+   "Maple syrup was exactly 1 booth above heirloom tomatoes.",
    "Whoever sold goat cheese is Rosalie.",
    "Wren is either on booth 3 or on booth 7.",
-   "Whoever sold smoked trout is either on booth 4 or on booth 2.",
    "Whoever decorated a wooden crate stall sold either seasonal jam or maple syrup.",
-   "Whoever was on booth 2 is Otho.",
-   "Whoever sold wildflower honey is either Barnabas or Sunniva."
+   "Whoever was on booth 5 decorated either a canvas-awning stall or a red-striped stall.",
+   "Whoever sold seasonal jam is Perry.",
+   "Whoever sold smoked trout is either on booth 4 or on booth 2.",
+   "Whoever sold goat cheese decorated a red-striped stall."
   ],
   "solution": {
    "Vendor": [
@@ -4792,9 +4803,9 @@
     6
    ]
   },
-  "n_clues": 17,
-  "deduction_depth": 11,
-  "direct_fraction": 0.235,
+  "n_clues": 16,
+  "deduction_depth": 12,
+  "direct_fraction": 0.312,
   "puzzle_index": 47,
   "difficulty": "hard",
   "theme_key": "farmers_market"
@@ -4841,23 +4852,21 @@
    ]
   },
   "clues": [
-   "The Steward booked either a wine tour or a walking tour.",
-   "Whoever booked a market tour ordered a gin fizz.",
-   "A walking tour was exactly 1 deck above a kayak trip.",
    "Whoever ordered a sidecar is not a wine tour.",
-   "Whoever was on deck 6 ordered either a sidecar or a mai tai.",
+   "Whoever ordered a gin fizz is on deck 5.",
    "A rum punch was exactly 1 deck above a martini.",
-   "The Gambler is not a gin fizz.",
+   "Whoever booked a market tour ordered a gin fizz.",
+   "Whoever ordered a martini is either the Tutor or the Steward.",
+   "A walking tour was exactly 1 deck above a kayak trip.",
    "Whoever booked a wine tour is the Nurse.",
-   "Whoever was on deck 3 booked a museum visit.",
-   "Whoever booked a horseback ride ordered a daiquiri.",
+   "Whoever was on deck 6 ordered either a sidecar or a mai tai.",
    "The Tutor is on deck 4.",
-   "A daiquiri was exactly 2 decks above a martini.",
-   "All of these are true: Whoever ordered a gin fizz is on deck 5. Whoever ordered a martini booked a walking tour.",
-   "Whoever was on deck 1 is the Widower.",
-   "Whoever booked a wine tour is not on deck 7.",
    "The Violinist booked either a zip-line tour or a walking tour.",
-   "Whoever ordered a sidecar is not on deck 1."
+   "Whoever booked a museum visit ordered either a gin fizz or a rum punch.",
+   "A daiquiri was exactly 2 decks above a martini.",
+   "The Gambler is not a gin fizz.",
+   "Whoever was on deck 7 ordered either a rum punch or a sidecar.",
+   "Whoever was on deck 1 is the Widower."
   ],
   "solution": {
    "Passenger": [
@@ -4897,9 +4906,9 @@
     6
    ]
   },
-  "n_clues": 17,
-  "deduction_depth": 7,
-  "direct_fraction": 0.353,
+  "n_clues": 15,
+  "deduction_depth": 10,
+  "direct_fraction": 0.333,
   "puzzle_index": 48,
   "difficulty": "hard",
   "theme_key": "cruise_mystery"
@@ -4950,12 +4959,12 @@
    "A chamomile tea was exactly 1 floor above a claret.",
    "The Envoy is not a plum coat.",
    "The Actress wore a burgundy coat.",
-   "The Doctor is either on floor 4 or on floor 5.",
+   "Whoever wore a forest coat is not the Butler.",
    "The Professor is not a chamomile tea.",
    "Whoever was holding a whisky wore either a russet coat or a grey coat.",
    "Whoever was on floor 5 was holding either a champagne or a claret.",
    "A coffee was exactly 2 floors above a lemonade.",
-   "Whoever was on floor 6 wore either a slate coat or a charcoal coat.",
+   "The Doctor is either on floor 4 or on floor 5.",
    "The Journalist was exactly 1 floor above the Professor.",
    "Whoever wore a charcoal coat was holding a claret.",
    "A burgundy coat was exactly 3 floors above a grey coat.",
@@ -5153,13 +5162,14 @@
   "clues": [
    "A yellow paddle was exactly 1 row above a black paddle.",
    "Whoever was on row 4 won either a grandfather clock or an oil portrait.",
-   "The Widow won either a grandfather clock or a bronze statue.",
    "All of these are true: Whoever won a porcelain vase is the Retiree. The Widow is on row 1.",
-   "A yellow paddle was exactly 5 rows above a purple paddle.",
-   "All of these are true: The Antiquarian carried a blue paddle. Whoever carried a gold paddle is on row 2.",
-   "The Curator was exactly 1 row above the Retiree.",
    "Whoever was on row 3 carried either a purple paddle or a red paddle.",
+   "A yellow paddle was exactly 5 rows above a purple paddle.",
+   "Whoever won a crystal chandelier is not a purple paddle.",
+   "The Curator was exactly 1 row above the Retiree.",
+   "All of these are true: The Antiquarian carried a blue paddle. Whoever carried a gold paddle is on row 2.",
    "The Decorator is on row 2.",
+   "Whoever won a jeweled brooch is either on row 2 or on row 4.",
    "The Heiress is on row 7.",
    "Whoever won an oil portrait is either the Curator or the Retiree.",
    "A mahogany desk was exactly 1 row above a jeweled brooch."
@@ -5202,9 +5212,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 11,
-  "direct_fraction": 0.167,
+  "n_clues": 13,
+  "deduction_depth": 7,
+  "direct_fraction": 0.154,
   "puzzle_index": 51,
   "difficulty": "expert",
   "theme_key": "antique_auction"
@@ -5251,47 +5261,46 @@
    ]
   },
   "clues": [
-   "Cherry red was exactly 2 spaces above chrome silver.",
-   "All of these are true: Whoever brought a '55 Beetle had it painted cherry red. Whoever had it painted cherry red brought a '55 Beetle.",
-   "Whoever had it painted cream white brought a '58 Corvette.",
-   "Gus was exactly 1 space above Roscoe.",
-   "Matte black was exactly 2 spaces above burnt orange.",
-   "Loretta is either on space 6 or on space 2.",
-   "Vivian brought either a '57 Bel Air or a '58 Corvette.",
-   "All of these are true: Vivian had it painted burnt orange. Chester brought a '67 GTO.",
-   "Whoever brought a '69 Camaro had it painted either cherry red or sunburst yellow.",
-   "All of these are true: Whoever was on space 1 had it painted burnt orange. Whoever brought a '69 Camaro is Duke.",
-   "All of these are true: Whoever was on space 5 is Hank. Roscoe is on space 6.",
-   "Whoever brought a '72 Charger is Hank.",
-   "Whoever had it painted cream white is not Loretta."
+   "Whoever brought a '67 GTO is either Roscoe or Duke.",
+   "All of these are true: Whoever was on space 4 had it painted sunburst yellow. Whoever had it painted chrome silver is Gus.",
+   "Cherry red was exactly 3 spaces above chrome silver.",
+   "A '57 Bel Air was exactly 1 space above a '67 GTO.",
+   "A '55 Beetle was exactly 2 spaces above a '67 GTO.",
+   "Matte black was exactly 5 spaces above chrome silver.",
+   "Vivian brought either a '69 Camaro or a '72 Charger.",
+   "A '69 Camaro was exactly 5 spaces above a '57 Bel Air.",
+   "Burnt orange was exactly 5 spaces above midnight blue.",
+   "Loretta is not on space 3.",
+   "Whoever had it painted sunburst yellow brought a '65 Mustang.",
+   "All of these are true: Duke is on space 6. Whoever brought a '69 Camaro is Chester."
   ],
   "solution": {
    "Owner": [
+    3,
     1,
+    4,
     6,
     0,
-    2,
     5,
-    3,
-    4
+    2
    ],
    "Car": [
-    2,
+    0,
     5,
     4,
-    1,
     3,
-    0,
-    6
+    6,
+    1,
+    2
    ],
    "Color": [
     3,
+    0,
     1,
     4,
-    6,
+    2,
     5,
-    0,
-    2
+    6
    ],
    "Space": [
     0,
@@ -5303,9 +5312,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 7,
-  "direct_fraction": 0.154,
+  "n_clues": 12,
+  "deduction_depth": 6,
+  "direct_fraction": 0.083,
   "puzzle_index": 52,
   "difficulty": "expert",
   "theme_key": "vintage_car_show"
@@ -5352,18 +5361,19 @@
    ]
   },
   "clues": [
-   "Whoever plated a stuffed quail wore a red apron.",
-   "All of these are true: Whoever was on station 3 wore a leather apron. Whoever wore a white apron is Rosemary.",
-   "Saffron was exactly 2 stations above Juniper.",
-   "All of these are true: Whoever plated a wild rice pilaf is Anise. Whoever wore a bib apron is Juniper.",
-   "Whoever plated a seared duck breast wore either a leather apron or a white apron.",
+   "Whoever was on station 6 plated either a lobster bisque or a wild rice pilaf.",
+   "All of these are true: Whoever wore a monogrammed apron plated a braised short rib. Cayenne is on station 6.",
+   "A saffron paella was exactly 5 stations above a roasted root vegetable tart.",
    "A saffron paella was exactly 6 stations above a braised short rib.",
-   "Marjoram was exactly 1 station above Cayenne.",
-   "All of these are true: Whoever was on station 6 wore a black apron. Whoever plated a saffron paella is on station 7.",
-   "Cayenne plated either a stuffed quail or a lobster bisque.",
+   "A wild rice pilaf was exactly 1 station above a roasted root vegetable tart.",
+   "All of these are true: Whoever was on station 3 wore a leather apron. Whoever wore a white apron is Rosemary.",
+   "Whoever was on station 4 is not a black apron.",
+   "Whoever wore a bib apron is Juniper.",
+   "Saffron was exactly 2 stations above Juniper.",
+   "Whoever plated a seared duck breast wore either a leather apron or a white apron.",
    "Whoever was on station 7 wore either a white apron or a waxed canvas apron.",
-   "Whoever was on station 1 is either Saffron or Clove.",
-   "Whoever was on station 6 is Cayenne."
+   "Marjoram was exactly 4 stations above Anise.",
+   "Whoever was on station 1 is either Saffron or Clove."
   ],
   "solution": {
    "Chef": [
@@ -5403,9 +5413,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 7,
-  "direct_fraction": 0.167,
+  "n_clues": 13,
+  "deduction_depth": 8,
+  "direct_fraction": 0.077,
   "puzzle_index": 53,
   "difficulty": "expert",
   "theme_key": "cooking_competition"
@@ -5453,18 +5463,18 @@
   },
   "clues": [
    "All of these are true: Whoever was on board 5 is Otis. Whoever was on board 6 represented the Meridian Club.",
-   "Whoever was on board 6 is either Simone or Marguerite.",
+   "Whoever played the Nimzo-Indian is either on board 7 or on board 6.",
    "The French Defense was exactly 3 boards above the Grunfeld Defense.",
-   "The Nimzo-Indian was exactly 3 boards above the Ruy Lopez.",
+   "Whoever was on board 6 is either Simone or Marguerite.",
    "Aiko was exactly 6 boards above Declan.",
+   "The Nimzo-Indian was exactly 3 boards above the Ruy Lopez.",
    "Marguerite was exactly 1 board above Declan.",
-   "Whoever played the French Defense represented either the Harborview Club or the Riverside Club.",
    "The Harborview Club was exactly 4 boards above the Downtown Club.",
-   "The University Club was exactly 1 board above the Foxwood Club.",
+   "Whoever played the French Defense represented either the Harborview Club or the Riverside Club.",
    "The Ruy Lopez was exactly 1 board above the English Opening.",
-   "Felix was exactly 2 boards above Declan.",
+   "The University Club was exactly 1 board above the Foxwood Club.",
    "All of these are true: Whoever played the King's Indian is Aiko. Whoever represented the Brookline Club played the King's Indian.",
-   "Whoever played the English Opening represented either the University Club or the Foxwood Club."
+   "Felix was exactly 2 boards above Declan."
   ],
   "solution": {
    "Player": [
@@ -5505,7 +5515,7 @@
    ]
   },
   "n_clues": 13,
-  "deduction_depth": 5,
+  "deduction_depth": 6,
   "direct_fraction": 0.0,
   "puzzle_index": 54,
   "difficulty": "expert",
@@ -5855,49 +5865,47 @@
    ]
   },
   "clues": [
-   "A black paddle was exactly 1 row above a gold paddle.",
-   "A jeweled brooch was exactly 3 rows above a silver tea set.",
-   "Whoever won a leather-bound atlas is the Decorator.",
-   "Whoever carried a red paddle won either a mahogany desk or a porcelain vase.",
-   "The Curator was exactly 6 rows above the Widow.",
-   "Whoever was on row 1 won a silver tea set.",
-   "Whoever won a mahogany desk is either on row 4 or on row 7.",
-   "All of these are true: Whoever was on row 1 carried a white paddle. Whoever carried a white paddle is on row 1.",
-   "Whoever carried a purple paddle is either on row 2 or on row 7.",
-   "Whoever carried a red paddle won either a leather-bound atlas or a mahogany desk.",
-   "The Antiquarian was exactly 1 row above the Appraiser.",
-   "All of these are true: Whoever won a leather-bound atlas is on row 2. Whoever won a porcelain vase is the Dealer.",
-   "The Antiquarian was exactly 2 rows above the Dealer.",
-   "The Broker is not an oil portrait.",
-   "The Antiquarian carried a yellow paddle."
+   "A mahogany desk was exactly 1 row above a grandfather clock.",
+   "The Appraiser was exactly 2 rows above the Curator.",
+   "The Broker was exactly 5 rows above the Antiquarian.",
+   "Whoever won a grandfather clock is either on row 6 or on row 7.",
+   "Whoever was on row 6 carried either a green paddle or a gold paddle.",
+   "Whoever was on row 5 won either a jeweled brooch or a mahogany desk.",
+   "The Dealer carried either a purple paddle or a gold paddle.",
+   "Whoever carried a red paddle is the Decorator.",
+   "A yellow paddle was exactly 1 row above a red paddle.",
+   "A porcelain vase was exactly 1 row above a leather-bound atlas.",
+   "Whoever won a silver tea set carried either a gold paddle or a black paddle.",
+   "All of these are true: Whoever won an oil portrait carried a green paddle. Whoever carried a purple paddle is on row 7.",
+   "All of these are true: Whoever carried a green paddle is on row 3. Whoever was on row 1 carried a red paddle."
   ],
   "solution": {
    "Bidder": [
-    2,
-    1,
     5,
-    3,
-    6,
     0,
-    4
+    6,
+    4,
+    2,
+    3,
+    1
    ],
    "Item": [
     5,
     6,
+    4,
+    0,
     3,
     1,
-    0,
-    2,
-    4
+    2
    ],
    "Paddle": [
     3,
-    1,
-    5,
+    6,
     2,
-    0,
+    5,
     4,
-    6
+    1,
+    0
    ],
    "Row": [
     0,
@@ -5909,9 +5917,9 @@
     6
    ]
   },
-  "n_clues": 15,
-  "deduction_depth": 8,
-  "direct_fraction": 0.2,
+  "n_clues": 13,
+  "deduction_depth": 6,
+  "direct_fraction": 0.077,
   "puzzle_index": 58,
   "difficulty": "expert",
   "theme_key": "antique_auction"
@@ -5959,15 +5967,16 @@
   },
   "clues": [
    "Whoever was on set 3 is either Coretta or Delphine.",
-   "Yolanda was exactly 1 set above Elmore.",
+   "Whoever was on set 5 opened with either a bebop set or a blues set.",
    "All of these are true: Whoever played the upright bass is Ines. Whoever played the trombone is on set 1.",
+   "Whoever opened with a blues set played either the guitar or the upright bass.",
+   "Whoever played the piano opened with a fusion set.",
+   "Yolanda was exactly 1 set above Elmore.",
+   "The drums was exactly 5 sets above the trombone.",
+   "Whoever played the trumpet is either on set 5 or on set 6.",
+   "Whoever opened with a ballad set is either Delphine or Marcus.",
    "The saxophone was exactly 2 sets above the guitar.",
    "All of these are true: Whoever was on set 5 is Delphine. Whoever played the saxophone opened with an original composition set.",
-   "Whoever played the piano opened with a fusion set.",
-   "The drums was exactly 5 sets above the trombone.",
-   "Whoever opened with a ballad set is either Delphine or Marcus.",
-   "Whoever was on set 5 opened with either a bebop set or a blues set.",
-   "Whoever was on set 7 opened with either a blues set or a ballad set.",
    "Yolanda opened with either a Latin jazz set or a fusion set."
   ],
   "solution": {
@@ -6008,9 +6017,9 @@
     6
    ]
   },
-  "n_clues": 11,
-  "deduction_depth": 7,
-  "direct_fraction": 0.091,
+  "n_clues": 12,
+  "deduction_depth": 8,
+  "direct_fraction": 0.083,
   "puzzle_index": 59,
   "difficulty": "expert",
   "theme_key": "jazz_club"
@@ -6158,8 +6167,8 @@
    ]
   },
   "clues": [
-   "All of these are true: Whoever poured a Chardonnay is on flight 1. Whoever was on flight 3 favored a Douro selection.",
    "Sylvie is either on flight 4 or on flight 2.",
+   "Callum was exactly 1 flight above Bea.",
    "All of these are true: Whoever was on flight 4 favored a Napa selection. Bea poured a Pinot Noir.",
    "Whoever poured a Grenache is either Noor or Rafael.",
    "A Barossa selection was exactly 2 flights above a Douro selection.",
@@ -6169,7 +6178,7 @@
    "Rafael poured either a Sauvignon Blanc or a Riesling.",
    "All of these are true: Callum is on flight 3. Whoever was on flight 7 favored a Tuscan selection.",
    "A Pinot Noir was exactly 1 flight above a Chardonnay.",
-   "Whoever favored a Marlborough selection is either Bea or Odette.",
+   "Bea favored either a Marlborough selection or a Barossa selection.",
    "A Grenache was exactly 2 flights above a Riesling."
   ],
   "solution": {
@@ -6211,7 +6220,7 @@
    ]
   },
   "n_clues": 13,
-  "deduction_depth": 8,
+  "deduction_depth": 10,
   "direct_fraction": 0.077,
   "puzzle_index": 61,
   "difficulty": "expert",
@@ -6359,47 +6368,45 @@
    ]
   },
   "clues": [
-   "Whoever represented the Foxwood Club is Simone.",
-   "All of these are true: Whoever was on board 6 played the King's Indian. Whoever played the Queen's Gambit is on board 3.",
-   "The Meridian Club was exactly 4 boards above the Lakeside Club.",
-   "The Nimzo-Indian was exactly 1 board above the Grunfeld Defense.",
-   "Otis was exactly 3 boards above Anders.",
-   "All of these are true: Whoever was on board 3 is Felix. Whoever was on board 6 played the King's Indian.",
-   "Otis was exactly 1 board above Nadia.",
-   "Whoever was on board 1 represented the Lakeside Club.",
-   "Whoever represented the University Club is either on board 4 or on board 6.",
-   "Whoever played the English Opening is either Otis or Anders.",
-   "The Riverside Club was exactly 4 boards above the Ashford Club.",
-   "Whoever was on board 4 is not the Grunfeld Defense.",
-   "All of these are true: Whoever played the Sicilian Defense is Junko. Whoever played the King's Indian represented the Foxwood Club."
+   "The Grunfeld Defense was exactly 1 board above the Queen's Gambit.",
+   "Whoever was on board 2 represented either the Downtown Club or the Foxwood Club.",
+   "Nadia was exactly 2 boards above Junko.",
+   "All of these are true: Whoever represented the Meridian Club is Simone. Whoever was on board 7 played the Sicilian Defense.",
+   "Aiko was exactly 1 board above Felix.",
+   "The Nimzo-Indian was exactly 4 boards above the Scandinavian Defense.",
+   "All of these are true: Whoever played the King's Indian is on board 3. Junko is on board 3.",
+   "The Lakeside Club was exactly 6 boards above the Ashford Club.",
+   "Whoever played the Grunfeld Defense is either Nadia or Simone.",
+   "The Foxwood Club was exactly 3 boards above the Riverside Club.",
+   "Anders represented either the University Club or the Ashford Club."
   ],
   "solution": {
    "Player": [
-    1,
-    2,
-    3,
-    6,
+    0,
     5,
     4,
-    0
+    2,
+    3,
+    1,
+    6
    ],
    "Opening": [
-    1,
+    5,
     6,
-    4,
-    2,
     0,
     3,
-    5
+    4,
+    1,
+    2
    ],
    "Club": [
     5,
     1,
-    2,
     0,
-    4,
+    6,
     3,
-    6
+    4,
+    2
    ],
    "Board": [
     0,
@@ -6411,9 +6418,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 5,
-  "direct_fraction": 0.154,
+  "n_clues": 11,
+  "deduction_depth": 9,
+  "direct_fraction": 0.0,
   "puzzle_index": 63,
   "difficulty": "expert",
   "theme_key": "chess_open"
@@ -6461,19 +6468,18 @@
   },
   "clues": [
    "All of these are true: Marchetti is on theater 7. Whoever won the Critics' Choice is Osei.",
-   "Bijou is either on theater 1 or on theater 3.",
+   "Whoever won the Discovery Award is on theater 3.",
    "Best Director was exactly 1 theater above the Audience Award.",
-   "Whoever screened a documentary is not on theater 5.",
+   "Bijou is either on theater 1 or on theater 3.",
    "A coming-of-age film was exactly 1 theater above a road movie.",
+   "All of these are true: Whoever was on theater 1 is Casimir. Whoever was on theater 2 won the Jury Prize.",
    "Whoever won Best Cinematography is either Wren or Casimir.",
-   "All of these are true: Whoever was on theater 2 won the Jury Prize. Whoever screened a coming-of-age film is on theater 3.",
    "Whoever screened a noir mystery is not on theater 1.",
    "Solveig was exactly 4 theaters above Casimir.",
    "Halston is not the Audience Award.",
+   "A war epic was exactly 4 theaters above a coming-of-age film.",
    "All of these are true: Halston screened a documentary. Whoever screened a courtroom drama won the Critics' Choice.",
-   "Whoever won the Discovery Award is on theater 3.",
-   "Halston is either on theater 5 or on theater 6.",
-   "A war epic was exactly 4 theaters above a coming-of-age film."
+   "Halston is either on theater 5 or on theater 6."
   ],
   "solution": {
    "Director": [
@@ -6513,9 +6519,9 @@
     6
    ]
   },
-  "n_clues": 14,
+  "n_clues": 13,
   "deduction_depth": 6,
-  "direct_fraction": 0.071,
+  "direct_fraction": 0.077,
   "puzzle_index": 64,
   "difficulty": "expert",
   "theme_key": "film_festival"
@@ -6663,20 +6669,20 @@
    ]
   },
   "clues": [
-   "Whoever wore a grey coat is either the Butler or the Heiress.",
-   "The Widow was holding either a brandy or a coffee.",
-   "Whoever was holding a claret is either the Curator or the Colonel.",
-   "A charcoal coat was exactly 1 floor above a navy coat.",
-   "All of these are true: Whoever was holding a cordial is on floor 7. The Heiress was holding a cordial.",
    "A champagne was exactly 5 floors above a claret.",
-   "Whoever wore a forest coat is either on floor 4 or on floor 7.",
-   "A burgundy coat was exactly 2 floors above a charcoal coat.",
    "A champagne was exactly 1 floor above a brandy.",
    "A whisky was exactly 2 floors above a soda water.",
-   "The Doctor is on floor 5.",
+   "A charcoal coat was exactly 1 floor above a navy coat.",
+   "The Doctor was exactly 1 floor above the Professor.",
    "All of these are true: Whoever wore a navy coat was holding a soda water. The Colonel is on floor 6.",
-   "The Butler is not on floor 4.",
-   "Whoever wore a camel coat is either on floor 7 or on floor 6."
+   "All of these are true: Whoever was holding a cordial is on floor 7. The Heiress was holding a cordial.",
+   "Whoever wore a grey coat is either the Butler or the Heiress.",
+   "The Doctor is either on floor 5 or on floor 1.",
+   "A forest coat was exactly 2 floors above a navy coat.",
+   "The Butler was exactly 1 floor above the Curator.",
+   "Whoever wore a camel coat is either on floor 7 or on floor 6.",
+   "A burgundy coat was exactly 2 floors above a charcoal coat.",
+   "The Professor was exactly 1 floor above the Widow."
   ],
   "solution": {
    "Guest": [
@@ -6717,8 +6723,8 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 8,
-  "direct_fraction": 0.071,
+  "deduction_depth": 7,
+  "direct_fraction": 0.0,
   "puzzle_index": 66,
   "difficulty": "expert",
   "theme_key": "manor_mystery"
@@ -6772,11 +6778,11 @@
    "All of these are true: Whoever was on table 7 entered a chocolate torte. Hazel entered a puff pastry.",
    "A denim apron was exactly 4 tables above a solid red apron.",
    "Whoever wore a solid red apron entered a spice cake.",
-   "All of these are true: Whoever was on table 1 is Della. Whoever wore a denim apron is Tobias.",
+   "A solid red apron was exactly 1 table above a checkered apron.",
    "All of these are true: Whoever entered a chocolate torte is Pascal. Faisal is on table 5.",
    "Whoever entered a fruit galette is either on table 6 or on table 5.",
    "Whoever entered a puff pastry is not a polka-dot apron.",
-   "All of these are true: Della wore a checkered apron. Whoever was on table 1 is Della."
+   "All of these are true: Whoever was on table 1 is Della. Whoever wore a denim apron is Tobias."
   ],
   "solution": {
    "Baker": [
@@ -6865,19 +6871,17 @@
    ]
   },
   "clues": [
-   "Whoever was on round 2 is Achebe.",
-   "Emmett is not a Latin root word.",
-   "All of these are true: Kellan was given a geography word. Whoever was given a science word is on round 2.",
    "Odalys was exactly 1 round above Achebe.",
-   "All of these are true: Whoever was given a legal term is Marisol. Whoever represented Elmwood School is on round 4.",
-   "A medical term was exactly 1 round above a science word.",
-   "Whoever was given a music term represented either Ashford Elementary or Harborview Elementary.",
-   "All of these are true: Whoever was on round 6 is Gideon. Whoever was on round 3 represented Glenhaven School.",
    "Marisol is either on round 7 or on round 4.",
+   "A medical term was exactly 1 round above a science word.",
+   "Elmwood School was exactly 3 rounds above Dunmore Prep.",
+   "Odalys was exactly 2 rounds above Kellan.",
+   "All of these are true: Whoever was on round 6 is Gideon. Whoever was on round 3 represented Glenhaven School.",
+   "Whoever was given a music term represented either Ashford Elementary or Harborview Elementary.",
    "Gideon represented either Elmwood School or Ivy Lane School.",
    "All of these are true: Whoever represented Juniper Academy is on round 2. Whoever was given a geography word represented Dunmore Prep.",
+   "All of these are true: Whoever represented Ashford Elementary was given a legal term. Emmett was given a nature word.",
    "Whoever was on round 7 represented Ashford Elementary.",
-   "Whoever represented Elmwood School is either Emmett or Achebe.",
    "All of these are true: Whoever was on round 1 represented Dunmore Prep. Whoever was given a science word is on round 2."
   ],
   "solution": {
@@ -6918,9 +6922,9 @@
     6
    ]
   },
-  "n_clues": 14,
+  "n_clues": 12,
   "deduction_depth": 6,
-  "direct_fraction": 0.143,
+  "direct_fraction": 0.083,
   "puzzle_index": 68,
   "difficulty": "expert",
   "theme_key": "spelling_bee"
@@ -6967,17 +6971,18 @@
    ]
   },
   "clues": [
-   "Glenhaven School was exactly 3 tables above Harborview Middle School.",
+   "Tobin represented either Juniper Academy or Fairview Academy.",
    "Achebe represented either Dunmore Prep or Cedar Ridge School.",
    "Louisa is either on table 5 or on table 4.",
-   "Tobin represented either Juniper Academy or Fairview Academy.",
-   "All of these are true: Whoever was on table 1 is Priya. Marisol presented a water filtration project.",
-   "Achebe is either on table 4 or on table 7.",
-   "All of these are true: Whoever presented a bacteria growth project is Kiri. Whoever represented Harborview Middle School is Marisol.",
-   "Whoever represented Cedar Ridge School presented either a robotics project or an earthquake simulator.",
    "A weather balloon project was exactly 6 tables above a solar energy project.",
-   "All of these are true: Whoever was on table 3 is Marisol. Louisa represented Fairview Academy.",
-   "Whoever represented Elmwood School is on table 7.",
+   "All of these are true: Whoever was on table 1 is Priya. Marisol presented a water filtration project.",
+   "Whoever represented Elmwood School is either on table 2 or on table 7.",
+   "All of these are true: Whoever presented a bacteria growth project is Kiri. Whoever represented Harborview Middle School is Marisol.",
+   "Achebe is either on table 4 or on table 7.",
+   "Whoever represented Cedar Ridge School presented either a robotics project or an earthquake simulator.",
+   "Juniper Academy was exactly 1 table above Dunmore Prep.",
+   "Glenhaven School was exactly 3 tables above Harborview Middle School.",
+   "Whoever represented Dunmore Prep is Priya.",
    "Whoever represented Juniper Academy presented either an earthquake simulator or a water filtration project."
   ],
   "solution": {
@@ -7018,9 +7023,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 6,
-  "direct_fraction": 0.083,
+  "n_clues": 13,
+  "deduction_depth": 7,
+  "direct_fraction": 0.077,
   "puzzle_index": 69,
   "difficulty": "expert",
   "theme_key": "science_fair"
@@ -7067,19 +7072,21 @@
    ]
   },
   "clues": [
-   "A velvet mask was exactly 1 arrival above a mirrored mask.",
-   "The Stranger was exactly 2 arrivals above the Painter.",
-   "The Poet was exactly 1 arrival above the Composer.",
-   "Whoever wore a porcelain mask opened with either a two-step or a polka.",
-   "A polka was exactly 3 arrivals above a gavotte.",
-   "Whoever was on arrival 7 is either the Merchant or the Stranger.",
-   "Whoever opened with a two-step is either on arrival 2 or on arrival 3.",
    "Whoever opened with a quadrille is the Duchess.",
+   "Whoever opened with a gavotte is not a porcelain mask.",
+   "The Twin was exactly 1 arrival above the Stranger.",
+   "A velvet mask was exactly 1 arrival above a mirrored mask.",
+   "Whoever wore a black lace mask is either the Twin or the Duchess.",
+   "A polka was exactly 1 arrival above a quadrille.",
+   "A mirrored mask was exactly 3 arrivals above a peacock mask.",
+   "The Poet was exactly 1 arrival above the Composer.",
    "A black lace mask was exactly 1 arrival above a peacock mask.",
-   "All of these are true: Whoever wore a beaded mask is the Composer. Whoever was on arrival 3 wore a peacock mask.",
-   "All of these are true: Whoever opened with a gavotte is on arrival 2. The Composer opened with a reel.",
+   "The Stranger was exactly 2 arrivals above the Painter.",
+   "Whoever opened with a two-step is either the Painter or the Twin.",
+   "Whoever opened with a reel wore either a black lace mask or a beaded mask.",
+   "A polka was exactly 3 arrivals above a gavotte.",
    "Whoever was on arrival 6 opened with a waltz.",
-   "The Painter wore either a peacock mask or a mirrored mask."
+   "Whoever was on arrival 3 is either the Painter or the Merchant."
   ],
   "solution": {
    "Guest": [
@@ -7119,9 +7126,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 7,
-  "direct_fraction": 0.154,
+  "n_clues": 15,
+  "deduction_depth": 10,
+  "direct_fraction": 0.133,
   "puzzle_index": 70,
   "difficulty": "expert",
   "theme_key": "masquerade_ball"
@@ -7270,20 +7277,19 @@
    ]
   },
   "clues": [
-   "Whoever had it painted forest green brought either a '55 Beetle or a '58 Corvette.",
-   "Whoever had it painted coral pink is either on space 1 or on space 5.",
-   "Whoever brought a '69 Camaro is not Loretta.",
-   "All of these are true: Whoever had it painted cream white is on space 7. Whoever was on space 3 brought a '69 Camaro.",
    "All of these are true: Chester had it painted forest green. Corrine is on space 2.",
-   "Whoever was on space 6 is Boyd.",
+   "A '69 Camaro was exactly 2 spaces above a '55 Beetle.",
+   "All of these are true: Whoever had it painted sunburst yellow brought a '72 Charger. Boyd is on space 6.",
    "Whoever had it painted matte black is either Corrine or Boyd.",
-   "Whoever had it painted cream white brought a '57 Bel Air.",
-   "Whoever had it painted turquoise brought either a '67 GTO or a '57 Bel Air.",
    "Boyd was exactly 1 space above Roscoe.",
-   "Sunburst yellow was exactly 1 space above cherry red.",
-   "Whoever had it painted turquoise is either on space 5 or on space 6.",
+   "Whoever had it painted cream white brought a '57 Bel Air.",
+   "Whoever had it painted turquoise is not a '58 Corvette.",
    "Whoever brought a '63 Thunderbird had it painted either matte black or cherry red.",
-   "All of these are true: Etta is on space 4. Whoever brought a '58 Corvette is on space 5."
+   "Loretta was exactly 6 spaces above Chester.",
+   "Whoever had it painted coral pink is either on space 1 or on space 5.",
+   "Whoever had it painted turquoise is either on space 5 or on space 6.",
+   "All of these are true: Whoever had it painted cream white is on space 7. Whoever was on space 3 brought a '69 Camaro.",
+   "Whoever brought a '69 Camaro is Duke."
   ],
   "solution": {
    "Owner": [
@@ -7323,9 +7329,9 @@
     6
    ]
   },
-  "n_clues": 14,
-  "deduction_depth": 7,
-  "direct_fraction": 0.143,
+  "n_clues": 13,
+  "deduction_depth": 8,
+  "direct_fraction": 0.154,
   "puzzle_index": 72,
   "difficulty": "expert",
   "theme_key": "vintage_car_show"
@@ -7373,17 +7379,17 @@
   },
   "clues": [
    "Ronan was exactly 1 wall above Solange.",
-   "Whoever favored an earth-tone palette is not collage.",
+   "Whoever was on wall 6 worked in either charcoal or bronze sculpture.",
    "All of these are true: Ronan worked in etching. Odalys favored a neon palette.",
    "A pastel palette was exactly 3 walls above a monochrome palette.",
    "Mixed media was exactly 6 walls above bronze sculpture.",
    "Whoever was on wall 3 is Solange.",
    "Whoever was on wall 3 worked in either clay or mixed media.",
    "Bastien is either on wall 7 or on wall 4.",
-   "A monochrome palette was exactly 1 wall above a cool palette.",
+   "Nils was exactly 3 walls above Solange.",
    "Whoever was on wall 2 favored a warm palette.",
    "Whoever worked in pastel is either on wall 1 or on wall 5.",
-   "Whoever was on wall 6 is either Ronan or Nils.",
+   "A monochrome palette was exactly 1 wall above a cool palette.",
    "Yara was exactly 2 walls above Solange.",
    "Whoever favored an earth-tone palette is not Yara."
   ],
@@ -7426,7 +7432,7 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 6,
+  "deduction_depth": 5,
   "direct_fraction": 0.143,
   "puzzle_index": 73,
   "difficulty": "expert",
@@ -7474,45 +7480,47 @@
    ]
   },
   "clues": [
-   "All of these are true: Remy plated a smoked brisket. Juniper wore a black apron.",
-   "All of these are true: Whoever was on station 3 wore a striped apron. Whoever wore a monogrammed apron is Thane.",
-   "A roasted root vegetable tart was exactly 3 stations above a smoked brisket.",
-   "A braised short rib was exactly 2 stations above a lobster bisque.",
-   "A striped apron was exactly 2 stations above a chef's coat.",
-   "Thane is either on station 2 or on station 6.",
-   "All of these are true: Whoever plated a stuffed quail is on station 2. Whoever was on station 2 wore a black apron.",
-   "Anise is either on station 2 or on station 5.",
-   "All of these are true: Whoever wore a leather apron is Tarragon. Whoever plated a lobster bisque wore a striped apron.",
-   "Whoever was on station 4 wore either a waxed canvas apron or a black apron.",
-   "All of these are true: Rosemary plated a lobster bisque. Whoever was on station 1 plated a seared duck breast."
+   "A smoked brisket was exactly 1 station above a stuffed quail.",
+   "All of these are true: Whoever was on station 5 is Rosemary. Whoever was on station 4 wore a monogrammed apron.",
+   "All of these are true: Whoever was on station 7 plated a braised short rib. Whoever wore a chef's coat is Anise.",
+   "Whoever wore a striped apron plated a smoked brisket.",
+   "Remy was exactly 1 station above Juniper.",
+   "Whoever was on station 1 is either Tarragon or Anise.",
+   "Whoever was on station 1 plated either a seared duck breast or a braised short rib.",
+   "Whoever plated a braised short rib wore either a black apron or a monogrammed apron.",
+   "All of these are true: Rosemary plated a saffron paella. Whoever was on station 3 plated a smoked brisket.",
+   "Whoever wore a red apron plated either a braised short rib or a lobster bisque.",
+   "Tarragon is on station 4.",
+   "Whoever wore a waxed canvas apron is either Rosemary or Remy.",
+   "Thane was exactly 3 stations above Tarragon."
   ],
   "solution": {
    "Chef": [
-    6,
-    4,
     3,
-    1,
+    0,
     2,
-    5,
-    0
+    1,
+    4,
+    6,
+    5
    ],
    "Dish": [
-    4,
-    5,
-    0,
     6,
-    2,
+    4,
+    0,
+    3,
+    5,
     1,
-    3
+    2
    ],
    "Apron": [
-    3,
-    6,
-    0,
+    4,
     1,
-    5,
+    0,
+    6,
+    3,
     2,
-    4
+    5
    ],
    "Station": [
     0,
@@ -7524,9 +7532,9 @@
     6
    ]
   },
-  "n_clues": 11,
-  "deduction_depth": 6,
-  "direct_fraction": 0.0,
+  "n_clues": 13,
+  "deduction_depth": 7,
+  "direct_fraction": 0.154,
   "puzzle_index": 74,
   "difficulty": "expert",
   "theme_key": "cooking_competition"
@@ -7679,7 +7687,7 @@
    "Cyra was exactly 3 places above Ronan.",
    "Kerr was exactly 4 places above Ronan.",
    "All of these are true: Whoever wore a red vest is on place 6. Whoever laced up blue spikes is on place 6.",
-   "All of these are true: Whoever laced up yellow spikes wore an orange vest. Indira is on place 6.",
+   "All of these are true: Whoever was on place 7 laced up yellow spikes. Whoever was on place 6 is Indira.",
    "Whoever was on place 3 is either Kerr or Holt.",
    "Green spikes was exactly 2 places above pink spikes.",
    "All of these are true: Whoever wore a teal vest is Holt. Whoever wore an orange vest is on place 7.",
@@ -7776,13 +7784,13 @@
    "Whoever worked in clay is Adaeze.",
    "Pastel was exactly 1 wall above oil paint.",
    "Nils was exactly 4 walls above Theo.",
-   "All of these are true: Whoever was on wall 7 is Mireille. Whoever favored a cool palette worked in ink wash.",
+   "Whoever was on wall 6 worked in clay.",
    "Nils was exactly 3 walls above Kato.",
    "All of these are true: Whoever worked in etching is Imre. Whoever favored an earth-tone palette is on wall 4.",
-   "Whoever worked in etching is not a metallic palette.",
+   "Whoever favored a stark black-and-white palette worked in either clay or collage.",
    "A muted palette was exactly 3 walls above a metallic palette.",
    "A cool palette was exactly 6 walls above a neon palette.",
-   "Whoever was on wall 6 worked in clay."
+   "All of these are true: Mireille is on wall 7. Whoever was on wall 4 worked in etching."
   ],
   "solution": {
    "Artist": [
@@ -7823,7 +7831,7 @@
    ]
   },
   "n_clues": 11,
-  "deduction_depth": 6,
+  "deduction_depth": 7,
   "direct_fraction": 0.182,
   "puzzle_index": 77,
   "difficulty": "expert",
@@ -8273,21 +8281,21 @@
    ]
   },
   "clues": [
-   "Isolde is not a sailing school.",
-   "Seraphine is not the Sea Fox.",
+   "All of these are true: Dagny was sponsored by a marine supply shop. Whoever sailed the Meridian is on lane 4.",
+   "Torsten sailed either the Halcyon or the Meridian.",
    "All of these are true: Whoever sailed the Halcyon was sponsored by a local bank. Whoever sailed the Windrunner was sponsored by a marine supply shop.",
    "Marisela was sponsored by either a local bank or the Harbor Club.",
-   "All of these are true: Whoever sailed the Storm Petrel is Isolde. Whoever was sponsored by a marine supply shop is on lane 7.",
-   "Dagny was sponsored by a marine supply shop.",
-   "Whoever was on lane 3 is either Seraphine or Marisela.",
    "Whoever was sponsored by a local bank is either on lane 1 or on lane 2.",
-   "The Marina Grill was exactly 2 lanes above a yacht broker.",
-   "Torsten sailed either the Halcyon or the Meridian.",
-   "Whoever was on lane 5 is not the Storm Petrel.",
-   "The Windrunner was exactly 3 lanes above the Meridian.",
+   "Seraphine sailed either the Halcyon or the Wavecrest.",
+   "Whoever was on lane 3 is either Seraphine or Marisela.",
+   "Whoever was sponsored by the Marina Grill is not the Storm Petrel.",
+   "The Tidewater was exactly 2 lanes above the Halcyon.",
+   "All of these are true: Whoever sailed the Storm Petrel is Isolde. Whoever was sponsored by a marine supply shop is on lane 7.",
+   "Isolde is not a sailing school.",
+   "Whoever was on lane 4 is either Seraphine or Merit.",
    "Whoever sailed the Wavecrest is on lane 2.",
-   "Whoever sailed the Tidewater was sponsored by either the Marina Grill or the Harbor Club.",
-   "All of these are true: Merit was sponsored by the Marina Grill. Whoever was sponsored by the Harbor Club is on lane 3."
+   "Whoever was on lane 5 is not the Storm Petrel.",
+   "The Marina Grill was exactly 2 lanes above a yacht broker."
   ],
   "solution": {
    "Sailor": [
@@ -8328,8 +8336,8 @@
    ]
   },
   "n_clues": 15,
-  "deduction_depth": 9,
-  "direct_fraction": 0.133,
+  "deduction_depth": 11,
+  "direct_fraction": 0.067,
   "puzzle_index": 82,
   "difficulty": "expert",
   "theme_key": "regatta"
@@ -8376,47 +8384,45 @@
    ]
   },
   "clues": [
-   "Fairview Academy was exactly 3 rounds above Harborview Elementary.",
-   "A geography word was exactly 4 rounds above a science word.",
-   "Rosalind represented either Ivy Lane School or Cedar Ridge School.",
-   "Wren represented either Ivy Lane School or Dunmore Prep.",
-   "Whoever was on round 5 is either Zora or Odalys.",
-   "A Latin root word was exactly 1 round above an architecture term.",
-   "Whoever represented Harborview Elementary is on round 3.",
-   "Whoever represented Harborview Elementary is not Junie.",
-   "All of these are true: Whoever was on round 6 is Emmett. Odalys is on round 7.",
-   "Whoever was given a medical term represented Ashford Elementary.",
-   "A science word was exactly 2 rounds above a French loanword.",
-   "All of these are true: Whoever represented Ashford Elementary is on round 4. Rosalind is on round 1.",
-   "Cedar Ridge School was exactly 3 rounds above Dunmore Prep."
+   "Whoever was on round 7 is Tobias.",
+   "Whoever was on round 3 represented either Fairview Academy or Dunmore Prep.",
+   "All of these are true: Whoever represented Elmwood School is Wren. Whoever was given a geography word represented Ashford Elementary.",
+   "Whoever was given a medical term represented either Ashford Elementary or Ivy Lane School.",
+   "Whoever was on round 6 represented Dunmore Prep.",
+   "All of these are true: Whoever was given a history word is Odalys. Whoever represented Harborview Elementary is Rosalind.",
+   "Whoever represented Fairview Academy was given either a French loanword or a history word.",
+   "All of these are true: Zora was given an architecture term. Whoever represented Ivy Lane School is Junie.",
+   "Harborview Elementary was exactly 2 rounds above Ivy Lane School.",
+   "Junie was exactly 1 round above Odalys.",
+   "Whoever was given a science word is not on round 5."
   ],
   "solution": {
    "Contestant": [
+    2,
     5,
+    1,
+    6,
     4,
     3,
-    2,
-    1,
-    0,
-    6
+    0
    ],
    "Word": [
     6,
-    2,
     3,
-    4,
-    0,
     1,
-    5
+    5,
+    2,
+    0,
+    4
    ],
    "School": [
+    2,
+    1,
     5,
     0,
-    1,
-    4,
-    2,
     3,
-    6
+    6,
+    4
    ],
    "Round": [
     0,
@@ -8428,9 +8434,9 @@
     6
    ]
   },
-  "n_clues": 13,
-  "deduction_depth": 5,
-  "direct_fraction": 0.154,
+  "n_clues": 11,
+  "deduction_depth": 10,
+  "direct_fraction": 0.182,
   "puzzle_index": 83,
   "difficulty": "expert",
   "theme_key": "spelling_bee"
@@ -8578,47 +8584,45 @@
    ]
   },
   "clues": [
-   "All of these are true: Whoever was on booth 4 decorated a red-striped stall. Whoever decorated a canvas-awning stall sold goat cheese.",
-   "Whoever was on booth 4 is either Perry or Dashiell.",
-   "Idris decorated either a rustic-barrel stall or a red-striped stall.",
-   "Barnabas was exactly 1 booth above Perry.",
-   "Whoever decorated a burlap-lined stall is not fresh-cut flowers.",
-   "Maple syrup was exactly 1 booth above roasted coffee.",
-   "Whoever sold roasted coffee is not Sunniva.",
-   "Whoever decorated a chalkboard-sign stall is not on booth 7.",
-   "Whoever was on booth 2 is not a chalkboard-sign stall.",
-   "Idris was exactly 1 booth above Dashiell.",
-   "Whoever decorated a painted-sign stall sold either sourdough bread or roasted coffee.",
-   "Whoever sold goat cheese is either Marigold or Barnabas.",
-   "Whoever was on booth 1 decorated either a painted-sign stall or a red-striped stall.",
-   "All of these are true: Whoever was on booth 3 decorated a string-lit stall. Whoever sold maple syrup is on booth 4.",
-   "A burlap-lined stall was exactly 1 booth above a red-striped stall.",
-   "Maple syrup was exactly 2 booths above heirloom tomatoes.",
-   "Perry decorated either a red-striped stall or a rustic-barrel stall."
+   "Whoever sold heirloom tomatoes decorated either a red-striped stall or a burlap-lined stall.",
+   "Dashiell sold goat cheese.",
+   "Whoever was on booth 5 decorated a burlap-lined stall.",
+   "A rustic-barrel stall was exactly 1 booth above a painted-sign stall.",
+   "Perry was exactly 3 booths above Cleo.",
+   "Whoever was on booth 4 decorated a chalkboard-sign stall.",
+   "Whoever sold roasted coffee is either on booth 2 or on booth 4.",
+   "Whoever decorated a canvas-awning stall is either on booth 4 or on booth 7.",
+   "Perry was exactly 1 booth above Idris.",
+   "All of these are true: Whoever sold maple syrup is on booth 3. Whoever decorated a string-lit stall sold maple syrup.",
+   "Whoever was on booth 5 is not Sunniva.",
+   "Maple syrup was exactly 1 booth above fresh-cut flowers.",
+   "Marigold is either on booth 2 or on booth 6.",
+   "Marigold sold either roasted coffee or handmade soap.",
+   "Cleo decorated either a painted-sign stall or a canvas-awning stall."
   ],
   "solution": {
    "Vendor": [
     3,
     4,
-    2,
-    0,
-    6,
-    1,
-    5
-   ],
-   "Product": [
-    4,
     0,
     6,
     5,
-    3,
+    2,
+    1
+   ],
+   "Product": [
+    5,
+    0,
+    6,
     1,
-    2
+    2,
+    4,
+    3
    ],
    "Stall": [
     1,
-    5,
     3,
+    5,
     0,
     6,
     4,
@@ -8634,9 +8638,9 @@
     6
    ]
   },
-  "n_clues": 17,
-  "deduction_depth": 7,
-  "direct_fraction": 0.0,
+  "n_clues": 15,
+  "deduction_depth": 6,
+  "direct_fraction": 0.2,
   "puzzle_index": 85,
   "difficulty": "expert",
   "theme_key": "farmers_market"
@@ -8783,17 +8787,18 @@
    ]
   },
   "clues": [
-   "Whoever was on table 1 presented either a solar energy project or a weather balloon project.",
-   "All of these are true: Whoever was on table 7 represented Juniper Academy. Whoever represented Glenhaven School is Achebe.",
+   "Whoever was on table 4 is not Priya.",
    "All of these are true: Whoever presented a bacteria growth project represented Cedar Ridge School. Wren represented Cedar Ridge School.",
+   "Whoever was on table 1 presented either a solar energy project or a weather balloon project.",
+   "All of these are true: Wren presented a bacteria growth project. Whoever was on table 7 represented Juniper Academy.",
    "Glenhaven School was exactly 1 table above Ivy Lane School.",
-   "All of these are true: Whoever presented a weather balloon project represented Brookline Academy. Whoever was on table 2 represented Elmwood School.",
    "Whoever presented an ocean acidity project is Kiri.",
-   "Whoever represented Brookline Academy is either on table 5 or on table 3.",
+   "Whoever represented Brookline Academy is either on table 4 or on table 5.",
+   "All of these are true: Whoever presented a weather balloon project represented Brookline Academy. Whoever was on table 2 represented Elmwood School.",
    "All of these are true: Whoever presented a weather balloon project is Osei. Whoever was on table 2 is Louisa.",
    "Whoever was on table 2 is not a memory-testing app.",
    "Achebe was exactly 1 table above Priya.",
-   "Whoever represented Brookline Academy is either on table 4 or on table 5.",
+   "Whoever was on table 6 is Wren.",
    "A plant genetics project was exactly 3 tables above a solar energy project."
   ],
   "solution": {
@@ -8834,9 +8839,9 @@
     6
    ]
   },
-  "n_clues": 12,
+  "n_clues": 13,
   "deduction_depth": 7,
-  "direct_fraction": 0.083,
+  "direct_fraction": 0.154,
   "puzzle_index": 87,
   "difficulty": "expert",
   "theme_key": "science_fair"
@@ -8883,21 +8888,22 @@
    ]
   },
   "clues": [
-   "Whoever opened with a blues set is not Booker.",
-   "Vashti opened with either a swing set or a modal set.",
-   "All of these are true: Whoever was on set 6 played the saxophone. Marcus played the trumpet.",
-   "All of these are true: Whoever played the upright bass opened with a ballad set. Silas played the flute.",
-   "Whoever was on set 5 is either Django or Vashti.",
-   "All of these are true: Whoever opened with a standards set played the flute. Whoever was on set 6 played the saxophone.",
-   "Whoever was on set 1 played either the flute or the vibraphone.",
-   "Ines is either on set 4 or on set 2.",
-   "Vashti was exactly 1 set above Odette.",
-   "Whoever played the vibraphone opened with either a Latin jazz set or a blues set.",
-   "Whoever opened with a swing set is not the guitar.",
+   "All of these are true: Whoever was on set 2 is Ines. Whoever opened with a blues set is on set 3.",
+   "Booker is not a modal set.",
    "All of these are true: Ines played the upright bass. Whoever was on set 5 opened with a swing set.",
-   "Vashti is either on set 3 or on set 7.",
+   "Whoever opened with a blues set is not Booker.",
    "Odette was exactly 2 sets above Booker.",
-   "Whoever played the saxophone opened with either a ballad set or a bebop set."
+   "All of these are true: Whoever was on set 6 played the saxophone. Marcus played the trumpet.",
+   "Whoever played the vibraphone is not a swing set.",
+   "Whoever opened with a swing set is not the guitar.",
+   "All of these are true: Whoever played the upright bass opened with a ballad set. Silas played the flute.",
+   "A ballad set was exactly 1 set above a standards set.",
+   "Whoever opened with a blues set is not Django.",
+   "Whoever played the vibraphone is Booker.",
+   "Ines was exactly 1 set above Silas.",
+   "Whoever opened with a modal set is not Django.",
+   "Whoever played the saxophone opened with either a ballad set or a bebop set.",
+   "Vashti opened with either a swing set or a modal set."
   ],
   "solution": {
    "Musician": [
@@ -8937,9 +8943,9 @@
     6
    ]
   },
-  "n_clues": 15,
-  "deduction_depth": 10,
-  "direct_fraction": 0.0,
+  "n_clues": 16,
+  "deduction_depth": 7,
+  "direct_fraction": 0.062,
   "puzzle_index": 88,
   "difficulty": "expert",
   "theme_key": "jazz_club"
@@ -9084,20 +9090,16 @@
    ]
   },
   "clues": [
-   "Whoever entered a rose is either Linden or Elston.",
-   "A purple ribbon was exactly 3 tents above a white ribbon.",
-   "Whoever was on tent 3 was awarded a rosette ribbon.",
-   "All of these are true: Whoever was awarded a green ribbon is Basil. Whoever was awarded a blue ribbon is on tent 7.",
-   "Whoever was awarded a yellow ribbon is either Elston or Petra.",
-   "Petra entered a hydrangea.",
-   "Whoever was on tent 1 is either Petra or Verbena.",
    "Clover was exactly 1 tent above Basil.",
+   "All of these are true: Whoever was awarded a white ribbon is Verbena. Whoever entered a tulip is on tent 6.",
+   "Whoever was awarded a yellow ribbon is either Elston or Petra.",
+   "A blue ribbon was exactly 5 tents above a green ribbon.",
    "All of these are true: Whoever was awarded a blue ribbon is Linden. Clover was awarded a rosette ribbon.",
-   "A delphinium was exactly 2 tents above a peony.",
-   "Whoever entered a rose is either on tent 5 or on tent 2.",
    "Linden entered either a zinnia or a rose.",
-   "All of these are true: Whoever entered a tulip is on tent 6. Linden is on tent 7.",
-   "Whoever was on tent 4 entered either a tulip or a hydrangea."
+   "Elston was exactly 3 tents above Basil.",
+   "All of these are true: Whoever entered a peony is on tent 1. Whoever entered a chrysanthemum is on tent 2.",
+   "A tulip was exactly 1 tent above a rose.",
+   "All of these are true: Fennimore is on tent 6. Whoever was awarded a purple ribbon entered a hydrangea."
   ],
   "solution": {
    "Exhibitor": [
@@ -9137,9 +9139,9 @@
     6
    ]
   },
-  "n_clues": 14,
-  "deduction_depth": 5,
-  "direct_fraction": 0.143,
+  "n_clues": 10,
+  "deduction_depth": 7,
+  "direct_fraction": 0.0,
   "puzzle_index": 90,
   "difficulty": "expert",
   "theme_key": "garden_show"
@@ -9290,20 +9292,18 @@
    ]
   },
   "clues": [
-   "Cream white was exactly 2 spaces above cherry red.",
-   "All of these are true: Whoever had it painted burnt orange is on space 6. Whoever had it painted coral pink is on space 5.",
-   "All of these are true: Whoever was on space 1 brought a '58 Corvette. Whoever had it painted burnt orange is on space 6.",
-   "Whoever brought a '67 GTO had it painted either burnt orange or coral pink.",
-   "Boyd was exactly 1 space above Loretta.",
    "All of these are true: Whoever had it painted matte black brought a '58 Corvette. Whoever brought a '67 GTO is Roscoe.",
-   "Dot was exactly 1 space above Duke.",
-   "Whoever had it painted sunburst yellow is not on space 7.",
-   "All of these are true: Whoever was on space 3 brought a '62 Impala. Whoever had it painted coral pink brought a '65 Mustang.",
-   "A '62 Impala was exactly 1 space above a '70 Challenger.",
-   "Boyd brought either a '70 Challenger or a '65 Mustang.",
-   "Whoever was on space 7 brought either a '62 Impala or a '63 Thunderbird.",
+   "All of these are true: Whoever had it painted burnt orange is on space 6. Whoever had it painted coral pink is on space 5.",
+   "Gus had it painted either burnt orange or forest green.",
+   "Boyd was exactly 1 space above Loretta.",
    "Whoever had it painted matte black is Duke.",
-   "Gus had it painted either burnt orange or forest green."
+   "Burnt orange was exactly 3 spaces above sunburst yellow.",
+   "Whoever brought a '67 GTO had it painted either burnt orange or coral pink.",
+   "A '62 Impala was exactly 1 space above a '70 Challenger.",
+   "Cream white was exactly 2 spaces above cherry red.",
+   "Whoever was on space 4 is not Boyd.",
+   "Dot was exactly 1 space above Duke.",
+   "All of these are true: Whoever had it painted coral pink brought a '65 Mustang. Loretta brought a '57 Bel Air."
   ],
   "solution": {
    "Owner": [
@@ -9343,9 +9343,9 @@
     6
    ]
   },
-  "n_clues": 14,
-  "deduction_depth": 5,
-  "direct_fraction": 0.071,
+  "n_clues": 12,
+  "deduction_depth": 7,
+  "direct_fraction": 0.083,
   "puzzle_index": 92,
   "difficulty": "expert",
   "theme_key": "vintage_car_show"
@@ -9392,19 +9392,19 @@
    ]
   },
   "clues": [
-   "Otis is either on board 5 or on board 7.",
-   "Declan played either the Caro-Kann or the King's Indian.",
+   "All of these are true: Whoever played the Queen's Gambit is on board 6. Whoever represented the Old Town Club is Grant.",
+   "The Grunfeld Defense was exactly 1 board above the Queen's Gambit.",
    "All of these are true: Simone is on board 2. Felix is on board 5.",
    "Whoever represented the Brookline Club played either the Nimzo-Indian or the Scandinavian Defense.",
-   "All of these are true: Whoever played the Queen's Gambit is on board 6. Whoever represented the Old Town Club is Grant.",
    "Aiko was exactly 1 board above Declan.",
+   "Declan played either the Caro-Kann or the King's Indian.",
    "Whoever played the King's Indian is not Declan.",
    "Whoever represented the Meridian Club is Felix.",
    "Whoever represented the Riverside Club is not Simone.",
-   "Whoever represented the Meridian Club is not the Ruy Lopez.",
-   "The Downtown Club was exactly 6 boards above the Lakeside Club.",
    "All of these are true: Whoever played the Scandinavian Defense represented the Ashford Club. Whoever represented the Ashford Club is Aiko.",
-   "The Grunfeld Defense was exactly 1 board above the Queen's Gambit."
+   "The Downtown Club was exactly 6 boards above the Lakeside Club.",
+   "Otis played either the King's Indian or the Grunfeld Defense.",
+   "Whoever represented the Meridian Club is not the Ruy Lopez."
   ],
   "solution": {
    "Player": [
@@ -9495,14 +9495,14 @@
   "clues": [
    "Soren is not gold spikes.",
    "White spikes was exactly 4 places above silver spikes.",
-   "Whoever wore a black vest laced up either gold spikes or black spikes.",
+   "All of these are true: Whoever wore a black vest is on place 2. Whoever laced up green spikes is on place 7.",
    "Whoever was on place 3 laced up either red spikes or silver spikes.",
    "Talia wore either an orange vest or a white vest.",
    "A purple vest was exactly 4 places above a teal vest.",
-   "Whoever wore a purple vest laced up green spikes.",
+   "All of these are true: Whoever wore a white vest is Soren. Whoever was on place 7 wore a purple vest.",
    "Whoever wore a white vest is not blue spikes.",
    "All of these are true: Delia wore a purple vest. Whoever laced up white spikes is Wren.",
-   "All of these are true: Whoever wore a white vest is Soren. Whoever wore a black vest is on place 2.",
+   "Whoever wore a black vest laced up either gold spikes or black spikes.",
    "Whoever wore a black vest is either Holt or Soren.",
    "All of these are true: Whoever laced up silver spikes is Cyra. Cyra laced up silver spikes.",
    "Whoever was on place 6 is not blue spikes.",
@@ -9547,8 +9547,8 @@
    ]
   },
   "n_clues": 14,
-  "deduction_depth": 9,
-  "direct_fraction": 0.071,
+  "deduction_depth": 7,
+  "direct_fraction": 0.0,
   "puzzle_index": 94,
   "difficulty": "expert",
   "theme_key": "track_meet"
@@ -9595,46 +9595,46 @@
    ]
   },
   "clues": [
-   "All of these are true: Whoever was on slot 7 wrote about memory. Barnaby wrote about the ocean.",
-   "Barnaby was exactly 3 slots above Suri.",
-   "Dunmore was exactly 1 slot above Ashford.",
-   "Adaora was exactly 4 slots above Suri.",
-   "Cedar Falls was exactly 4 slots above Ivy Lane.",
-   "Suri was exactly 1 slot above Gideon.",
-   "All of these are true: Whoever was on slot 2 came from Fairview. Whoever was on slot 1 wrote about hope.",
-   "Whoever came from Dunmore is either on slot 4 or on slot 6.",
-   "All of these are true: Lior wrote about childhood. Whoever came from Cedar Falls wrote about the city at night.",
-   "Whoever came from Harborview is not Adaora.",
-   "Whoever came from Cedar Falls is Elowen.",
-   "Distance was exactly 2 slots above hope."
+   "Whoever came from Cedar Falls wrote about either childhood or the city at night.",
+   "Whoever wrote about hope is either on slot 6 or on slot 5.",
+   "Grief was exactly 4 slots above the ocean.",
+   "All of these are true: Whoever came from Harborview wrote about the ocean. Whoever came from Harborview is Adaora.",
+   "The city at night was exactly 2 slots above hope.",
+   "Whoever came from Juniper Hill wrote about the city at night.",
+   "All of these are true: Rune came from Fairview. Lior came from Dunmore.",
+   "Elowen was exactly 1 slot above Gideon.",
+   "Whoever was on slot 1 is not memory.",
+   "Whoever came from Ashford is either on slot 6 or on slot 3.",
+   "Whoever wrote about grief came from Dunmore.",
+   "Suri was exactly 2 slots above Gideon."
   ],
   "solution": {
    "Poet": [
-    6,
-    4,
-    2,
-    3,
-    0,
     1,
-    5
+    3,
+    4,
+    5,
+    0,
+    2,
+    6
    ],
    "Subject": [
-    0,
-    2,
-    5,
     4,
-    3,
+    0,
     1,
-    6
+    6,
+    3,
+    5,
+    2
    ],
    "Hometown": [
     6,
-    5,
     1,
     0,
-    2,
     4,
-    3
+    2,
+    3,
+    5
    ],
    "Slot": [
     0,
@@ -9647,8 +9647,8 @@
    ]
   },
   "n_clues": 12,
-  "deduction_depth": 6,
-  "direct_fraction": 0.083,
+  "deduction_depth": 10,
+  "direct_fraction": 0.167,
   "puzzle_index": 95,
   "difficulty": "expert",
   "theme_key": "poetry_slam"
@@ -9695,18 +9695,19 @@
    ]
   },
   "clues": [
-   "Orange spikes was exactly 1 place above black spikes.",
-   "Ronan laced up pink spikes.",
-   "Whoever laced up black spikes is Marsh.",
-   "Blue spikes was exactly 2 places above orange spikes.",
-   "A teal vest was exactly 1 place above a lime vest.",
-   "Whoever wore a white vest is either Delia or Marsh.",
-   "All of these are true: Amos wore a gold vest. Whoever laced up white spikes is on place 3.",
-   "A red vest was exactly 4 places above a gold vest.",
    "All of these are true: Whoever was on place 7 laced up red spikes. Delia laced up red spikes.",
+   "Ronan laced up pink spikes.",
+   "Whoever was on place 1 is not a maroon vest.",
+   "Whoever wore a teal vest is either on place 6 or on place 1.",
    "Whoever wore a teal vest is either Talia or Cyra.",
-   "Whoever wore an orange vest laced up either black spikes or orange spikes.",
-   "Talia was exactly 4 places above Cyra."
+   "A red vest was exactly 4 places above a gold vest.",
+   "Talia was exactly 1 place above Ronan.",
+   "Pink spikes was exactly 2 places above white spikes.",
+   "All of these are true: Whoever wore an orange vest laced up orange spikes. Whoever wore a lime vest laced up pink spikes.",
+   "All of these are true: Amos wore a gold vest. Whoever laced up white spikes is on place 3.",
+   "Whoever laced up blue spikes is either on place 5 or on place 4.",
+   "Whoever laced up black spikes is Marsh.",
+   "Whoever was on place 2 is either Ronan or Cyra."
   ],
   "solution": {
    "Runner": [
@@ -9746,9 +9747,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 8,
-  "direct_fraction": 0.167,
+  "n_clues": 13,
+  "deduction_depth": 6,
+  "direct_fraction": 0.154,
   "puzzle_index": 96,
   "difficulty": "expert",
   "theme_key": "track_meet"
@@ -9795,45 +9796,48 @@
    ]
   },
   "clues": [
-   "A white apron was exactly 1 station above a red apron.",
-   "A seared duck breast was exactly 3 stations above a lobster bisque.",
-   "A roasted root vegetable tart was exactly 6 stations above a citrus-glazed salmon.",
-   "All of these are true: Whoever wore a linen apron is on station 5. Whoever plated a wild rice pilaf wore a red apron.",
-   "All of these are true: Whoever plated a wild rice pilaf is on station 3. Whoever wore a leather apron plated a citrus-glazed salmon.",
-   "A red apron was exactly 1 station above a chef's coat.",
-   "All of these are true: Whoever was on station 2 plated a lobster bisque. Rosemary is on station 5.",
-   "Whoever wore a black apron is on station 7.",
-   "Anise was exactly 1 station above Juniper.",
-   "Whoever wore a red apron is either Juniper or Marjoram.",
-   "Remy was exactly 3 stations above Sorrel.",
-   "Remy plated either a citrus-glazed salmon or a saffron paella."
+   "Remy plated either a saffron paella or a citrus-glazed salmon.",
+   "Sorrel wore a black apron.",
+   "Whoever was on station 5 wore either a chef's coat or a linen apron.",
+   "Whoever plated a lobster bisque wore a striped apron.",
+   "Whoever plated a lobster bisque is either Remy or Marjoram.",
+   "Rosemary wore a red apron.",
+   "Juniper was exactly 4 stations above Remy.",
+   "Whoever plated a seared duck breast is not on station 4.",
+   "Whoever plated a stuffed quail is either Marjoram or Saffron.",
+   "A citrus-glazed salmon was exactly 2 stations above a roasted root vegetable tart.",
+   "A chef's coat was exactly 4 stations above a white apron.",
+   "Whoever wore a white apron is either Saffron or Anise.",
+   "Whoever plated a seared duck breast is either on station 3 or on station 4.",
+   "Sorrel is not on station 3.",
+   "A lobster bisque was exactly 3 stations above a citrus-glazed salmon."
   ],
   "solution": {
    "Chef": [
-    2,
-    3,
-    0,
-    4,
-    5,
     6,
-    1
+    0,
+    3,
+    2,
+    4,
+    1,
+    5
    ],
    "Dish": [
-    4,
-    0,
     2,
-    1,
     3,
+    4,
     6,
+    0,
+    1,
     5
    ],
    "Apron": [
-    3,
-    2,
-    6,
-    5,
-    0,
     1,
+    2,
+    3,
+    6,
+    0,
+    5,
     4
    ],
    "Station": [
@@ -9846,9 +9850,9 @@
     6
    ]
   },
-  "n_clues": 12,
-  "deduction_depth": 6,
-  "direct_fraction": 0.083,
+  "n_clues": 15,
+  "deduction_depth": 8,
+  "direct_fraction": 0.2,
   "puzzle_index": 97,
   "difficulty": "expert",
   "theme_key": "cooking_competition"
@@ -9896,16 +9900,16 @@
   },
   "clues": [
    "Whoever was on booth 7 decorated either a red-striped stall or a burlap-lined stall.",
+   "Dashiell sold either wildflower honey or smoked trout.",
    "All of these are true: Whoever sold seasonal jam decorated a red-striped stall. Fenn sold maple syrup.",
-   "Dashiell was exactly 1 booth above Marigold.",
    "All of these are true: Whoever decorated a burlap-lined stall is Cleo. Whoever decorated a string-lit stall sold heirloom tomatoes.",
-   "Wren was exactly 2 booths above Fenn.",
+   "Dashiell was exactly 1 booth above Marigold.",
    "A green-striped stall was exactly 2 booths above a wooden crate stall.",
-   "A chalkboard-sign stall was exactly 4 booths above a wooden crate stall.",
+   "Wren was exactly 2 booths above Fenn.",
    "All of these are true: Whoever sold wildflower honey is on booth 5. Cleo is on booth 4.",
    "Whoever decorated a green-striped stall sold either seasonal jam or fresh-cut flowers.",
    "Dashiell was exactly 4 booths above Sunniva.",
-   "All of these are true: Whoever was on booth 6 sold smoked trout. Whoever sold maple syrup is Fenn."
+   "A chalkboard-sign stall was exactly 4 booths above a wooden crate stall."
   ],
   "solution": {
    "Vendor": [
@@ -9946,7 +9950,7 @@
    ]
   },
   "n_clues": 11,
-  "deduction_depth": 7,
+  "deduction_depth": 8,
   "direct_fraction": 0.0,
   "puzzle_index": 98,
   "difficulty": "expert",
@@ -10096,7 +10100,7 @@
    "Whoever carried an orange paddle is either the Widow or the Retiree.",
    "Whoever won a leather-bound atlas is the Decorator.",
    "A porcelain vase was exactly 1 row above a bronze statue.",
-   "Whoever carried a red paddle is either the Curator or the Broker.",
+   "The Curator was exactly 1 row above the Decorator.",
    "A red paddle was exactly 4 rows above a purple paddle.",
    "All of these are true: Whoever carried a black paddle is on row 4. Whoever was on row 7 carried an orange paddle.",
    "The Collector carried either a gold paddle or an orange paddle.",

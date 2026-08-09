@@ -342,6 +342,7 @@ class PuzzleEngine:
         the point where depth would drop below it), not during adding."""
         clues: List[Clue] = []
         seen_atom_sets = set()
+        seen_atoms = set()  # individual atoms, catches duplicates hidden inside compound clues
         attempts = 0
 
         def solved_and_depth(cl):
@@ -359,7 +360,12 @@ class PuzzleEngine:
             key = frozenset(c.atoms)
             if key in seen_atom_sets:
                 continue
+            # reject if ANY individual atom (including one nested inside a
+            # compound clue) duplicates a fact already asserted elsewhere
+            if any(a in seen_atoms for a in c.atoms):
+                continue
             seen_atom_sets.add(key)
+            seen_atoms.update(c.atoms)
             clues.append(c)
 
         # strip redundant clues (keep order stable, re-check each removal),
