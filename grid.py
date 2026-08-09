@@ -135,7 +135,7 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
 
     col_items = [_display_label(it) for k in names[1:] for it in cats[k]]
     longest_col_label_w = max(c.stringWidth(lbl, FONT, col_fsize) for lbl in col_items)
-    col_label_h = longest_col_label_w + 12  # padding, since rotated 90deg
+    col_label_h = longest_col_label_w + 18  # padding, since rotated 90deg
 
     col_categories = names[1:]
 
@@ -167,7 +167,7 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             c.translate(cxp, grid_top - 0.03 * IN)
             c.rotate(90)
             c.setFont(FONT, col_fsize)
-            c.drawString(2, -cell * 0.32, _display_label(label))
+            c.drawString(6, -cell * 0.32, _display_label(label))
             c.restoreState()
 
     # ---------- staircase blocks: block i has rows = categories[i] ----------
