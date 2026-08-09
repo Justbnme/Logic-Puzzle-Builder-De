@@ -186,36 +186,8 @@ def draw_worked_example_page(c):
 
     y -= 6
     c.setFont("Helvetica-Bold", 10.5)
-    c.drawString(MARGIN, y, "Solved:")
-    y -= 15
-    c.setFont("Helvetica", 10)
-    solved = [
-        "Priya - muffin - coffee",
-        "Owen - croissant - tea",
-        "Talia - scone - cocoa",
-    ]
-    for line in solved:
-        c.drawString(MARGIN + 10, y, line)
-        y -= 14
-
-    y -= 10
-    closing = ("That's the whole method: place what you're given directly, then "
-               "let each new fact narrow the rest, until every square is "
-               "decided. The grid on the next page shows this same puzzle "
-               "fully marked, exactly how yours should look when you finish "
-               "one. New to logic grids? Give Puzzle 1 a try next.")
-    _draw_wrapped(c, closing, MARGIN, y, "Helvetica-Oblique", 9.5, w, 13)
-
-
-def draw_worked_example_grid_page(c):
-    c.setFont("Helvetica-Bold", 14)
-    c.drawString(MARGIN, PAGE_H - MARGIN - 10, "The Same Puzzle, Fully Solved")
-    y = PAGE_H - MARGIN - 40
-    w = PAGE_W - 2 * MARGIN
-    intro = ("Every square decided: a checkmark where a pairing is confirmed, "
-             "an X everywhere else in that row and column. This is what a "
-             "completed grid looks like for any puzzle in this book.")
-    y = _draw_wrapped(c, intro, MARGIN, y, "Helvetica", 10, w, 14)
+    c.drawString(MARGIN, y, "Solved below:")
+    y -= 20
 
     # Item order is chosen so the true solution falls on the diagonal of
     # each sub-block (Priya=0/Muffin=0/Coffee=0, etc) -- purely a display
@@ -231,6 +203,5 @@ def draw_worked_example_grid_page(c):
             for j in range(3):
                 marks[(catA, i, catB, j)] = "check" if i == j else "x"
 
-    grid_top_y = y - 30
-    draw_logic_grid(c, MARGIN, grid_top_y, ex_cats, trim="8.5x11", marks=marks,
+    draw_logic_grid(c, MARGIN, y, ex_cats, trim="8.5x11", marks=marks,
                      usable_width_override=3.6 * IN)
