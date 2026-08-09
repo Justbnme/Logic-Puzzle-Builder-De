@@ -57,11 +57,14 @@ def _fit_font(c, font, target, min_size, max_char_h_budget):
     return max(size, min_size)
 
 
-def compute_cell_size(K: int, N: int, trim: str, large_print: bool = False) -> dict:
+def compute_cell_size(K: int, N: int, trim: str, large_print: bool = False,
+                       usable_width_override: float = None) -> dict:
     """Rough cell pitch, used only as a sanity floor -- actual font sizes
     and label-area widths are resolved in draw_logic_grid with real text
-    measurements."""
-    usable = usable_width(trim)
+    measurements. Pass usable_width_override to size a smaller illustrative
+    grid (e.g. a worked example) instead of always filling the full page
+    width regardless of how few columns exist."""
+    usable = usable_width_override if usable_width_override is not None else usable_width(trim)
     cat_bar = 0.17 * IN
     approx_row_label_w = (1.05 + 0.05 * max(0, N - 5)) * IN
     ncols = (K - 1) * N
@@ -72,8 +75,10 @@ def compute_cell_size(K: int, N: int, trim: str, large_print: bool = False) -> d
             "row_label_w": approx_row_label_w}
 
 
-def fit_check(K: int, N: int, trim: str, large_print: bool = False):
-    spec = compute_cell_size(K, N, trim, large_print=large_print)
+def fit_check(K: int, N: int, trim: str, large_print: bool = False,
+              usable_width_override: float = None):
+    spec = compute_cell_size(K, N, trim, large_print=large_print,
+                              usable_width_override=usable_width_override)
     if not spec["fits"]:
         raise ValueError(
             f"{K} categories x {N} items does not fit legibly at {trim} "
@@ -126,13 +131,18 @@ def _kerned_centered(c, cx, cy, text, font, size, tracking=0.6, color=HDR_FG):
 
 
 def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
-                     trim: str = "6x9", large_print: bool = False, marks: dict = None):
+                     trim: str = "6x9", large_print: bool = False, marks: dict = None,
+                     usable_width_override: float = None):
     """cats: ordered {category_name: [item labels]}. First category is the
-    row/person axis. Returns (width, height) of the drawn grid."""
+    row/person axis. Returns (width, height) of the drawn grid.
+    usable_width_override: constrain sizing to less than the full page width,
+    e.g. for a small illustrative example grid that shouldn't stretch to
+    fill the same width as a real, much-wider puzzle grid."""
     names = list(cats.keys())
     K = len(names)
     N = len(next(iter(cats.values())))
-    spec = fit_check(K, N, trim, large_print=large_print)
+    spec = fit_check(K, N, trim, large_print=large_print,
+                      usable_width_override=usable_width_override)
     cell = spec["cell"]
     cat_bar = spec["cat_bar"]
 

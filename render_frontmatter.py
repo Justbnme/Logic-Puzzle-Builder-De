@@ -232,4 +232,5 @@ def draw_worked_example_grid_page(c):
                 marks[(catA, i, catB, j)] = "check" if i == j else "x"
 
     grid_top_y = y - 30
-    draw_logic_grid(c, MARGIN, grid_top_y, ex_cats, trim="8.5x11", marks=marks)
+    draw_logic_grid(c, MARGIN, grid_top_y, ex_cats, trim="8.5x11", marks=marks,
+                     usable_width_override=3.6 * IN)
