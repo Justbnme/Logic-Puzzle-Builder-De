@@ -58,9 +58,23 @@ def _clean(s: str) -> str:
     return " ".join(out)
 
 
-def draw_solutions_pages(c, puzzles: list, puzzles_per_page: int = 6):
+def draw_solutions_pages(c, puzzles: list):
     w = PAGE_W - 2 * MARGIN
     col_w = (w - COL_GAP) / N_COLS
+    header_h = 40
+
+    # All puzzles in this book are N=7, so every entry has the same shape
+    # (one title line + 7 solution lines) -- compute how many actually fit
+    # per column instead of dividing the page evenly by a guessed count.
+    N = len(_solution_rows(puzzles[0]))
+    title_h = 14
+    line_h = 11
+    entry_gap = 16
+    entry_h = title_h + N * line_h + entry_gap
+
+    usable_h = PAGE_H - 2 * MARGIN - header_h
+    per_col = max(1, int(usable_h // entry_h))
+    per_page = per_col * N_COLS
 
     i = 0
     first_page = True
@@ -70,15 +84,14 @@ def draw_solutions_pages(c, puzzles: list, puzzles_per_page: int = 6):
         first_page = False
         c.setFont("Helvetica-Bold", 16)
         c.drawString(MARGIN, PAGE_H - MARGIN - 5, "Solutions")
-        y_top = PAGE_H - MARGIN - 40
+        y_top = PAGE_H - MARGIN - header_h
 
-        batch = puzzles[i:i + puzzles_per_page]
-        per_col = (len(batch) + N_COLS - 1) // N_COLS
+        batch = puzzles[i:i + per_page]
         for j, p in enumerate(batch):
             col = j // per_col
             row_in_col = j % per_col
             x = MARGIN + col * (col_w + COL_GAP)
-            y = y_top - row_in_col * ((PAGE_H - 2 * MARGIN - 40) / max(per_col, 1))
+            y = y_top - row_in_col * entry_h
 
             c.setFont("Helvetica-Bold", 10)
             c.drawString(x, y, f"Puzzle {p['puzzle_index']}  {p['title']}")
@@ -87,4 +100,4 @@ def draw_solutions_pages(c, puzzles: list, puzzles_per_page: int = 6):
             for line in _solution_rows(p):
                 c.drawString(x + 4, y, line)
                 y -= 11
-        i += puzzles_per_page
+        i += per_page

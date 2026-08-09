@@ -99,6 +99,20 @@ def _display_label(s: str) -> str:
     return " ".join(out)
 
 
+def _draw_check(c, cx, cy, size):
+    c.setStrokeColor(INK)
+    c.setLineWidth(1.3)
+    c.line(cx - size * 0.35, cy, cx - size * 0.08, cy - size * 0.32)
+    c.line(cx - size * 0.08, cy - size * 0.32, cx + size * 0.4, cy + size * 0.35)
+
+
+def _draw_x(c, cx, cy, size):
+    c.setStrokeColor(HAIR)
+    c.setLineWidth(1.1)
+    c.line(cx - size * 0.3, cy - size * 0.3, cx + size * 0.3, cy + size * 0.3)
+    c.line(cx - size * 0.3, cy + size * 0.3, cx + size * 0.3, cy - size * 0.3)
+
+
 def _kerned_centered(c, cx, cy, text, font, size, tracking=0.6, color=HDR_FG):
     """Draw text with extra letter-spacing, centered at (cx, cy)."""
     widths = [c.stringWidth(ch, font, size) for ch in text]
@@ -112,7 +126,7 @@ def _kerned_centered(c, cx, cy, text, font, size, tracking=0.6, color=HDR_FG):
 
 
 def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
-                     trim: str = "6x9", large_print: bool = False):
+                     trim: str = "6x9", large_print: bool = False, marks: dict = None):
     """cats: ordered {category_name: [item labels]}. First category is the
     row/person axis. Returns (width, height) of the drawn grid."""
     names = list(cats.keys())
@@ -210,6 +224,18 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             for col in range(N + 1):
                 xx = gx0 + col * cell
                 c.line(xx, gy0, xx, block_top)
+            if marks:
+                for row in range(N):
+                    for col in range(N):
+                        m = marks.get((row_cat_name, row, cat_name, col)) or \
+                            marks.get((cat_name, col, row_cat_name, row))
+                        if m:
+                            ccx = gx0 + col * cell + cell / 2
+                            ccy = block_top - row * cell - cell / 2
+                            if m == "check":
+                                _draw_check(c, ccx, ccy, cell * 0.7)
+                            elif m == "x":
+                                _draw_x(c, ccx, ccy, cell * 0.7)
             # heavier divider between this column-group and the next
             c.setStrokeColor(INK)
             c.setLineWidth(1.4)
