@@ -6,6 +6,12 @@ CJR Books / Julian Stone look (black kerned header bars, hairline gridlines,
 boxed labels flush to the grid, no floating gaps) -- with DYNAMIC sizing on
 top, so any (K categories x N items) shape sizes itself for 6x9 or 8.5x11
 instead of needing new hand-tuned constants each time.
+
+Font sizes are set to fixed READABLE targets (not derived from cell width --
+that was the earlier bug: cell width barely constrains rotated-label font
+size at all, so deriving font from cell produced needlessly tiny text).
+row_label_w and col_label_h are instead measured from the actual longest
+label string at the target font, so labels always fit without guessing.
 """
 
 from reportlab.lib.units import inch as IN
@@ -29,31 +35,41 @@ TRIMS = {
 MIN_CELL = 0.20 * IN
 MIN_CELL_LARGE_PRINT = 0.26 * IN
 
+# Fixed readable font targets -- shrink only if the cell is genuinely too
+# narrow to hold a character at that size (checked at render time).
+ROW_FONT_TARGET = 8.5
+COL_FONT_TARGET = 8.0
+ROW_FONT_MIN = 6.5
+COL_FONT_MIN = 6.5
+
 
 def usable_width(trim: str) -> float:
     w, h, gutter, outer = TRIMS[trim]
     return w - gutter - outer
 
 
-def compute_cell_size(K: int, N: int, trim: str, row_label_w: float = None,
-                       large_print: bool = False) -> dict:
+def _fit_font(c, font, target, min_size, max_char_h_budget):
+    """Shrink font from target down to min_size only if a single character's
+    height would exceed the available budget (cell width, for rotated text)."""
+    size = target
+    while size > min_size and size * 0.8 > max_char_h_budget:
+        size -= 0.5
+    return max(size, min_size)
+
+
+def compute_cell_size(K: int, N: int, trim: str, large_print: bool = False) -> dict:
+    """Rough cell pitch, used only as a sanity floor -- actual font sizes
+    and label-area widths are resolved in draw_logic_grid with real text
+    measurements."""
     usable = usable_width(trim)
     cat_bar = 0.17 * IN
-    if row_label_w is None:
-        row_label_w = (0.95 + 0.045 * max(0, N - 5)) * IN
+    approx_row_label_w = (1.05 + 0.05 * max(0, N - 5)) * IN
     ncols = (K - 1) * N
-    avail = usable - cat_bar - row_label_w
+    avail = usable - cat_bar - approx_row_label_w
     cell = avail / ncols
     min_cell = MIN_CELL_LARGE_PRINT if large_print else MIN_CELL
-    fits = cell >= min_cell
-    font_size = max(6, min(9.5, cell / IN * 24))
-    return {
-        "cell": max(cell, min_cell * 0.6),
-        "row_label_w": row_label_w,
-        "cat_bar": cat_bar,
-        "font_size": font_size,
-        "fits": fits,
-    }
+    return {"cell": cell, "cat_bar": cat_bar, "fits": cell >= min_cell,
+            "row_label_w": approx_row_label_w}
 
 
 def fit_check(K: int, N: int, trim: str, large_print: bool = False):
@@ -61,8 +77,7 @@ def fit_check(K: int, N: int, trim: str, large_print: bool = False):
     if not spec["fits"]:
         raise ValueError(
             f"{K} categories x {N} items does not fit legibly at {trim} "
-            f"(cell would be {spec['cell']/IN:.3f}in, need >= "
-            f"{(MIN_CELL_LARGE_PRINT if large_print else MIN_CELL)/IN:.3f}in)."
+            f"(cell would be {spec['cell']/IN:.3f}in). Use a larger trim or reduce N/K."
         )
     return spec
 
@@ -88,13 +103,24 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
     N = len(next(iter(cats.values())))
     spec = fit_check(K, N, trim, large_print=large_print)
     cell = spec["cell"]
-    row_label_w = spec["row_label_w"]
     cat_bar = spec["cat_bar"]
-    fsize = spec["font_size"]
-    small_fsize = max(5.5, fsize - 1.3)
+
+    # -- row-label font: shrink only if it wouldn't fit the cell HEIGHT --
+    row_fsize = _fit_font(c, FONT, ROW_FONT_TARGET, ROW_FONT_MIN, cell * 0.9)
+    # -- column rotated-label font: shrink only if it wouldn't fit cell WIDTH --
+    col_fsize = _fit_font(c, FONT, COL_FONT_TARGET, COL_FONT_MIN, cell * 0.9)
+
+    # -- measure real label widths to size the label areas (no guessing) --
+    person_axis_labels = cats[names[0]]
+    row_label_w = max(c.stringWidth(lbl, FONT, row_fsize) for lbl in person_axis_labels) \
+                  + 10  # padding
+    row_label_w = max(row_label_w, 0.55 * IN)
+
+    col_items = [it for k in names[1:] for it in cats[k]]
+    longest_col_label_w = max(c.stringWidth(lbl, FONT, col_fsize) for lbl in col_items)
+    col_label_h = longest_col_label_w + 12  # padding, since rotated 90deg
 
     col_categories = names[1:]
-    col_label_h = (0.80 + 0.045 * max(0, N - 5)) * IN
 
     grid_x = ox + cat_bar + row_label_w
     catbar_y = oy_top
@@ -102,13 +128,14 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
     grid_top = collab_y - col_label_h
 
     # ---------- top category bars (black, kerned white text) ----------
+    hdr_fsize = min(9.5, max(7, cell / IN * 26))
     for gi, cat_name in enumerate(col_categories):
         bx = grid_x + gi * N * cell
         block_w = N * cell
         c.setFillColor(HDR_BG)
         c.rect(bx, catbar_y - cat_bar, block_w, cat_bar, fill=1, stroke=0)
         _kerned_centered(c, bx + block_w / 2, catbar_y - cat_bar + cat_bar * 0.28,
-                          cat_name.upper(), FONT_B, min(8.5, fsize), tracking=0.7)
+                          cat_name.upper(), FONT_B, min(8.5, hdr_fsize), tracking=0.7)
 
     # ---------- rotated column item labels ----------
     c.setFillColor(INK)
@@ -118,13 +145,12 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
             c.saveState()
             c.translate(cxp, grid_top - 0.03 * IN)
             c.rotate(90)
-            c.setFont(FONT, small_fsize)
-            c.drawString(2, -cell * 0.28, label[:24])
+            c.setFont(FONT, col_fsize)
+            c.drawString(2, -cell * 0.32, label)
             c.restoreState()
 
     # ---------- staircase blocks: block i has rows = categories[i] ----------
     n_blocks = K - 1
-    c.setFont(FONT, fsize)
     for block_idx in range(n_blocks):
         row_cat_name = names[block_idx]
         row_items = cats[row_cat_name]
@@ -145,10 +171,10 @@ def draw_logic_grid(c: canvas.Canvas, ox: float, oy_top: float, cats: dict,
         c.rect(label_x, block_top - N * cell, label_w, N * cell, fill=0, stroke=1)
 
         c.setFillColor(INK)
-        c.setFont(FONT, fsize)
+        c.setFont(FONT, row_fsize)
         for i, label in enumerate(row_items):
             yy = block_top - i * cell - cell / 2
-            c.drawString(label_x + 4, yy - fsize * 0.35, label[:26])
+            c.drawString(label_x + 4, yy - row_fsize * 0.35, label)
 
         # the N x N cell blocks for this row category against remaining cols
         col_cats = names[block_idx + 1:]
