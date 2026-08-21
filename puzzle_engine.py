@@ -58,6 +58,12 @@ class Category:
     kind: str = "attribute"    # "person" | "ordinal" | "attribute" -- drives clue grammar
     verb: str = "had"          # used for attribute categories, e.g. "wore", "was holding"
     unit: str = None           # used for ordinal categories, e.g. "floor", "place"
+    possessive: str = ""       # optional possessive determiner baked into the verb phrase,
+                                # e.g. verb="lost", possessive="their" -> "lost their {item}".
+                                # Kept separate from verb so either/or clues can repeat the
+                                # possessive per alternative instead of stranding it before
+                                # "either" (e.g. "lost either their X or their Y", not
+                                # "lost their either X or Y").
 
     def __post_init__(self):
         if self.ordinal and self.kind == "attribute":
@@ -69,13 +75,19 @@ class Category:
     def n(self) -> int:
         return len(self.items)
 
+    def _verb_phrase(self) -> str:
+        """Full verb phrase including any possessive, e.g. 'lost their'."""
+        if self.possessive:
+            return f"{self.verb} {self.possessive}"
+        return self.verb
+
     def as_subject(self, item_idx: int) -> str:
         it = self.items[item_idx]
         if self.kind == "person":
             return it[0].upper() + it[1:] if it and it[0].islower() else it
         if self.kind == "ordinal":
             return f"Whoever was on {self.unit} {it}"
-        return f"Whoever {self.verb} {it}"
+        return f"Whoever {self._verb_phrase()} {it}"
 
     def as_predicate(self, item_idx: int) -> str:
         it = self.items[item_idx]
@@ -83,15 +95,39 @@ class Category:
             return f"is {it}"
         if self.kind == "ordinal":
             return f"is on {self.unit} {it}"
-        return f"{self.verb} {it}"
+        return f"{self._verb_phrase()} {it}"
 
     def as_bare_object(self, item_idx: int) -> str:
-        """Plain object form, used in negative/either-or clues where a single
-        neutral copula ('is not', 'either...or') needs to govern any kind."""
+        """Plain object form, used only when a single neutral copula ('is
+        either...or') already governs the sentence (person/ordinal). Not
+        safe for attribute categories -- see as_object_clause."""
         it = self.items[item_idx]
         if self.kind == "ordinal":
             return f"on {self.unit} {it}"
         return it
+
+    def as_object_clause(self, item_idx: int) -> str:
+        """Object-position form for negative direct clues ('X is not ___'),
+        safe for any kind -- attribute categories get a full relative-clause
+        object ('the one who lost their X') instead of a bare noun, so the
+        verb is never silently dropped."""
+        it = self.items[item_idx]
+        if self.kind == "person":
+            return it
+        if self.kind == "ordinal":
+            return f"on {self.unit} {it}"
+        return f"the one who {self._verb_phrase()} {it}"
+
+    def either_or_phrase(self, i1: int, i2: int) -> str:
+        """Full '<verb> either A or B' clause for either/or clues, safe for
+        any kind -- attribute categories with a possessive repeat it per
+        alternative instead of stranding it before 'either'."""
+        if self.kind == "attribute":
+            poss = f"{self.possessive} " if self.possessive else ""
+            it1, it2 = self.items[i1], self.items[i2]
+            return f"{self.verb} either {poss}{it1} or {poss}{it2}"
+        obj1, obj2 = self.as_bare_object(i1), self.as_bare_object(i2)
+        return f"{self.stem()} either {obj1} or {obj2}"
 
     def stem(self) -> str:
         """The bare copula/verb used before a plain object list, e.g. in
@@ -167,7 +203,7 @@ class PuzzleEngine:
             correct_ib = self.item_at_slot(catB.name, sa)
             wrong_choices = [j for j in range(self.N) if j != correct_ib]
             ib = self.rng.choice(wrong_choices)
-            text = f"{catA.as_subject(ia)} is not {catB.as_bare_object(ib)}."
+            text = f"{catA.as_subject(ia)} is not {catB.as_object_clause(ib)}."
             atoms = [("negative", catA.name, ia, catB.name, ib, None)]
         return Clue("positive" if positive else "negative", text, atoms)
 
@@ -180,8 +216,7 @@ class PuzzleEngine:
         wrong_ib = self.rng.choice(others)
         pair = [correct_ib, wrong_ib]
         self.rng.shuffle(pair)
-        text = (f"{catA.as_subject(ia)} {catB.stem()} either {catB.as_bare_object(pair[0])} "
-                f"or {catB.as_bare_object(pair[1])}.")
+        text = f"{catA.as_subject(ia)} {catB.either_or_phrase(pair[0], pair[1])}."
         atoms = [("negative", catA.name, ia, catB.name, j, None)
                  for j in range(self.N) if j not in pair]
         return Clue("either_or", text, atoms)

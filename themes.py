@@ -27,6 +27,10 @@ class ThemeCategory:
     pool: List[str]       # word bank -- must be >= max N you'll ever draw
     verb: str = "had"     # only used for kind="attribute"
     unit: Optional[str] = None  # only used for kind="ordinal"
+    possessive: str = ""  # optional, kind="attribute" only, e.g. "their" for
+                           # verb="lost" -> "lost their {item}" -- keep separate
+                           # from verb so either/or clues repeat it correctly
+                           # per alternative instead of stranding it pre-"either"
 
 
 @dataclass
@@ -65,7 +69,8 @@ def build_themed_puzzle(theme: ScenarioTheme, N: int, profile_name: str,
         else:
             chosen = rng.sample(tc.pool, N)
         cat = Category(tc.name, chosen, ordinal=(tc.kind == "ordinal"),
-                        kind=tc.kind, verb=tc.verb, unit=tc.unit)
+                        kind=tc.kind, verb=tc.verb, unit=tc.unit,
+                        possessive=tc.possessive)
         engine_cats.append(cat)
 
     cap = MAX_DIRECT_FRACTION.get(profile_name, 1.0)
